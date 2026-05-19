@@ -1,0 +1,374 @@
+{
+  "Index": {
+    "title": "Ezz Export | Leading Egyptian Agriculture Exporter",
+    "description": "We specialize in exporting the finest fresh Egyptian fruits and vegetables with international quality standards worldwide."
+  },
+  "Navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "catalog": "Price Quotation",
+    "products": "Products",
+    "contact": "Contact Us",
+    "brandName": "Ezz Export",
+    "selectLanguage": "Select Language"
+  },
+  "Hero": {
+    "newSeason": "New Season 2026",
+    "titlePrefix": "Ezz",
+    "titleHighlight": "Premium Global",
+    "titleSuffix": "Selections",
+    "description": "Providing the finest fresh vegetables and fruits with full commitment to international quality standards and professional packaging.",
+    "downloadCatalog": "Download 2026 Product Catalog",
+    "ctaContact": "Contact Us",
+    "fastDelivery": "Fast Delivery",
+    "globalReach": "Global Reach",
+    "premiumHarvest": "Premium Harvest"
+  },
+  "Footer": {
+    "description": "A premier Egyptian enterprise specialized in exporting top-tier agricultural products to European markets, delivering tailored sourcing solutions built on uncompromised quality, continuity, and operational transparency.",
+    "navigation": {
+      "title": "Quick Links",
+      "home": "Home",
+      "about": "About Us",
+      "products": "Products",
+      "contact": "Contact Us"
+    },
+    "getInTouch": "Get In Touch",
+    "phone": "Phone Number",
+    "email": "Email",
+    "location": "Our Office",
+    "address": "Kafr El-Dawar - Beheira - Egypt",
+    "copyright": "© 2026 Ezz Export. All rights reserved",
+    "craftedBy": "Designed & Developed by"
+  },
+  "WhyUs": {
+    "badge": "Why Partner With Us",
+    "title": "We build supply on <colored>Continuity</colored> and not on promises",
+    "mainDesc": "In agricultural supply markets, success does not depend on price alone, but on the true capability for commitment and continuity.",
+    "subDesc": "Therefore, <bold>Ezz Export</bold> works to provide flexible supply solutions backed by export quality, professional logistics, and operational transparency that helps the European importer build a stable and sustainable supply chain.",
+    "btn": "Read More About Us",
+    "points": {
+      "0": {
+        "title": "Supply Continuity",
+        "desc": "Stable supply chains throughout the year without interruption."
+      },
+      "1": {
+        "title": "Certified Export Quality",
+        "desc": "Full compliance with the highest international standards and certifications."
+      },
+      "2": {
+        "title": "Commercial Flexibility",
+        "desc": "Tailored facilities and solutions to meet diverse market needs."
+      },
+      "3": {
+        "title": "European Standards Compliance",
+        "desc": "Rigorous screening for pesticide residues and operational quality."
+      },
+      "4": {
+        "title": "Professional Logistics",
+        "desc": "Precise tracking and fast shipping that preserves cargo integrity."
+      }
+    }
+  },
+  "MainProducts": {
+    "badge": "Main Products",
+    "title": "Premium Products for European Markets",
+    "desc": "We supply a premium selection of Egyptian agricultural products that enjoy growing demand in European markets, focusing on quality and operational stability.",
+    "btn": "View All Products"
+  },
+  "WhyEgypt": {
+    "badge": "Why Egypt Now?",
+    "title": "Egypt has become <br></br> <green>A Strategic Hub</green> <br></br> for Agricultural Supply",
+    "description": "With the development of export infrastructure and the improvement of agricultural quality standards, Egypt has become one of the most important sourcing destinations for European markets, especially for agricultural products that require seasonal continuity and competitive costs.",
+    "destination_badge": "DESTINATION",
+    "destination_text": "To Global Markets",
+    "highlights": {
+      "geo": {
+        "title": "Forward-Looking Strategic Location",
+        "desc": "Integrated logistical advantage ensuring maximum supply efficiency."
+      },
+      "euro": {
+        "title": "European Standards Compliance",
+        "desc": "Integrated logistical advantage ensuring maximum supply efficiency."
+      },
+      "cost": {
+        "title": "Competitive Cost & Quality",
+        "desc": "Integrated logistical advantage ensuring maximum supply efficiency."
+      }
+    }
+  },
+  "Quality": {
+    "badge": "Quality & Operations",
+    "title": "Quality is not a stage <br></br> <green>It is an entire ecosystem</green>",
+    "description": "We implement strict operating and monitoring procedures aimed at preserving product quality from sourcing to shipping, focusing on sorting, packaging, and cold chain integrity.",
+    "steps": {
+      "step1": "Sourcing",
+      "step2": "Sorting",
+      "step3": "Packaging",
+      "step4": "Cooling",
+      "step5": "Shipping"
+    }
+  },
+  "FinalCTA": {
+    "badge": "Sustainable Growth Partnership",
+    "title": "Establish a Stable Supply Partnership <br></br> with <green>Ezz Export</green>",
+    "description": "If you are looking for a reliable sourcing partner in the Egyptian market, our team is ready to support your operational and commercial needs with the highest international standards.",
+    "cta_call": "Book a Business Call",
+    "card_title": "Products & Specifications Guide",
+    "card_desc": "Discover our premium fruits and vegetables varieties, global quality standards, and our seasonal export calendar.",
+    "cta_catalog": "Download Full Catalog"
+  },
+  "FloatingActions": {
+    "downloadCatalog": "Download Catalog",
+    "chatWithUs": "Chat with Us"
+  },
+  "ProductsPage": {
+    "metadata": {
+      "title": "Our Agricultural Products | Exporting Fresh Fruits & Vegetables",
+      "description": "Explore Ezz Export's premium agricultural products. We provide the finest Egyptian citrus, fruits, and vegetables with international export quality."
+    },
+    "header": {
+      "our": "Our Premium",
+      "products": "Products",
+      "subtitle": "<colored>Egyptian</colored> quality with international standards.",
+      "delivery": "<colored>Seamless</colored> and secure international shipping.",
+      "origin": "Quality",
+      "pure": "Pure",
+      "nile": "Nile.",
+      "protocol": "2026 Export Protocol",
+      "explore": "Explore Catalog",
+      "stats_badges": {
+        "global_shipping": "Global Export",
+        "quality_guaranteed": "Quality Control"
+      }
+    },
+    "grid": {
+      "premiumSelection": "Premium Selection",
+      "pureCollection": "The <italic>Pure</italic> Collection.",
+      "filter": {
+        "all": "All",
+        "fresh": "Fresh",
+        "iqf": "Frozen (IQF)",
+        "in_brine": "In Brine"
+      },
+      "categories": {
+        "vegetable": "Vegetables",
+        "vegetables": "Vegetables",
+        "fruit": "Fruit",
+        "fruits": "Fruits"
+      },
+      "origin": "Origin",
+      "country": "Egypt",
+      "loading": "Loading products..."
+    }
+  },
+  "b2b": {
+    "partnerships": "Partnerships",
+    "bulk_title": "Wholesale",
+    "bulk_subtitle": "Orders.",
+    "description": "Global supply chain and customized packaging solutions upon request.",
+    "contact_button": "Contact Team",
+    "features": {
+      "cold_chain": "Cold Chain Management",
+      "private_label": "Private Label Services",
+      "compliance": "Full Compliance Documents"
+    }
+  },
+  "ProductDetails": {
+    "backToCatalog": "Back to Catalog",
+    "premiumExport": "Premium Export",
+    "directFromFarms": "Direct from Farms",
+    "origin": "Origin",
+    "egypt": "Egypt",
+    "quality": "Quality",
+    "premium": "Premium",
+    "type": "Type",
+    "organic": "Organic",
+    "availableSelection": "Available Sizes",
+    "exportPacking": "Export Packing",
+    "certifiedQuality": "Certified Quality",
+    "contactWhatsApp": "Contact via WhatsApp",
+    "curatedSelection": "Curated Selection",
+    "similarItems": "Similar Products",
+    "worldwideLogistics": "Global Logistics",
+    "startJourney": "Start Export Journey.",
+    "logisticsDesc": "Expertly handled logistics from Egypt to any port in the world.",
+    "directContact": "Direct Contact",
+    "chatWhatsApp": "WhatsApp Chat",
+    "availablePdf": "PDF File Available",
+    "downloadCatalog": "Download Catalog",
+    "features": [
+      {
+        "title": "Europe & Gulf",
+        "desc": "Door to Door Shipping",
+        "icon": "01"
+      },
+      {
+        "title": "Custom Packing",
+        "desc": "Your Brand, Our Quality",
+        "icon": "02"
+      },
+      {
+        "title": "Certified Quality",
+        "desc": "Global Export Standards",
+        "icon": "03"
+      },
+      {
+        "title": "Fast Response",
+        "desc": "Quotes < 24 Hours",
+        "icon": "04"
+      }
+    ]
+  },
+  "Contact": {
+    "metadata": {
+      "title": "Contact Us | Ezz Export for Agricultural Products",
+      "description": "Have a question about our products or want a business partnership? Contact the Ezz Export team now. We are here to help you get the best Egyptian agricultural products."
+    },
+    "badge": "Contact Us",
+    "title": "Stay in <touch>Touch.</touch>",
+    "description": "We bring the richness of the Nile Delta to your business. Contact our expert team for global export inquiries.",
+    "globalExports": "Global Export",
+    "servingCountries": "Serving over 45 countries with premium Egyptian products.",
+    "directCall": "Direct Call",
+    "emailUs": "Email Us",
+    "workingHours": "Working Hours",
+    "workingHoursValue": "Sun - Thu: 9AM - 6PM",
+    "sendInquiry": "Send Inquiry",
+    "inquirySubtitle": "Our export managers will respond to you within 24 hours.",
+    "ourLocation": "Our Location",
+    "addressValue": "Kafr El-Dawar, Beheira, Egypt",
+    "form": {
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Full Name",
+      "email": "Email Address",
+      "emailPlaceholder": "contact@company.com",
+      "message": "Message",
+      "messagePlaceholder": "How can we help with your export needs?",
+      "submit": "Send Inquiry",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Enter your phone number",
+      "successMessage": "Your message has been sent successfully! We'll contact you soon.",
+      "errorMessage": "An error occurred while sending. Please try again."
+    }
+  },
+  "About": {
+    "title": "About Us",
+    "description": "Learn more about Ezz Export, our history, and our vision in exporting the finest Egyptian agricultural products to the world.",
+    "Hero": {
+      "pure": "True",
+      "impact": "Partner.",
+      "subtitle": "Ezz Export <green>from Egypt</green> to the world,",
+      "subtitle-1": "quality you can trust.",
+      "originLabel": "Origin",
+      "originValue": "Nile Delta",
+      "globalReach": "Global Reach.",
+      "download": "Download",
+      "catalog": "Our Catalog"
+    },
+    "Story": {
+      "badge-1": "From the Nile's Heart",
+      "badge-2": "Since 2024",
+      "badge-3": "Premium Quality Products",
+      "title": "Our Story.",
+      "p1": "Ezz Export began with a clear goal: selecting the best Egyptian products from trusted suppliers and delivering them to global markets with confidence and consistent quality. We don't just sell products.",
+      "p2": "We ensure experience and credibility in every shipment to provide the best and become trusted partners who guarantee that every Egyptian product reaches global markets with care and professionalism.",
+      "button": "Contact Us Now"
+    },
+    "Marquee": {
+      "premiumQuality": "Premium Quality",
+      "pureSoil": "Professional Export"
+    },
+    "Process": {
+      "subtitle": "Our Process",
+      "title": "From Soil to Success",
+      "description": "We control every step of the journey to ensure the freshness of the Nile Delta reaches your destination intact.",
+      "steps": {
+        "step1": {
+          "title": "Selective",
+          "desc": "We handpick every crop with extreme care. If it's not perfect, it doesn't leave the farm."
+        },
+        "step2": {
+          "title": "Certified",
+          "desc": "Our products pass the world's toughest safety tests. Chemical-free, 100% natural."
+        },
+        "step3": {
+          "title": "Logistics",
+          "desc": "Cold chain control from Egypt to your warehouse. Freshness guaranteed."
+        }
+      }
+    },
+    "ExportCTA": {
+      "badge": "Ready for Global Export",
+      "title": "Your Trusted Gateway to Premium Egyptian Goods.",
+      "description": "Global exports of premium fresh, frozen, and brine products—meeting world-class standards.",
+      "downloadCatalog": "Download Full Catalog",
+      "contactSales": "Talk to an Export Expert"
+    },
+    "Seson": {
+      "badge": "Ezz Export Quality",
+      "title": "Our Top <green>Products</green>",
+      "discoverMore": "Discover More",
+      "viewAllProducts": "View All",
+      "availableVarieties": "Available Varieties",
+      "exportSeason": "Export Season",
+      "products": {
+        "01": {
+          "name": "Artichoke",
+          "category": "Vegetables",
+          "description": "Tender artichoke hearts, rich in fiber and antioxidants. Perfect for salads and pizzas.",
+          "specs": {
+            "size": "Fresh - Frozen - Brine",
+            "season": "December - April"
+          }
+        },
+        "02": {
+          "name": "Mixed Vegetables",
+          "category": "Vegetables",
+          "description": "A premium blend of peas, carrots, and green beans, rich in essential vitamins.",
+          "specs": {
+            "size": "Peas, Carrots, Beans",
+            "season": "February - July"
+          }
+        },
+        "03": {
+          "name": "Strawberry",
+          "category": "Fruits",
+          "description": "IQF strawberries that retain full flavor and texture. Ideal for desserts and smoothies.",
+          "specs": {
+            "size": "Festival - Fortuna - Others",
+            "season": "January - June"
+          }
+        }
+      }
+    }
+  },
+  "catalog": {
+    "metadata": {
+      "title": "Product Catalog Request | Ezz Export",
+      "description": "Request the official product catalog from Ezz Export. Explore our premium selection of Egyptian fresh fruits, vegetables, and high-quality IQF products."
+    },
+    "heroBadge": "Ezz Export Official Catalog",
+    "heroTitle": "Download 2026 Product Catalog",
+    "heroDescription": "Learn about available agricultural products, technical specifications, packaging options, and the export capabilities of Ezz Export.",
+    "formTitle": "Start connecting with the supply team",
+    "formSubtitle": "Please fill out the fields below to receive the catalog files directly.",
+    "labelName": "Full Name",
+    "placeholderName": "John Doe",
+    "labelCompany": "Company Name",
+    "placeholderCompany": "e.g., AgriTrade International",
+    "labelEmail": "Business Email",
+    "placeholderEmail": "name@company.com",
+    "labelCountry": "Target Country",
+    "placeholderCountry": "e.g., Italy, Germany, UAE",
+    "labelProducts": "Required Products",
+    "placeholderProducts": "Frozen Strawberries, Fresh Onions",
+    "labelOrderSize": "Expected Order Volume",
+    "placeholderOrderSize": "20ft Container, 50 Tons",
+    "submitButton": "Request and Download Catalog Now",
+    "submitting": "Processing your request.",
+    "successTitle": "Thank you for contacting us",
+    "successDescription": "The catalog and product files will be sent to your email, and our team will contact you to discuss your supply needs.",
+    "errorMsg": "Something went wrong. Please try again."
+  }
+}

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+[dir="rtl"] *, 
+[lang="ar"] * {
+    letter-spacing: 0 !important;
+    word-spacing: normal !important;
+}
+
+/* Ensure route loading overlay always disappears even in purely static exports */
+.route-loading-overlay {
+  animation: routeLoadingFadeOut 900ms ease-out 800ms forwards;
+}
+
+@keyframes routeLoadingFadeOut {
+  0% {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,374 @@
+{
+  "Index": {
+    "title": "Ezz Export | Leader nell'Esportazione di Prodotti Agricoli Egiziani",
+    "description": "Siamo specializzati nell'esportazione della migliore frutta e verdura fresca egiziana con standard di qualità internazionali in tutto il mondo."
+  },
+  "Navbar": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "catalog": "Preventivo",
+    "products": "Prodotti",
+    "contact": "Contatti",
+    "brandName": "Ezz Export",
+    "selectLanguage": "Lingua"
+  },
+  "Hero": {
+    "newSeason": "Nuova Stagione 2026",
+    "titlePrefix": "Ezz",
+    "titleHighlight": "Premium Global",
+    "titleSuffix": "Selections",
+    "description": "Forniamo la migliore frutta e verdura fresca con il massimo impegno verso gli standard di qualità internazionali e un confezionamento professionale.",
+    "downloadCatalog": "Scarica il catalogo dei prodotti 2026",
+    "ctaContact": "Contattaci",
+    "fastDelivery": "Consegna Rapida",
+    "globalReach": "Portata Globale",
+    "premiumHarvest": "Raccolto Premium"
+  },
+  "Footer": {
+    "description": "Un'azienda egiziana leader specializzata nell'esportazione di prodotti agricoli di alta qualità verso i mercati europei, offrendo soluzioni di fornitura basate su eccellenza, continuità e trasparenza operativa.",
+    "navigation": {
+      "title": "Link Rapidi",
+      "home": "Home",
+      "about": "Chi Siamo",
+      "products": "Prodotti",
+      "contact": "Contattaci"
+    },
+    "getInTouch": "Contatti",
+    "phone": "Telefono",
+    "email": "Email",
+    "location": "Sede",
+    "address": "Kafr El-Dawar - Beheira - Egitto",
+    "copyright": "© 2026 Ezz Export. Tutti i diritti riservati",
+    "craftedBy": "Design e Sviluppo di"
+  },
+  "WhyUs": {
+    "badge": "Perché Collaborare Con Noi",
+    "title": "Costruiamo la fornitura sulla <colored>Continuità</colored> e non sulle promesse",
+    "mainDesc": "Nei mercati delle forniture agricole, il successo non dipende solo dal prezzo, ma dalla reale capacità di impegno e continuità.",
+    "subDesc": "Pertanto, <bold>Ezz Export</bold> opera per fornire soluzioni di fornitura flessibili, supportate da qualità da esportazione, logistica professionale e trasparenza operativa per aiutare l'importatore europeo.",
+    "btn": "Leggi di più su di noi",
+    "points": {
+      "0": {
+        "title": "Continuità delle Forniture",
+        "desc": "Catene di approvvigionamento stabili tutto l'anno senza interruzioni."
+      },
+      "1": {
+        "title": "Qualità da Esportazione Certificata",
+        "desc": "Piena conformità ai più elevati standard e certificazioni internazionali."
+      },
+      "2": {
+        "title": "Flessibilità Commerciale",
+        "desc": "Soluzioni e agevolazioni personalizzate per soddisfare le esigenze del mercato."
+      },
+      "3": {
+        "title": "Conformità agli Standard Europei",
+        "desc": "Controlli rigorosi sui residui di pesticidi e sulla qualità operativa."
+      },
+      "4": {
+        "title": "Coordinamento Logistico Professionale",
+        "desc": "Tracciabilità precisa e spedizioni rapide che preservano l'integrità del carico."
+      }
+    }
+  },
+  "MainProducts": {
+    "badge": "Prodotti Principali",
+    "title": "Prodotti Selezionati per i Mercati Europei",
+    "desc": "Forniamo una selezione premium di prodotti agricoli egiziani che godono di una crescente domanda nei mercati europei, concentrandoci sulla qualità e sulla stabilità operativa.",
+    "btn": "Mostra tutti i prodotti"
+  },
+  "WhyEgypt": {
+    "badge": "Perché l'Egitto adesso?",
+    "title": "L'Egitto è diventato <br></br> <green>Un Hub Strategico</green> <br></br> per l'approvvigionamento agricolo",
+    "description": "Con lo sviluppo delle infrastrutture di esportazione e il miglioramento degli standard di qualità agricola, l'Egitto è diventato una delle fonti di approvvigionamento più importanti per i mercati europei, in particolare per i prodotti agricoli che richiedono continuità stagionale e costi competitivi.",
+    "destination_badge": "DESTINAZIONE",
+    "destination_text": "Verso i mercati globali",
+    "highlights": {
+      "geo": {
+        "title": "Posizione Strategica Lungimirante",
+        "desc": "Vantaggio logistico integrato che garantisce la massima efficienza di fornitura."
+      },
+      "euro": {
+        "title": "Conformità agli Standard Europei",
+        "desc": "Vantaggio logistico integrato che garantisce la massima efficienza di fornitura."
+      },
+      "cost": {
+        "title": "Costo e Qualità Competitivi",
+        "desc": "Vantaggio logistico integrato che garantisce la massima efficienza di fornitura."
+      }
+    }
+  },
+  "Quality": {
+    "badge": "Qualità e Operazioni",
+    "title": "La qualità non è una fase <br></br> <green>È un intero sistema di lavoro</green>",
+    "description": "Applichiamo procedure operative e di monitoraggio volte a preservare la qualità del prodotto dall'approvvigionamento alla spedizione, concentrandoci su selezione, confezionamento e integrità della catena del freddo.",
+    "steps": {
+      "step1": "Approvvigionamento",
+      "step2": "Selezione",
+      "step3": "Confezionamento",
+      "step4": "Refrigerazione",
+      "step5": "Spedizione"
+    }
+  },
+  "FinalCTA": {
+    "badge": "Partnership di Crescita Sostenibile",
+    "title": "Avvia una Partnership di Fornitura Stabile <br></br> con <green>Ezz Export</green>",
+    "description": "Se cerchi un partner di fornitura affidabile sul mercato egiziano, il nostro team è pronto a supportare le tue esigenze operative e commerciali con i più alti standard internazionali.",
+    "cta_call": "Prenota una Call Aziendale",
+    "card_title": "Guida ai Prodotti e Specifiche",
+    "card_desc": "Scopri le nostre varietà premium di frutta e verdura, gli standard di qualità globali e il nostro calendario stagionale delle esportazioni.",
+    "cta_catalog": "Scarica il Catalogo Completo"
+  },
+  "FloatingActions": {
+    "downloadCatalog": "Scarica Catalogo",
+    "chatWithUs": "Chatta con Noi"
+  },
+  "ProductsPage": {
+    "metadata": {
+      "title": "I Nostri Prodotti Agricoli | Esportazione Frutta e Verdura Fresca",
+      "description": "Scopri i prodotti agricoli premium di Ezz Export. Forniamo i migliori agrumi, frutta e verdura egiziana con qualità di esportazione internazionale."
+    },
+    "header": {
+      "our": "I Nostri",
+      "products": "Prodotti",
+      "subtitle": "Qualità <colored>Egiziana</colored> con standard internazionali.",
+      "delivery": "Spedizioni internazionali <colored>fluide</colored> e sicure.",
+      "origin": "Qualità",
+      "pure": "Purezza",
+      "nile": "Nilo.",
+      "protocol": "Protocollo Export 2026",
+      "explore": "Esplora Catalogo",
+      "stats_badges": {
+        "global_shipping": "Export Globale",
+        "quality_guaranteed": "Controllo Qualità"
+      }
+    },
+    "grid": {
+      "premiumSelection": "Selezione Premium",
+      "pureCollection": "La Collezione <italic>Pura</italic>.",
+      "filter": {
+        "all": "Tutti",
+        "fresh": "Fresco",
+        "iqf": "Surgelato (IQF)",
+        "in_brine": "In Salamoia"
+      },
+      "categories": {
+        "vegetable": "Verdure",
+        "vegetables": "Verdure",
+        "fruit": "Frutta",
+        "fruits": "Frutta"
+      },
+      "origin": "Origine",
+      "country": "Egitto",
+      "loading": "Caricamento prodotti..."
+    }
+  },
+  "b2b": {
+    "partnerships": "Partnership",
+    "bulk_title": "Ordini",
+    "bulk_subtitle": "all'Ingrosso.",
+    "description": "Catena di fornitura globale e soluzioni di imballaggio personalizzate.",
+    "contact_button": "Contatta il Team",
+    "features": {
+      "cold_chain": "Gestione Catena del Freddo",
+      "private_label": "Servizi Private Label",
+      "compliance": "Documentazione Completa"
+    }
+  },
+  "ProductDetails": {
+    "backToCatalog": "Torna al Catalogo",
+    "premiumExport": "Export Premium",
+    "directFromFarms": "Dalla Fattoria",
+    "origin": "Origine",
+    "egypt": "Egitto",
+    "quality": "Qualità",
+    "premium": "Premium",
+    "type": "Tipo",
+    "organic": "Biologico",
+    "availableSelection": "Formati Disponibili",
+    "exportPacking": "Imballaggio Export",
+    "certifiedQuality": "Qualità Certificata",
+    "contactWhatsApp": "Contatta via WhatsApp",
+    "curatedSelection": "Selezione Curata",
+    "similarItems": "Prodotti Simili",
+    "worldwideLogistics": "Logistica Globale",
+    "startJourney": "Inizia il Viaggio Export.",
+    "logisticsDesc": "Logistica gestita con cura dall'Egitto a qualsiasi porto del mondo.",
+    "directContact": "Contatto Diretto",
+    "chatWhatsApp": "Chat WhatsApp",
+    "availablePdf": "PDF Disponibile",
+    "downloadCatalog": "Scarica Catalogo",
+    "features": [
+      {
+        "title": "Europa e Golfo",
+        "desc": "Spedizione Door to Door",
+        "icon": "01"
+      },
+      {
+        "title": "Imballaggio Custom",
+        "desc": "Tuo Brand, Nostra Qualità",
+        "icon": "02"
+      },
+      {
+        "title": "Qualità Certificata",
+        "desc": "Standard Export Globali",
+        "icon": "03"
+      },
+      {
+        "title": "Risposta Rapida",
+        "desc": "Preventivi < 24 Ore",
+        "icon": "04"
+      }
+    ]
+  },
+  "Contact": {
+    "metadata": {
+      "title": "Contattaci | Ezz Export per Prodotti Agricoli",
+      "description": "Hai una domanda sui nostri prodotti o desideri una partnership commerciale? Contatta ora il team di Ezz Export. Siamo qui per aiutarti a ottenere i migliori prodotti agricoli egiziani."
+    },
+    "badge": "Contattaci",
+    "title": "Resta in <touch>Contatto.</touch>",
+    "description": "Portiamo la ricchezza del Delta del Nilo nel tuo business.",
+    "globalExports": "Export Globale",
+    "servingCountries": "Serviamo oltre 45 paesi con prodotti egiziani premium.",
+    "directCall": "Chiamata Diretta",
+    "emailUs": "Scrivici",
+    "workingHours": "Orari di Lavoro",
+    "workingHoursValue": "Dom - Gio: 9:00 - 18:00",
+    "sendInquiry": "Invia Richiesta",
+    "inquirySubtitle": "I nostri export manager risponderanno entro 24 ore.",
+    "ourLocation": "La Nostra Sede",
+    "addressValue": "Kafr El-Dawar, Beheira, Egitto",
+    "form": {
+      "fullName": "Nome Completo",
+      "fullNamePlaceholder": "Nome Completo",
+      "email": "Indirizzo Email",
+      "emailPlaceholder": "contatto@azienda.it",
+      "message": "Messaggio",
+      "messagePlaceholder": "Come possiamo aiutarti con le tue esigenze di export?",
+      "submit": "Invia Richiesta",
+      "phone": "Numero di Telefono",
+      "phonePlaceholder": "Inserisci il tuo numero",
+      "successMessage": "Il tuo messaggio è stato inviato con successo! Ti contatteremo presto.",
+      "errorMessage": "Si è verificato un errore durante l'invio. Riprova."
+    }
+  },
+  "About": {
+    "title": "Chi siamo",
+    "description": "Scopri di più su Ezz Export, la nostra storia e la nostra visione nell'esportazione dei migliori prodotti agricoli egiziani nel mondo.",
+    "Hero": {
+      "pure": "Partner",
+      "impact": "Reale.",
+      "subtitle": "Ezz Export <green>dall'Egitto</green> al mondo,",
+      "subtitle-1": "qualità di cui ti puoi fidare.",
+      "originLabel": "Origine",
+      "originValue": "Delta del Nilo",
+      "globalReach": "Copertura Globale.",
+      "download": "Scarica",
+      "catalog": "Il Nostro Catalogo"
+    },
+    "Story": {
+      "badge-1": "Dal Cuore del Nilo",
+      "badge-2": "Dal 2024",
+      "badge-3": "Prodotti di Alta Qualità",
+      "title": "La Nostra Storia.",
+      "p1": "Ezz Export è nata con un obiettivo chiaro: selezionare i migliori prodotti egiziani da fornitori affidabili e consegnarli ai mercati globali con fiducia.",
+      "p2": "Garantiamo esperienza e credibilità in ogni spedizione per diventare partner affidabili nel mercato internazionale.",
+      "button": "Contattaci Ora"
+    },
+    "Marquee": {
+      "premiumQuality": "Qualità Premium",
+      "pureSoil": "Export Professionale"
+    },
+    "Process": {
+      "subtitle": "Il Nostro Processo",
+      "title": "Dalla Terra al Successo",
+      "description": "Controlliamo ogni fase del viaggio per garantire che la freschezza del Delta del Nilo arrivi a destinazione.",
+      "steps": {
+        "step1": {
+          "title": "Selettivi",
+          "desc": "Scegliamo ogni raccolto con cura estrema. Se non è perfetto, non lascia l'azienda."
+        },
+        "step2": {
+          "title": "Certificati",
+          "desc": "I nostri prodotti superano i test di sicurezza più severi. 100% naturali."
+        },
+        "step3": {
+          "title": "Logistica",
+          "desc": "Controllo della catena del freddo dall'Egitto al tuo magazzino."
+        }
+      }
+    },
+    "ExportCTA": {
+      "badge": "Esportazione Globale",
+      "title": "Il tuo partner per il meglio dell'Egitto.",
+      "description": "Prodotti freschi, surgelati e in salamoia di qualità superiore.",
+      "downloadCatalog": "Scarica il Catalogo",
+      "contactSales": "Parla con un Esperto"
+    },
+    "Seson": {
+      "badge": "Qualità Ezz Export",
+      "title": "Le Nostre <green>Eccellenze</green>",
+      "discoverMore": "Scopri di più",
+      "viewAllProducts": "Vedi Tutti",
+      "availableVarieties": "Varietà Disponibili",
+      "exportSeason": "Stagione Export",
+      "products": {
+        "01": {
+          "name": "Carciofi",
+          "category": "Verdure",
+          "description": "Cuori di carciofo teneri, ricchi di fibre e antiossidanti. Ideali per insalate e pizze.",
+          "specs": {
+            "size": "Fresco - Surgelato - Salamoia",
+            "season": "Dicembre - Aprile"
+          }
+        },
+        "02": {
+          "name": "Mix di Verdure",
+          "category": "Verdure",
+          "description": "Miscele di piselli, carote e fagiolini, ricche di vitamine e minerali essenziali.",
+          "specs": {
+            "size": "Piselli, Carote, Fagiolini",
+            "season": "Febbraio - Luglio"
+          }
+        },
+        "03": {
+          "name": "Fragole",
+          "category": "Frutta",
+          "description": "Fragole surgelate (IQF) che mantengono sapore e consistenza. Ideali per dolci e succhi.",
+          "specs": {
+            "size": "Festival - Fortuna - Altre",
+            "season": "Gennaio - Giugno"
+          }
+        }
+      }
+    }
+  },
+  "catalog": {
+    "metadata": {
+      "title": "Richiesta Catalogo Prodotti | Ezz Export",
+      "description": "Richiedi il catalogo ufficiale dei prodotti Ezz Export. Esplora la nostra selezione premium di frutta e verdura fresca egiziana e prodotti IQF di alta qualità."
+    },
+    "heroBadge": "Catalogo Ufficiale Ezz Export",
+    "heroTitle": "Scarica il Catalogo Prodotti 2026",
+    "heroDescription": "Scopri i prodotti agricoli disponibili, le specifiche tecniche, le opzioni di imballaggio e le capacità di esportazione di Ezz Export.",
+    "formTitle": "Inizia a connetterti con il team di fornitura",
+    "formSubtitle": "Compila il modulo sottostante per ricevere direttamente i file del catalogo.",
+    "labelName": "Nome Completo",
+    "placeholderName": "Nome e Cognome",
+    "labelCompany": "Ragione Sociale",
+    "placeholderCompany": "es., AgriTrade International",
+    "labelEmail": "E-mail Aziendale",
+    "placeholderEmail": "nome@azienda.com",
+    "labelCountry": "Paese di Destinazione",
+    "placeholderCountry": "Italia, Germania, Emirati Arabi",
+    "labelProducts": "Prodotti Richiesti",
+    "placeholderProducts": "Fragole Surgelate, Cipolle Fresche",
+    "labelOrderSize": "Volume dell'Ordine Previsto",
+    "placeholderOrderSize": "Contenitore da 20 piedi, 50 Ton",
+    "submitButton": "Richiedi e Scarica il Catalogo Ora",
+    "submitting": "Elaborazione in corso.",
+    "successTitle": "Grazie per averci contattato",
+    "successDescription": "Il catalogo e i file dei prodotti saranno inviati alla tua e-mail, e il nostro team ti contatterà per discutere le tue esigenze di fornitura.",
+    "errorMsg": "Qualcosa è andato storto. Riprova."
+  }
+}

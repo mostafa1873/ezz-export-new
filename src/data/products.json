@@ -1,0 +1,781 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "category": "vegetable",
+      "status": "fresh",
+      "name_ar": "خرشوف",
+      "name_en": "Artichoke",
+      "name_it": "Carciofo",
+      "image": "../image/artichoke.fresh.jpg",
+      "description_ar": "مثالية لإضافتها إلى الحساء والصلصات وأطباق المعكرونة والمزيد، مما يجعل من السهل دمج هذه الخضار متعددة الاستخدامات في إبداعاتك الطهوية قلوب الخرشوف الطرية، مثالية للسلطات والبيتزا والأطباق الفاخرة. غنية بالألياف ومضادات الأكسدة.",
+      "description_en": "Tender artichoke hearts, perfect for salads, pizzas, and gourmet dishes. Rich in fiber and antioxidants,perfect for adding to soups, sauces, pasta dishes, and more, making it easy to incorporate this versatile vegetable into your culinary creations.",
+      "description_it": "Cuori di carciofo teneri, perfetti per insalate, pizze e piatti gourmet. Ricchi di fibre e antiossidanti, perfetto da aggiungere a zuppe, salse, piatti di pasta e altro ancora, rendendo facile incorporare questa versatile verdura nelle tue creazioni culinarie."
+    },
+    {
+      "id": 2,
+      "category": "vegetable",
+      "status": "iqf",
+      "name_ar": "خرشوف مجمد",
+      "name_en": "Artichoke IQF",
+      "name_it": "Carciofo IQF",
+      "image": "../image/Artichoke IQF.png",
+      "description_ar": "الخرشوف المصري المجمد هو خضروات عالية الجودة، يتم حصادها وتجميدها مباشرةً للحفاظ على نكهتها وقيمتها الغذائية. يتميز بتجميدها الفردي السريع (IQF) يمكن استخدامه في العديد من الأطباق مثل السلطات، المعكرونة، المقبلات، وأطباق الطبخ بالخضروات.",
+      "description_en": "Frozen Egyptian artichokes are high-quality vegetables, harvested and frozen immediately to preserve their flavor and nutritional value. Individually Quick Frozen (IQF) makes them ideal for use in a variety of dishes, including salads, pasta, appetizers, and vegetable casseroles.",
+      "description_it": "I carciofi egiziani surgelati sono ortaggi di alta qualità, raccolti e surgelati immediatamente per preservarne il sapore e il valore nutrizionale. La surgelazione rapida individuale (IQF) li rende ideali per l'utilizzo in una varietà di piatti, tra cui insalate, pasta, antipasti e stufati di verdure.",
+      "variants": [
+        {
+          "name_en": "Quarter Artichoke: (2-5 cm)",
+          "name_ar": "ربع الخرشوف: (5-2 سم)",
+          "name_it": "Quarto di carciofo: (2-5 cm)"
+        },
+        {
+          "name_en": "Artichoke bottoms: (3.5 cm), (7-5 ​​cm), (9-7 cm)",
+          "name_ar": "قيعان الخرشوف: (3.5 سم)، (7-5 سم)، (9-7 سم)",
+          "name_it": "Fondi di carciofo: (3,5 cm), (7-5 ​​cm), (9-7 cm)"
+        },
+        {
+          "name_en": "Artichoke hearts: Available in (20-25 pieces/kg), (25-30 pieces/kg), up to 35 pieces/kg",
+          "name_ar": "قلوب خرشوف: متوفرة بتعبئة (20-25 قطعة/كيلو)، (25-30 قطعة/كيلو)، وحتى 35 قطعة/كيلو.",
+          "name_it": "Cuori di carciofo: disponibili in (20-25 pezzi/kg), (25-30 pezzi/kg), fino a 35 pezzi/kg"
+        },
+        {
+          "name_en": "Artichoke slice: (2 mm diameter) - Half an artichoke (50/40 halves/kg)",
+          "name_ar": "شريحة الخرشوف: (قطرها 2 مم) - نصف الخرشوف (50/40 نصف / كجم)",
+          "name_it": "Fetta di carciofo: (diametro 2 mm) - Mezzo carciofo (50/40 metà/kg)"
+        },
+        {
+          "name_en": "Artichoke cubes: Available in (14-20 pieces/kg)",
+          "name_ar": "كاسات الخرشوف: متوفرة بتعبئة (14-20 قطعة/كيلو).",
+          "name_it": "Cubetti di carciofo: disponibili in (14-20 pezzi/kg)"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "vegetable",
+      "status": "in_brine",
+      "name_ar": "خرشوف محلول ملحي",
+      "name_en": "Artichoke In Brine",
+      "name_it": "Salamoia di carciofi",
+      "image": "../image/Artichoke In-brine.jpg",
+      "description_ar": "خرشوف في محلول ملحي، الذي يزرع في دلتا النيل في مصر. يحافظ تحضيرنا على المذاق الطازج والملمس الناعم، في حين أن المحلول الملحي المعتدل يعزز النكهات الطبيعية. معبأة في ذروة النضج، فهي مغذية وسهلة الاستخدام للوجبات أو الترفيه. استمتع بالطعم المصري الأصيل مع الخرشوف عالي الجودة.",
+      "description_en": "Brine artichokes, grown in Egypt's Nile Delta. Our preparation maintains the fresh taste and soft texture, while the mild brine enhances the natural flavors. Packed at the peak of ripeness, they're nutritious and easy to use for meals or entertaining. Enjoy the authentic Egyptian taste with high-quality artichokes.",
+      "description_it": "Carciofi in salamoia, coltivati ​​nel Delta del Nilo in Egitto. La nostra preparazione ne mantiene il sapore fresco e la consistenza morbida, mentre la delicata salamoia ne esalta gli aromi naturali. Confezionati al massimo della maturazione, sono nutrienti e facili da usare per i pasti o per intrattenere gli ospiti. Godetevi l'autentico sapore egiziano con carciofi di alta qualità.",
+      "variants": [
+        {
+          "name_en": "Artichoke bottoms: in brine (net weight: 125 kg/drum)",
+          "name_ar": "قيعان الخرشوف: في محلول ملحي (الوزن الصافي: 125 كجم / أسطوانة)",
+          "name_it": "Fondi di carciofo: in salamoia (peso netto: 125 kg/fusto)"
+        },
+        {
+          "name_en": "Artichokes with stem: in brine (net weight: 130 kg/drum)",
+          "name_ar": "خرشوف كاس: في محلول ملحي (الوزن الصافي: 130 كجم / طبل)",
+          "name_it": "Carciofi con gambo: in salamoia (peso netto: 130 kg/cestello)"
+        },
+        {
+          "name_en": "Artichoke hearts: in brine (net weight: 150 kg/drum)",
+          "name_ar": "قلوب الخرشوف: في محلول ملحي (الوزن الصافي: 150 كجم / طبل)",
+          "name_it": "Cuori di carciofo: in salamoia (peso netto: 150 kg/fusto)"
+        },
+        {
+          "name_en": "Quarter artichokes: in brine (net weight: 160 kg/drum)",
+          "name_ar": "ربع الخرشوف: في محلول ملحي (الوزن الصافي: 160 كجم / طبل)",
+          "name_it": "Quarti di carciofo: in salamoia (peso netto: 160 kg/tamburo)"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "vegetable",
+      "status": [
+        "iqf"
+      ],
+      "name_ar": "بروكلي",
+      "name_en": "Broccoli",
+      "name_it": "Broccoli",
+      "image": "../image/product8.jpg",
+      "description_ar": "بروكلي مجمد فاخر، مصدره منطقة دلتا النيل الخصبة في مصر، يتميز بنضارة لا مثيل لها وقيمة غذائية عالية. يحافظ على لونه الزاهي ونكهته الغنية، مما يسهل إضافته إلى أي وجبة توفر منتجاتنا بالأصناف التالية:",
+      "description_en": " Premium frozen broccoli, sourced from Egypt's fertile Nile Delta region, offers unparalleled freshness and nutrition. It maintains its vibrant color and rich flavor, making it easy to add to any meal our products are available in the following varieties:",
+      "description_it": "I broccoli surgelati di alta qualità, provenienti dalla fertile regione egiziana del Delta del Nilo, offrono freschezza e proprietà nutrizionali senza pari. Mantengono il loro colore vivace e il sapore intenso, rendendoli facili da aggiungere a qualsiasi piatto I nostri prodotti sono disponibili nelle seguenti varietà:",
+      "variants": [
+        {
+          "name_en": "IQF 20-40 mm",
+          "name_ar": "مم 40-20 IQF",
+          "name_it": "IQF 20-40 mm"
+        },
+        {
+          "name_en": "IQF 30-50 mm",
+          "name_ar": "مم 50-30 IQF",
+          "name_it": "IQF 30-50 mm"
+        },
+        {
+          "name_en": "IQF 40-60 mm",
+          "name_ar": "مم 60-40 IQF",
+          "name_it": "IQF 40-60 mm"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "vegetable",
+      "status": [
+        "iqf"
+      ],
+      "name_ar": "قرنبيط",
+      "name_en": "Cauliflower",
+      "name_it": "Cavolfiore",
+      "image": "../image/Cauliflower.jpg",
+      "description_ar": "استمتع بالنكهة الطازجة والفوائد الصحية لقرنبيط فاخر من دلتا النيل في مصر. يتميز صنفنا بحلاوته الطبيعية وملمسه الناعم ولونه الابيض المميز، مما يجعله سهل الاستخدام في أطباق متنوعة توفر منتجاتنا بالأصناف التالية:",
+      "description_en": "Enjoy the fresh flavor and health benefits of premium cauliflower from the Nile Delta in Egypt. Our frozen variety captures its natural sweetness and soft texture, making it easy to use in a variety of dishes our products are available in the following varieties:",
+      "description_it": "Godetevi il sapore fresco e i benefici per la salute del cavolfiore di prima qualità proveniente dal Delta del Nilo in Egitto. La nostra varietà surgelata ne conserva la naturale dolcezza e la consistenza morbida, rendendolo facile da utilizzare in una varietà di piatti I nostri prodotti sono disponibili nelle seguenti varietà:",
+      "variants": [
+        {
+          "name_en": "IQF 20-40 mm",
+          "name_ar": "مم 40-20 IQF",
+          "name_it": "IQF 20-40 mm"
+        },
+        {
+          "name_en": "IQF 30-50 mm",
+          "name_ar": "مم 50-30 IQF",
+          "name_it": "IQF 30-50 mm"
+        },
+        {
+          "name_en": "IQF 40-60 mm",
+          "name_ar": "مم 60-40 IQF",
+          "name_it": "IQF 40-60 mm"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "category": "vegetable",
+      "status": "iqf",
+      "name_ar": "بامية",
+      "name_en": "Okra",
+      "name_it": "Okra",
+      "image": "../image/product10.jpg",
+      "description_ar": "تحافظ البامية المجمدة على قوامها الطري ونكهتها الحلوة، مما يجعلها مكونًا متعدد الاستخدامات لمختلف الاستخدامات في الشرق الأوسط. تتوفر منتجاتنا بالأنواع التالية:",
+      "description_en": "Frozen okra maintains its tender texture and sweet flavor, making it a versatile ingredient for various Middle Eastern uses. Our products come in the following varieties:",
+      "description_it": "L'okra surgelato mantiene la sua consistenza tenera e il suo sapore dolce, rendendolo un ingrediente versatile per vari usi mediorientali. I nostri prodotti sono disponibili nelle seguenti varietà:",
+      "variants": [
+        {
+          "name_en": "Fine Extra: up to 2.5 cm",
+          "name_ar": "فاين إكسترا: حتى 2.5 سم",
+          "name_it": "Extra Fine: fino a 2.5 cm"
+        },
+        {
+          "name_en": "Zero: Diameter: between 2.5 and 3.5 cm",
+          "name_ar": "زيروالقطر: بين 2.5 و 3.5 سم",
+          "name_it": "Zero: Diametro: tra 2.5 e 3.5 cm"
+        },
+        {
+          "name_en": "Excellent: Diameter between 3.5 and 4.5 cm",
+          "name_ar": "ممتاز: القطر بين 3.5 و 4.5 سم",
+          "name_it": "Eccellente: Diametro tra 3.5 e 4.5 cm"
+        },
+        {
+          "name_en": "Lady Finger: Diameter between 4.5 and 5.5 cm",
+          "name_ar": "ليدي فينجر: القطر بين 4.5 و 5.5 سم",
+          "name_it": "Lady Finger: Diametro tra 4.5 e 5.5 cm"
+        },
+        {
+          "name_en": "Turkish Okra: all sizes 0-4.5 cm, 7-4.5 cm, and 7-9 cm",
+          "name_ar": "بامية تركية: جميع الأحجام 0-4.5 سم و 7-4.5 سم و 7-9 سم",
+          "name_it": "Okra Turca: tutte le misure 0-4.5 cm, 7-4.5 cm e 7-9 cm"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "category": "vegetable",
+      "status": [
+        "fresh"
+      ],
+      "name_ar": "فاصوليا",
+      "name_en": "Beans",
+      "name_it": "Fagioli",
+      "image": "../image/newPro-5.jpeg",
+      "description_ar": "تُقطف هذه الفاصوليا الطازجة بعناية لضمان قوامها المقرمش ونكهتها الغنية، مع الحفاظ على كامل قيمتها الغذائية من المزرعة إليكم. تتوفر منتجاتنا بالأصناف التالية:",
+      "description_en": "These fresh beans are carefully picked to ensure their crisp texture and rich flavor, preserving all their nutritional value from the farm to you. Our products are available in the following varieties:",
+      "description_it": "Questi fagioli freschi sono raccolti con cura per garantirne la consistenza croccante e il sapore ricco, preservando tutto il loro valore nutrizionale dalla fattoria a voi. I nostri prodotti sono disponibili nelle seguenti varietà:"
+    },
+    {
+      "id": 7,
+      "category": "vegetable",
+      "status": "iqf",
+      "name_ar": "الفاصوليا",
+      "name_en": "Beans",
+      "name_it": "Fagioli",
+      "image": "../image/product11.png",
+      "description_ar": "يتم اختيار هذه الفاصوليا الطرية في ذروة نضجها، محتفظةً بالعناصر الغذائية الأساسية ونكهتها الطازجة. تتوفر منتجاتنا بالأصناف التالية:",
+      "description_en": "These tender beans are selected at their peak of ripeness, retaining essential nutrients and fresh flavor. Our products come in the following varieties:",
+      "description_it": "Questi teneri fagioli vengono selezionati al culmine della maturazione, conservando i nutrienti essenziali e il sapore fresco. I nostri prodotti sono disponibili nelle seguenti varietà:",
+      "variants": [
+        {
+          "name_en": "IQF Whole Green Beans (Diameter: 8-12 cm)",
+          "name_ar": "كاملة مُجمدة (القطر: 8-12 سم)",
+          "name_it": "Fagiolini interi IQF (diametro: 8-12 cm)"
+        },
+        {
+          "name_en": "IQF Cut Green Beans (Diameter: 20-40 mm)",
+          "name_ar": "مُجمدة قطع (القطر: 20-40 مم)",
+          "name_it": "Fagiolini tagliati IQF (diametro: 20-40 mm)"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "category": "vegetable",
+      "status": "iqf",
+      "name_ar": "بازلاء خضراء",
+      "name_en": "Peas",
+      "name_it": "Piselli verdi",
+      "image": "../image/product12.png",
+      "description_ar": "هذه البقوليات متعددة الاستخدامات عنصر أساسي في مطبخك، وتشكيلتنا المجمدة بسرعة تُضفي نكهات شرق أوسطية أصيلة على أطباقك على مدار العام. تتوفر منتجاتنا بالأصناف التالية:",
+      "description_en": "These versatile legumes are a kitchen staple, and our flash-frozen variety adds authentic Middle Eastern flavors to your cooking year-round. Our products come in the following varieties:",
+      "description_it": "Questi legumi versatili sono un elemento essenziale in cucina e la nostra varietà surgelata aggiunge autentici sapori mediorientali ai tuoi piatti tutto l'anno. I nostri prodotti sono disponibili nelle seguenti varietà:",
+      "variants": [
+        {
+          "name_en": "Plain Green Peas",
+          "name_ar": "بازلاء خضراء سادة",
+          "name_it": "Piselli Verdi Semplici"
+        },
+        {
+          "name_en": "Peas with Carrots",
+          "name_ar": "بازلاء مع جزر",
+          "name_it": "Piselli e Carote"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "category": "vegetable",
+      "status": "iqf",
+      "name_ar": "فول",
+      "name_en": "Broad Beans",
+      "name_it": "Fave",
+      "image": "../image/product13.webp",
+      "description_ar": "استمتع بالنكهة الغنية والفوائد الصحية لأجود أنواع الفول العريض في مصر مع صنفنا المجمد الفاخر. تُزرع هذه البقوليات في دلتا النيل، وهي عنصر أساسي في مطبخ الشرق الأوسط. مُعالَجة بطريقتين:",
+      "description_en": "Experience the rich flavor and health benefits of Egypt's finest broad beans with our premium frozen variety. Grown in the Nile Delta, these legumes are a staple in Middle Eastern cuisine. Processed in two ways:",
+      "description_it": "Scopri il sapore intenso e i benefici per la salute delle migliori fave egiziane con la nostra varietà surgelata premium. Coltivate nel Delta del Nilo, queste fave sono un alimento base della cucina mediorientale. Lavorate in due modi:",
+      "variants": [
+        {
+          "name_en": "Peeled",
+          "name_ar": "مُقشَّر",
+          "name_it": "Sbucciate"
+        },
+        {
+          "name_en": "Unpeeled",
+          "name_ar": "غير مُقشَّر",
+          "name_it": "Con buccia"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "category": "vegetable",
+      "status": "iqf",
+      "name_ar": "ملوخية",
+      "name_en": "Molokhia",
+      "name_it": "Molochia",
+      "image": "../image/product14.webp",
+      "description_ar": " الملوخية المجمدة تُقطف وتُجهز بعناية لتكون جاهزة للطهي فوراً، دون عناء الغسيل أو التخرط. نضمن لك القوام المثالي واللون الأخضر الطازج في كل كيس. متوفرة بالأنواع التالية:",
+      "description_en": "Frozen Molokhia: Carefully harvested and processed to be kitchen-ready. No washing or mincing required. We guarantee the perfect texture and a vibrant natural green color in every pack. Available in the following varieties:",
+      "description_it": "Molochia surgelata: Raccolta e lavorata con cura per essere pronta alla cottura. Senza bisogno di lavarla o sminuzzarla. Garantiamo la consistenza perfetta e il colore verde intenso in ogni confezione. Disponibile nelle seguenti varianti:",
+      "variants": [
+        {
+          "name_en": "Whole leaves",
+          "name_ar": "أوراق كاملة",
+          "name_it": "Foglie intere"
+        },
+        {
+          "name_en": "Chopped leaves",
+          "name_ar": "أوراق مفرومة",
+          "name_it": "Foglie tritate"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "category": "vegetable",
+      "status": "iqf",
+      "name_ar": "سبانخ",
+      "name_en": "Spinach",
+      "name_it": "Spinaci",
+      "image": "../image/product15.jpeg",
+      "description_ar": "يُحافظ السبانخ المُجمد لدينا على حلاوة هذه الخضار وملمسها الطبيعي، مما يُسهّل استخدامه في أطباق مُتنوعة. تتوفر منتجاتنا بالأنواع التالية:",
+      "description_en": "Our frozen spinach captures the vegetable's natural sweetness and texture, making it easy to use in a variety of dishes. Our products come in the following varieties:",
+      "description_it": "I nostri spinaci surgelati mantengono la naturale dolcezza e consistenza della verdura, rendendoli facili da usare in una varietà di piatti. I nostri prodotti sono disponibili nelle seguenti varietà:",
+      "variants": [
+        {
+          "name_en": "Whole leaves",
+          "name_ar": "أوراق كاملة",
+          "name_it": "Foglie intere"
+        },
+        {
+          "name_en": "Chopped leaves",
+          "name_ar": "أوراق مُقطّعة",
+          "name_it": "Foglie tritate"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "category": "vegetable",
+      "status": "iqf",
+      "name_ar": "ذرة حلوة",
+      "name_en": "Sweet Corn",
+      "name_it": "Mais dolce",
+      "image": "../image/product16.png",
+      "description_ar": "تحافظ الذرة الحلوة المجمدة على نكهتها الطبيعية، مما يجعلها مكونًا بسيطًا وعمليًا للعديد من الأطباق. تتوفر منتجاتنا بالأنواع التالية:",
+      "description_en": "Frozen sweetcorn retains the natural goodness of the vegetable, making it a simple and practical ingredient for many dishes. Our products come in the following varieties:",
+      "description_it": "Il mais dolce congelato conserva la naturale bontà della verdura, rendendolo un ingrediente semplice e pratico per molti piatti. I nostri prodotti sono disponibili nelle seguenti varietà:",
+      "variants": [
+        {
+          "name_en": "Sweet corn (kernel)",
+          "name_ar": "ذرة حلوة (حبة)",
+          "name_it": "Mais dolce (chicchi)"
+        },
+        {
+          "name_en": "Sweet corn (on the cob)",
+          "name_ar": "ذرة حلوة (على الكوز)",
+          "name_it": "Mais dolce (pannocchie)"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "category": "vegetable",
+      "status": "iqf",
+      "name_ar": "بصل",
+      "name_en": "Onion",
+      "name_it": "Cipolla",
+      "image": "../image/product17.jpeg",
+      "description_ar": "بصلنا المصري المجمد غني بالفيتامينات والمعادن ومضادات الأكسدة الأساسية، وهو ليس لذيذًا فحسب، بل مصدر ممتاز لفيتامين سي والألياف والمنجنيز. هذه الخضراوات الغنية بالعناصر الغذائية تُضفي لمسةً رائعةً على وجبات عائلتك الصحية والنباتية.",
+      "description_en": "Packed with essentialvitamins, minerals, and antioxidants, our frozen Egyptian Onions are not only delicious but also an excellent source of vitamin C, fiber, and manganese. This nutrient-dense vegetable is a fantastic way to add more wholesome, plant-based goodness to your family's meals.",
+      "description_it": "Ricche di vitamine, minerali e antiossidanti essenziali, le nostre cipolle egiziane surgelate non sono solo deliziose, ma anche un'eccellente fonte di vitamina C, fibre e manganese. Questo ortaggio ricco di nutrienti è un modo fantastico per aggiungere più bontà vegetale ai pasti della tua famiglia."
+    },
+    {
+      "id": 14,
+      "category": "vegetable",
+      "status": "in_brine",
+      "name_ar": "فلفل هالابينو أحمر",
+      "name_en": "Red jalapeno pepper",
+      "name_it": "Peperoncino jalapeno rosso",
+      "image": "../image/product18.jpg",
+      "description_ar": "يُستخدم في المطبخ المصري، وفي أطباق متنوعة حول العالم، كتوابل في السلطات والصلصات والمخللات، ويُقدم طازجًا أو متبلًا. يُزرع في مصر في مزارع متخصصة متوفر براميل صناعية احجامها:",
+      "description_en": "It is used in Egyptian cuisine and various dishes around the world as a spice in salads, sauces, and pickles, and can be served fresh or marinated. It is grown in Egypt on specialized farms, Available Industrial drums:",
+      "description_it": "Viene utilizzato nella cucina egiziana e in vari piatti in tutto il mondo come spezia in insalate, salse e sottaceti, e può essere servito fresco o marinato. Viene coltivato in Egitto in aziende agricole specializzate. Disponibili Fusti industriali:",
+      "variants": [
+        {
+          "name_en": "140 kg (0.5 - 1.0 cm) barrel",
+          "name_ar": "برميل 140 كجم (٠.٥ - ١.٠ سم)",
+          "name_it": "Barile da 140 kg (0,5 - 1,0 cm)"
+        },
+        {
+          "name_en": "160 kg (0.5 - 1.0 cm) barrel",
+          "name_ar": "برميل 160 كجم (٠.٥ - ١.٠ سم)",
+          "name_it": "Barile da 160 kg (0,5 - 1,0 cm)"
+        },
+        {
+          "name_en": "225 kg (0.5 - 1.0 cm) barrel",
+          "name_ar": "برميل 225 كجم (٠.٥ - ١.٠ سم)",
+          "name_it": "Barile da 225 kg (0,5 - 1,0 cm)"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "category": "vegetable",
+      "status": "in_brine",
+      "name_ar": "فلفل هالابينو أخضر",
+      "name_en": "Green jalapeno peppers",
+      "name_it": "Peperoncini jalapeno verdi",
+      "image": "../image/felfel.jpg",
+      "description_ar": "يحتوي على مادة الكابسيسين، التي تُعطيه حرارته. له استخدامات طهي وفوائد صحية متعددة، مثل تعزيز المناعة، وتحسين الدورة الدموية، والمساعدة على إنقاص الوزن تتوفر الأنواع:",
+      "description_en": "It contains capsaicin, which gives it its heat. It has multiple culinary uses and health benefits, such as boosting immunity, improving blood circulation, and aiding weight loss:",
+      "description_it": "Contiene capsaicina, che gli conferisce il suo sapore piccante. Ha molteplici usi culinari e benefici per la salute, come rafforzare il sistema immunitario, migliorare la circolazione sanguigna e favorire la perdita di peso:",
+      "variants": [
+        {
+          "name_en": "140 kg (0.5 - 1.0 cm) barrel",
+          "name_ar": "برميل 140 كجم (٠.٥ - ١.٠ سم)",
+          "name_it": "Barile da 140 kg (0,5 - 1,0 cm)"
+        },
+        {
+          "name_en": "160 kg (0.5 - 1.0 cm) barrel",
+          "name_ar": "برميل 160 كجم (٠.٥ - ١.٠ سم)",
+          "name_it": "Barile da 160 kg (0,5 - 1,0 cm)"
+        },
+        {
+          "name_en": "225 kg (0.5 - 1.0 cm) barrel",
+          "name_ar": "برميل 225 كجم (٠.٥ - ١.٠ سم)",
+          "name_it": "Barile da 225 kg (0,5 - 1,0 cm)"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "category": "vegetable",
+      "status": "iqf",
+      "name_ar": "البطاطس",
+      "name_en": "Potatoes",
+      "name_it": "Patate",
+      "image": "../image/patatos.webp",
+      "description_ar": "رقائق بطاطس مقلية جزئيًا، تُجمّد سريعًا للحفاظ على نكهتها وقوامها المقرمش. سهلة وسريعة الطهي في الفرن، أو المقلاة الهوائية، أو المقلاة التقليدية، وهي مصدر جيد للطاقة (الكربوهيدرات).",
+      "description_en": "Partially fried potato chips that are then quickly frozen to preserve their flavor and crispy texture. They are easy and quick to cook in the oven, air fryer, or skillet, and are a good source of energy (carbohydrates).",
+      "description_it": "Patatine fritte parzialmente fritte e poi rapidamente congelate per preservarne il sapore e la croccantezza. Sono facili e veloci da cuocere in forno, nella friggitrice ad aria o in padella e sono una buona fonte di energia (carboidrati)."
+    },
+    {
+      "id": 17,
+      "category": "vegetable",
+      "status": "iqf",
+      "name_ar": "خضروات مشكل",
+      "name_en": "Mixed vegetables",
+      "name_it": "Verdure miste",
+      "image": "../image/product24.jpg",
+      "description_ar": "مزيج من الخضراوات الطازجة، غالبًا ما تُجمد لتوفير الوقت وزيادة القيمة الغذائية، مثل البازلاء والجزر والفاصوليا الخضراء والذرة، يُستخدم في العديد من الأطباق المصرية. وهو غني بالفيتامينات والمعادن والألياف. يمكن طهيه كطبق جانبي منفصل. يمكن إضافته إلى الحساء والأرز واليخنات واللحوم والدجاج. يمكن استخدامه في السلطات أو كطبق خضار سوتيه.",
+      "description_en": "A mix of fresh vegetables, often frozen to save time and increase nutritional value, such as peas, carrots, green beans, and corn, is used in many Egyptian dishes. It is rich in vitamins, minerals, and fiber. It can be cooked as a separate side dish. It can be added to soups, rice, stews, meats, and chicken. It can be used in salads or as a sautéed vegetable dish.",
+      "description_it": "Un mix di verdure fresche, spesso surgelate per risparmiare tempo e aumentare il valore nutrizionale, come piselli, carote, fagiolini e mais, viene utilizzato in molti piatti egiziani. È ricco di vitamine, minerali e fibre. Può essere cucinato come contorno a parte. Può essere aggiunto a zuppe, riso, stufati, carni e pollo. Può essere utilizzato nelle insalate o come piatto di verdure saltate.",
+      "variants": [
+        {
+          "name_en": "Mixed Vegetables (Green Peas, Carrots, and Green Beans)",
+          "name_ar": "خضروات مشكلة (بازلاء، جزر، وفاصوليا خضراء)",
+          "name_it": "Misto di Verdure (Piselli, Carote e Fagiolini)"
+        },
+        {
+          "name_en": "Mixed Vegetables (Green Peas, Carrots, and Sweetcorn)",
+          "name_ar": "خضروات مشكلة (بازلاء، جزر، وذرة حلوة)",
+          "name_it": "Misto di Verdure (Piselli, Carote e Mais Dolce)"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "category": "vegetable",
+      "status": [
+        "fresh"
+      ],
+      "name_ar": "جزر",
+      "name_en": "Carrot ",
+      "name_it": "Carota",
+      "image": "../image/newPro-6.webp",
+      "description_ar": "جزر طازج وفريش جزر طازج منتقى بعناية من أجود المزارع، يتميز بلونه البرتقالي الزاهي وقوامه المقرمش وطعمه الحلو الطبيعي. تم غسله وتنظيفه جيداً ليكون جاهزاً للاستخدام المباشر. يعد إضافة مثالية للسلطات، العصائر الصحية، أو كوجبة خفيفة ومغذية. غني جداً بالبيتا كاروتين وفيتامين A الضروري لصحة النظر والبشرة.",
+      "description_en": "Fresh Carrots Premium fresh carrots, carefully selected from the finest farms, featuring a vibrant orange color, crunchy texture, and natural sweet flavor. Thoroughly washed and cleaned for immediate use. They are a perfect addition to salads, healthy juices, or as a nutritious snack. Rich in beta-carotene and Vitamin A, essential for eye health and glowing skin.",
+      "description_it": "Carote Fresche Carote fresche di prima scelta, selezionate dai migliori raccolti, caratterizzate da un colore arancione vivace, una consistenza croccante e un sapore naturalmente dolce. Lavate e pulite accuratamente per un uso immediato. Sono l'aggiunta perfetta per insalate, succhi salutari o come spuntino nutriente. Ricche di beta-carotene e vitamina A, essenziali per la vista e la salute della pelle.",
+      "variants": [
+        {
+          "name_en": "10x10 Cubes",
+          "name_ar": "مكعبات (10×10)",
+          "name_it": "Cubetti 10x10"
+        },
+        {
+          "name_en": "10x10 Rings",
+          "name_ar": "حلقات (10×10)",
+          "name_it": "Anelli 10x10"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "category": "vegetable",
+      "status": [
+        "iqf",
+        "in_brine"
+      ],
+      "name_ar": "جزر",
+      "name_en": "Carrot ",
+      "name_it": "Carota",
+      "image": "../image/product25.jpg",
+      "description_ar": "جزر طازج تم تقشيره وتقطيعه وتجميده بسرعة للحفاظ على نكهته وقيمته الغذائية. يُستخدم في العديد من الوصفات مثل الشوربات واليخنات، ويتميز بمدة صلاحية طويلة وسهولة الاستخدام، حيث يمكن طهيه مباشرة من الفريزر. وهو مصدر جيد لفيتامين A والألياف.",
+      "description_en": "Fresh carrots have been peeled, sliced, and quickly frozen to preserve their flavor and nutritional value. Used in many recipes, such as soups and stews, they have a long shelf life and are easy to use, as they can be cooked straight from the freezer. They are a good source of vitamin A and fiber.",
+      "description_it": "Le carote fresche vengono pelate, affettate e rapidamente congelate per preservarne il sapore e il valore nutrizionale. Utilizzate in molte ricette, come zuppe e stufati, hanno una lunga conservazione e sono facili da usare, poiché possono essere cucinate direttamente dal congelatore. Sono una buona fonte di vitamina A e fibre."
+    },
+    {
+      "id": 30,
+      "category": "vegetable",
+      "status": [
+        "fresh"
+      ],
+      "name_ar": "خس كابتشو",
+      "name_en": "Capcho lettuce ",
+      "name_it": "Lattuga Capcho",
+      "image": "../image/newPro-7.webp",
+      "description_ar": "خس كابوتشا طازج خس كابوتشا طازج يتميز بأوراقه المقرمشة والمنعشة، تم غسله وتجهيزه بعناية للحفاظ على جودته العالية. يُعد خياراً مثالياً للسلطات، السندوتشات، والمقبلات بفضل قوامه الفريد وطعمه الخفيف. يتميز بسهولة الاستخدام والتحضير السريع، كما أنه مصدر ممتاز للمياه والألياف الطبيعية، مما يجعله إضافة صحية ومنعشة لوجباتك اليومية.",
+      "description_en": "Fresh Iceberg Lettuce Fresh Iceberg lettuce, known for its crisp and refreshing leaves, carefully washed and prepared to maintain its high quality. It is an ideal choice for salads, sandwiches, and appetizers thanks to its unique texture and mild flavor. Highly convenient and quick to prepare, it is an excellent source of hydration and natural fiber, making it a healthy and refreshing addition to your daily meals.",
+      "description_it": "Lattuga Iceberg Fresca Lattuga Iceberg fresca, caratterizzata da foglie croccanti e rinfrescanti, accuratamente lavata e preparata per mantenerne l'alta qualità. È la scelta ideale per insalate, panini e antipasti grazie alla sua consistenza unica e al gusto delicato. Pronta all'uso e veloce da preparare, è un'ottima fonte di idratazione e fibre naturali, rendendola un'aggiunta sana e rinfrescante ai tuoi pasti quotidiani."
+    },
+    {
+      "id": 19,
+      "category": "vegetable",
+      "status": [
+        "iqf",
+        "in_brine"
+      ],
+      "name_ar": "فلفل ملون",
+      "name_en": "Colored Pepper",
+      "name_it": "Pepe Colorato",
+      "image": "../image/felfelcolor.webp",
+      "description_ar": "خيار غذائي ممتاز يحافظ على نكهة الفلفل الطازج وفوائده من خلال التجميد السريع، ويمكن استخدامه في أطباق متنوعة، مثل السلطات والمشويات والمعكرونة. يُحضّر بتقطيع الفلفل وغسله، ثم يُجمّد بسرعة ويُحفظ في المُجمد لمدة تصل إلى عام.",
+      "description_en": "An excellent food option that preserves the flavor and benefits of fresh peppers through rapid freezing, it can be used in a variety of dishes, such as salads, grilled dishes, and pasta. Prepared by cutting and washing the peppers, they are then quickly frozen and can be stored in the freezer for up to a year.",
+      "description_it": "Un'eccellente opzione alimentare che preserva il sapore e i benefici dei peperoni freschi grazie al congelamento rapido, e può essere utilizzata in una varietà di piatti, come insalate, grigliate e pasta. Preparati tagliando e lavando i peperoni, vengono poi congelati rapidamente e possono essere conservati nel congelatore fino a un anno.",
+      "variants": [
+        {
+          "name_en": "140/120 kg (10x10 mm) barrel cubes",
+          "name_ar": "مكعبات برميل 140/120 كجم (10×10 مم)",
+          "name_it": "Cubi di barile da 140/120 kg (10x10 mm)"
+        },
+        {
+          "name_en": "140/120 kg (5-7 mm) Barrel Strips",
+          "name_ar": "شرايح برميل 140/120 كجم (5-7 مم)",
+          "name_it": "Strisce per barili da 140/120 kg (5-7 mm)"
+        },
+        {
+          "name_en": "Half barrel cut 140/120 kg",
+          "name_ar": "نصف قطع برميل 140/120 كجم",
+          "name_it": "Taglio a mezza botte 140/120 kg"
+        },
+        {
+          "name_en": "IQF (cubes, slices, halves, and color mixes)",
+          "name_ar": "IQF (مكعبات، شرائح، أنصاف، وخليط ألوان)",
+          "name_it": "IQF (cubetti, fette, metà e miscele di colori)"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "category": "vegetable",
+      "status": [
+        "in_brine"
+      ],
+      "name_ar": "فلفل شيري",
+      "name_en": "Cherry Pepper",
+      "name_it": "Pepe Ciliegia",
+      "image": "../image/product27.webp",
+      "description_ar": "مخلل فلفل شيري هو طريقة لتحضير الفلفل الحار (مثل الشيري أو الهالبينو) مع الحفاظ عليه لفترة طويلة باستخدام محلول ملحي وخل. يعتبر من المخللات سهلة التحضير ويُستخدم كطبق جانبي أو مقبلات، ويُعرف أيضاً بمذاقه الحار ويُمكن تحضيره بسرعة أو تركه لفترة أطول.",
+      "description_en": "Pickled cherry peppers are a method of preparing hot peppers (such as cherry or jalapeño peppers) and preserving them for a long time using a brine and vinegar solution. They are easy to prepare and can be used as a side dish or appetizer. They are also known for their spicy flavor and can be prepared quickly or left to stand for a longer period.",
+      "description_it": "I peperoncini ciliegia sott'aceto sono un metodo per preparare peperoncini piccanti (come i peperoncini ciliegia o i jalapeño) e conservarli a lungo utilizzando una soluzione di salamoia e aceto. Sono facili da preparare e possono essere utilizzati come contorno o antipasto. Sono anche noti per il loro sapore piccante e possono essere preparati rapidamente o lasciati riposare per un periodo più lungo."
+    },
+    {
+      "id": 34,
+      "category": "vegetable",
+      "status": [
+        "fresh"
+      ],
+      "name_ar": "ثوم",
+      "name_en": "Garlic",
+      "name_it": "Aglio",
+      "image": "../image/product33.webp",
+      "description_ar": "نقدم لكم الثوم المصري الفريش، المزروع في أجود الأراضي المصرية والمعروف بنكهته القوية وجودته العالية. يتم حصاده وفرزه وتعبئته بعناية فائقة لضمان وصوله بأفضل حالة، مطابقًا لأعلى معايير الجودة العالمية ومثاليًا لمتطلبات الأسواق الخارجية والتصدير.",
+      "description_en": "We offer fresh Egyptian garlic, grown in the finest Egyptian soil and known for its robust flavor and superior quality. It is harvested, sorted, and packaged with meticulous care to ensure it arrives in perfect condition, meeting the highest international quality standards and ideally suited to the demands of international markets and export.",
+      "description_it": "Offriamo aglio egiziano fresco, coltivato nei migliori terreni egiziani e rinomato per il suo sapore intenso e la sua qualità superiore. Viene raccolto, selezionato e confezionato con la massima cura per garantire che arrivi in ​​perfette condizioni, soddisfacendo i più elevati standard di qualità internazionali e risultando ideale per le esigenze dei mercati internazionali e per l'esportazione.",
+      "variants": [
+        {
+          "name_en": "Caliber : 20, 30 , 40 , 50 , 60 , 70 , 80 Mm ",
+          "name_ar": "القطر (المقاس): 20، 30، 40، 50، 60، 70، 80 ملم",
+          "name_it": "Calibro : 20, 30 , 40 , 50 , 60 , 70 , 80 Mm "
+        },
+        {
+          "name_en": "Packaging: Carton or Mesh Bags, 10 kg, 15 kg as per request.",
+          "name_ar": "التعبئة: كرتون  أكياس شبكية  أسبتة حسب الطلب",
+          "name_it": "Imballaggio: Cartone o Sassi di Rete, 10 kg, 15 kg su richiesta."
+        },
+        {
+          "name_en": "Packaging: Carton or Mesh Bags, 10 kg, 15 kg as per request.",
+          "name_ar": "التعبئة: كرتون  أكياس شبكية  أسبتة حسب الطلب",
+          "name_it": "Imballaggio: Cartone o Sassi di Rete, 10 kg, 15 kg su richiesta."
+        },
+        {
+          "name_en": "Unite weight : As Client Request",
+          "name_ar": "وزن الوحدة: حسب طلب العميل",
+          "name_it": "Peso unitario : Come Richiesto dal Cliente"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "category": "fruit",
+      "status": [
+        "iqf"
+      ],
+      "name_ar": "الفراولة",
+      "name_en": "Strawberry",
+      "name_it": "Fragola",
+      "image": "../image/product20.webp",
+      "description_ar": "يتم تجميد فراولتنا بسرعة للحفاظ على الطعم الطبيعي والحلاوة والقوام الطازج، مما يجعلها سهلة الاستخدام في الحلويات والعصائر والمزيد. لا تحتاج إلى الغسل أو التقطيع؛ فقط قم بإذابة التجميد وأضفها إلى الزبادي أو المخبوزات أو المشروبات أشكال المنتج المتاحة: كاملة ومقطعة مكعبات وأنصاف وشرائح جميعها تتم معالجتها داخل مصانعنا بمعيار جودة مرتفع (Brix +7).",
+      "description_en": "Our strawberries are quickly frozen to preserve their natural flavor, sweetness, and fresh texture, making them easy to use in desserts, smoothies, and more. No washing or chopping required; simply thaw and add to yogurt, baked goods, or drinks Available product forms: Whole, Diced, Half, Sliced All processed in-house to a high quality standard (Brix +7).",
+      "description_it": "Le nostre fragole vengono congelate rapidamente per preservarne il sapore naturale, la dolcezza e la consistenza fresca, rendendole facili da usare in dessert, frullati e altro ancora. Non è necessario lavarle o tagliarle; basta scongelarle e aggiungerle a yogurt, prodotti da forno o bevande Formati di prodotto disponibili: Intero, a cubetti, a metà, a fette. Tutti lavorati internamente secondo elevati standard qualitativi (Brix +7).",
+      "variants": [
+        {
+          "name_en": "Festival, Fortuna, Sensation, And other types",
+          "name_ar": "Festival, Fortuna, Sensation, وأنواع أخرى",
+          "name_it": "Festival, Fortuna, Sensazione, e altri tipi"
+        },
+        {
+          "name_en": "Sizes: Non-calibrated, size (15-25 mm), size (25-35 mm)",
+          "name_ar": "الأحجام: غير معايرة و حجم (15-25 مم) وحجم (25-35 مم)",
+          "name_it": "Dimensioni: Non calibrato, dimensione (15-25 mm), dimensione (25-35 mm)"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "category": "fruit",
+      "status": [
+        "fresh"
+      ],
+      "name_ar": "برتقال",
+      "name_en": "Orange",
+      "name_it": "Arancia",
+      "image": "../image/product21.webp",
+      "description_ar": "برتقال فاخر يتميز بحلاوته المنعشة وعصارته الوفيرة ومحتواه العالي من فيتامين C. تشمل أصنافه الرئيسية أبو سرة وفالنسيا، والتي تُقطف في ذروة نضجها لضمان توازن مثالي للنكهة. غني بالعناصر الغذائية الأساسية مثل البوتاسيوم والألياف، مما يجعله ضرورياً لتعزيز جهاز المناعة ودعم صحة القلب والجهاز الهضمي.",
+      "description_en": "Premium quality oranges, renowned for their refreshing sweetness, abundant juice, and high Vitamin C content. Featuring top varieties like Navel and Valencia, they are harvested at peak ripeness to ensure a perfect balance of flavor. Packed with essential nutrients like potassium and fiber, they are vital for strengthening the immune system and supporting heart and digestive health.",
+      "description_it": "Arance di prima qualità, rinomate per la loro dolcezza rinfrescante, l'abbondante succo e l'alto contenuto di vitamina C. Disponibili nelle varietà principali come Navel e Valencia, vengono raccolte alla perfetta maturazione. Ricche di nutrienti essenziali come potassio e fibre, sono fondamentali per rafforzare il sistema immunitario e favorire la salute del cuore e dell'apparato digerente."
+    },
+    {
+      "id": 23,
+      "category": "fruit",
+      "status": [
+        "iqf",
+        "fresh"
+      ],
+      "name_ar": "مانجو",
+      "name_en": "Mango ",
+      "name_it": "Mango ",
+      "image": "../image/product22.png",
+      "description_ar": "تُعتبر المانجو مصدرًا غنيًا بالفيتامينات (مثل فيتامين أ وج) والمعادن، بالإضافة إلى الأحماض الماليك والستريك. تحتل المانجو المصرية المرتبة الثالثة في التجارة بعد الموالح والعنب، وتُنتج مصر ما يقرب من 1.7 مليون طن سنويًا، وفقًا لآخر الإحصاءات منتجاتنا تتوفر بانواع:",
+      "description_en": "Mangoes are a rich source of vitamins (such as vitamins A and C) and minerals, as well as malic and citric acids. Egyptian mangoes rank third in trade after citrus fruits and grapes, with Egypt producing approximately 1.7 million tons annually, according to the latest statistics our products are available in the following types:",
+      "description_it": "I mango sono una ricca fonte di vitamine (come le vitamine A e C) e minerali, nonché di acido malico e citrico. Secondo le ultime statistiche, i mango egiziani sono al terzo posto nel commercio dopo agrumi e uva, con una produzione annua di circa 1,7 milioni di tonnellate I nostri prodotti sono disponibili nelle seguenti tipologie:",
+      "variants": [
+        {
+          "name_en": "cubes",
+          "name_ar": "مكعبات",
+          "name_it": "cubi"
+        },
+        {
+          "name_en": "equity",
+          "name_ar": "انصاف",
+          "name_it": "equità"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "category": "fruit",
+      "status": [
+        "fresh"
+      ],
+      "name_ar": "ليمون اضاليا",
+      "name_en": "Adalia Lemon",
+      "name_it": "Adalia Limone",
+      "image": "../image/newPro-1.webp",
+      "description_ar": "ليمون أضاليا طازج ليمون أضاليا فاخر يتميز بحجمه الكبير ولونه الأصفر الذهبي وقشرته الناعمة الغنية بالزيوت العطرية. يحتوي على كمية وفيرة من العصير المنعش بنكهة حمضية متوازنة، مما يجعله مثاليًا لتحضير العصائر، تتبيل المأكولات البحرية، وإضافة لمسة مميزة للحلويات. يعتبر مصدراً هائلاً لفيتامين C ومضادات الأكسدة التي تعزز المناعة.",
+      "description_en": "Fresh Adalia Lemon Premium Adalia lemons, known for their large size, vibrant golden yellow color, and smooth rind rich in aromatic oils. They provide an abundance of refreshing juice with a perfectly balanced acidic flavor, making them ideal for beverages, seasoning seafood, and enhancing desserts. A powerhouse of Vitamin C and antioxidants that boost the immune system.",
+      "description_it": "Limone Adalia Fresco Limoni Adalia di prima qualità, caratterizzati dalle grandi dimensioni, dal colore giallo intenso e dalla buccia liscia ricca di oli essenziali. Offrono un'abbondante quantità di succo rinfrescante con un sapore acido equilibrato, rendendoli ideali per spremute, condire frutti di mare e guarnire dolci. Sono una fonte eccezionale di vitamina C e antiossidanti che rafforzano il sistema immunitario."
+    },
+    {
+      "id": 25,
+      "category": "fruit",
+      "status": [
+        "iqf",
+        "fresh"
+      ],
+      "name_ar": "جوافة",
+      "name_en": "Guava",
+      "name_it": "Guaiava",
+      "image": "../image/newPro-2.webp",
+      "description_ar": "فاخرة جوافة طازجة منتقاة بعناية، تتميز برائحتها العطرية النفاذة وقوامها الكريمي وطعمها السكري اللذيذ. تعتبر من أغنى المصادر الطبيعية بفيتامين C (أضعاف ما يوجد في البرتقال)، مما يجعلها مثالية لتعزيز المناعة. يمكن تناولها طازجة، أو استخدامها لتحضير عصائر طبيعية منعشة غنية بالألياف والمعادن.",
+      "description_en": "Premium Fresh Guava Carefully selected fresh guava, known for its intense aromatic fragrance, creamy texture, and delicious sweet taste. It is one of the richest natural sources of Vitamin C (containing several times more than oranges), making it perfect for boosting immunity. Enjoy it fresh or use it to prepare refreshing natural juices rich in fiber and minerals.",
+      "description_it": "Guava Fresca Premium Guava fresca selezionata con cura, caratterizzata dal suo profumo intenso e aromatico, dalla consistenza cremosa e dal sapore dolce e delizioso. È una delle fonti naturali più ricche di vitamina C, rendendola ideale per rafforzare il sistema immunitario. Ottima da gustare fresca o per preparare succhi naturali rinfrescanti, ricchi di fibre e minerali.",
+      "variants": [
+        {
+          "name_en": "Whole Grain",
+          "name_ar": "حبه كامله",
+          "name_it": "Integrale"
+        },
+        {
+          "name_en": "Pitted Halves",
+          "name_ar": "أنصاف مخلية",
+          "name_it": "Metà Denocciolate"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "category": "fruit",
+      "status": [
+        "iqf",
+        "fresh"
+      ],
+      "name_ar": "رمان",
+      "name_en": "Pomegranate",
+      "name_it": "melograno",
+      "image": "../image/newPro-3.jpg",
+      "description_ar": "رمان طازج فاخر رمان طازج من أجود المحاصيل، يتميز بحباته الحمراء الياقوتية الممتلئة بالعصير وطعمه الفريد الذي يجمع بين الحلاوة واللمحة الحمضية المنعشة. يعتبر الرمان كنزاً من مضادات الأكسدة والفيتامينات التي تعزز صحة القلب والدورة الدموية. مثالي للتناول المباشر، أو لإضافته للسلطات والمقبلات، أو لتحضير عصير الرمان الطبيعي المركز.",
+      "description_en": "Premium Fresh Pomegranate Premium fresh pomegranates, featuring deep ruby-red arils bursting with juice and a unique flavor that perfectly balances sweetness with a refreshing tartness. Known as a superfood, it is packed with antioxidants and vitamins that support heart health and circulation. Perfect for snacking, adding to salads and appetizers, or preparing pure, refreshing pomegranate juice.",
+      "description_it": "Melagrana Fresca Premium Melagrana fresca di qualità superiore, caratterizzata da chicchi color rosso rubino ricchi di succo e da un sapore unico che unisce dolcezza e una fresca nota acidula. Considerata un superfood, è un tesoro di antiossidanti e vitamine che favoriscono la salute del cuore e la circolazione. Ideale da gustare al naturale, da aggiungere a insalate e antipasti, o per preparare spremute fresche e genuine."
+    },
+    {
+      "id": 27,
+      "category": "vegetable",
+      "status": [
+        "iqf",
+        "fresh"
+      ],
+      "name_ar": "بطاطا",
+      "name_en": "Potato",
+      "name_it": "Patata Dolce",
+      "image": "../image/newPro-4.webp",
+      "description_ar": "بطاطا حلوة طازجة بطاطا حلوة منتقاة بعناية، تتميز بقوامها الناعم وطعمها العسلي الطبيعي الذي يزداد روعة عند الطهي. تعد خياراً مثالياً للشواء أو السلق أو كإضافة مبتكرة للحلويات والمخبوزات. وهي مصدر ممتاز للطاقة والبيتا كاروتين والألياف الغذائية، مما يجعلها وجبة مشبعة وصحية للكبار والأطفال على حد سواء.",
+      "description_en": "Fresh Sweet Potatoes Carefully selected sweet potatoes, known for their smooth texture and naturally honey-like flavor that intensifies when cooked. They are perfect for roasting, boiling, or as a creative addition to desserts and baked goods. An excellent source of energy, beta-carotene, and dietary fiber, they make a nutritious and satisfying meal for both adults and children.",
+      "description_it": "Patate Dolci Fresche Patate dolci selezionate con cura, caratterizzate da una consistenza morbida e un sapore naturalmente dolce che si esalta con la cottura. Sono ideali da fare al forno, bollite o come ingrediente creativo per dolci e prodotti da forno. Ottima fonte di energia, beta-carotene e fibre alimentari, rappresentano un pasto sano e nutriente per grandi e piccini."
+    },
+    {
+      "id": 31,
+      "category": "fruit",
+      "status": [
+        "iqf"
+      ],
+      "name_ar": "مشمش",
+      "name_en": "Apricot",
+      "name_it": "Albicocca",
+      "image": "../image/product31.webp",
+      "description_ar": "مشمش مجمد فاخر مشمش منتقى بعناية في ذروة نضجه لضمان الحفاظ على لونه الزاهي وطعمه المتوازن بين الحلاوة والحموضة الطبيعية. يتم تجميده بسرعة للحفاظ على قيمته الغذائية وقوامه المثالي، مما يجعله خياراً رائعاً لتحضير العصائر، المربى، والحلويات المبتكرة. غني بالفيتامينات ومضادات الأكسدة، ليكون إضافة صحية ومنعشة لوجباتكم طوال العام.",
+      "description_en": "Premium Frozen Apricots Carefully selected at the peak of ripeness, our frozen apricots preserve their vibrant color and the perfect balance of natural sweetness and tanginess. Flash-frozen to lock in nutrients and texture, they are ideal for smoothies, jams, and creative desserts. A rich source of vitamins and antioxidants, they provide a healthy and refreshing addition to your recipes all year round.",
+      "description_it": "Albicocche Surgelate di Prima Qualità Albicocche selezionate con cura nel momento di massima maturazione per garantire un colore vivace e un equilibrio perfetto tra dolcezza e acidità naturale. Surgelate rapidamente per preservare nutrienti e consistenza, sono ideali per preparare frullati, marmellate e dessert creativi. Ricche di vitamine e antiossidanti, rappresentano un'aggiunta sana e rinfrescante alle tue ricette durante tutto l'anno.",
+      "variants": [
+        {
+          "name_en": "Justice",
+          "name_ar": "انصاف",
+          "name_it": "لأiustizia"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "category": "fruit",
+      "status": [
+        "fresh"
+      ],
+      "name_ar": "قرع عسلي",
+      "name_en": "Pumpkin",
+      "name_it": "Zucca",
+      "image": "../image/product32.webp",
+      "description_ar": "نقدم لكم القرع العسلي الطازج المزروع في الأراضي الخصبة بمصر، والذي يتميز بمذاقه الغني وقوامه المتماسك. يتم حصاده، وفرزه، وتعبئته بعناية وفقًا لمعايير الجودة العالمية، مما يجعله مثاليًا للتصدير.",
+      "description_en": "We offer fresh butternut squash grown in the fertile lands of Egypt, distinguished by its rich flavor and firm texture. It is carefully harvested, sorted, and packaged according to international quality standards, making it ideal for export.",
+      "description_it": "Offriamo zucca butternut fresca, coltivata nelle fertili terre dell'Egitto, che si distingue per il suo sapore ricco e la consistenza soda. Viene raccolta, selezionata e confezionata con cura secondo gli standard di qualità internazionali, risultando ideale per l'esportazione.",
+      "variants": [
+        {
+          "name_en": "Sizes: Up to 30 kg.",
+          "name_ar": "المقاسات: حتى 30 كجم.",
+          "name_it": "Dimensioni: fino a 30 kg."
+        },
+        {
+          "name_en": "Packaging: 500 kg bags or carton boxes (10 kg, 15 kg) as per request.",
+          "name_ar": "التعبئة: بنزات 500 كجم أو صناديق كرتونية (10 كجم، 15 كجم) حسب الطلب.",
+          "name_it": "Imballaggio: sacchi da 500 kg o scatole di cartone (10 kg, 15 kg) su richiesta."
+        }
+      ]
+    }
+  ]
+}

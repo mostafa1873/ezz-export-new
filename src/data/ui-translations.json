@@ -1,0 +1,123 @@
+{
+  "navigation": {
+    "back_to_catalog": {
+      "en": "Back to Catalog",
+      "ar": "العودة للكتالوج",
+      "it": "Torna al Catalogo"
+    },
+    "premium_export": {
+      "en": "Premium Export",
+      "ar": "تصدير فاخر",
+      "it": "Esportazione Premium"
+    }
+  },
+  "product_badge": {
+    "direct_farms": {
+      "en": "Direct from Farms",
+      "ar": "مباشرة من المزارع",
+      "it": "Diretto dalle Fattorie"
+    }
+  },
+  "specs": {
+    "origin_label": { "en": "Origin", "ar": "المنشأ", "it": "Origine" },
+    "origin_value": { "en": "Egypt", "ar": "مصر", "it": "Egitto" },
+    "quality_label": { "en": "Quality", "ar": "الجودة", "it": "Qualità" },
+    "quality_value": { "en": "Premium", "ar": "فاخرة", "it": "Premium" },
+    "type_label": { "en": "Type", "ar": "النوع", "it": "Tipo" },
+    "type_value": { "en": "Organic", "ar": "أورجانيك", "it": "Biologico" }
+  },
+  "sections": {
+    "available_selection": {
+      "en": "Available Selection",
+      "ar": "الأنواع المتاحة",
+      "it": "Selezione Disponibile"
+    },
+    "export_packing": {
+      "en": "Export Packing",
+      "ar": "تغليف للتصدير",
+      "it": "Imballaggio Export"
+    },
+    "certified_quality": {
+      "en": "Certified Quality",
+      "ar": "جودة معتمدة",
+      "it": "Qualità Certificata"
+    }
+  },
+  "actions": {
+    "whatsapp_btn": {
+      "en": "Contact via WhatsApp",
+      "ar": "تواصل عبر واتساب",
+      "it": "Contatta via WhatsApp"
+    },
+    "inquiry_text": {
+      "en": "Inquiry about",
+      "ar": "استفسار بخصوص",
+      "it": "Richiesta su"
+    }
+  },
+  "related": {
+    "curated": {
+      "en": "Curated Selection",
+      "ar": "مختارات لك",
+      "it": "Selezione Curata"
+    },
+    "similar_items": {
+      "en": "Similar Items",
+      "ar": "منتجات مشابهة",
+      "it": "Articoli Simili"
+    }
+  },
+  "cta_banner": {
+    "logistics_ready": {
+      "en": "Worldwide Logistics Ready",
+      "ar": "جاهزون للشحن الدولي",
+      "it": "Logistica Mondiale Pronta"
+    },
+    "title_start": {
+      "en": "Start Your",
+      "ar": "ابدأ رحلة",
+      "it": "Inizia la Tua"
+    },
+    "title_highlight": {
+      "en": "Export",
+      "ar": "التصدير",
+      "it": "Esportazione"
+    },
+    "title_end": {
+      "en": "Journey.",
+      "ar": "الآن.",
+      "it": "Viaggio."
+    },
+    "description": {
+      "en": "Expertly handled logistics from Egypt to any port worldwide. 24/7 support for wholesale inquiries.",
+      "ar": "خدمات لوجستية متقنة من مصر لأي ميناء في العالم. دعم فني متواصل لطلبات الجملة.",
+      "it": "Logistica gestita sapientemente dall'Egitto verso qualsiasi porto mondiale. Supporto 24/7."
+    },
+    "btn_chat_sub": { "en": "Direct Contact", "ar": "تواصل مباشر", "it": "Contatto Diretto" },
+    "btn_chat_main": { "en": "Chat on WhatsApp", "ar": "دردش عبر واتساب", "it": "Chatta su WhatsApp" },
+    "btn_pdf_sub": { "en": "Available PDF", "ar": "ملف PDF متاح", "it": "PDF Disponibile" },
+    "btn_pdf_main": { "en": "Download Catalog", "ar": "حمل الكتالوج", "it": "Scarica Catalogo" }
+  },
+  "features": [
+    {
+      "icon": "01",
+      "title": { "en": "Europe & Gulf", "ar": "أوروبا والخليج", "it": "Europa e Golfo" },
+      "desc": { "en": "Door to Door Shipping", "ar": "شحن من الباب للباب", "it": "Spedizione Porta a Porta" }
+    },
+    {
+      "icon": "02",
+      "title": { "en": "Custom Packaging", "ar": "تغليف مخصص", "it": "Imballaggio Personalizzato" },
+      "desc": { "en": "Your Brand, Our Quality", "ar": "علامتك بجودتنا", "it": "Tuo Brand, Nostra Qualità" }
+    },
+    {
+      "icon": "03",
+      "title": { "en": "Quality Certified", "ar": "جودة معتمدة", "it": "Qualità Certificata" },
+      "desc": { "en": "Global Export Standards", "ar": "معايير تصدير عالمية", "it": "Standard Export Globali" }
+    },
+    {
+      "icon": "04",
+      "title": { "en": "Fast Response", "ar": "رد سريع", "it": "Risposta Rapida" },
+      "desc": { "en": "Quotes in < 24 Hours", "ar": "عروض أسعار < 24 ساعة", "it": "Preventivi in < 24 Ore" }
+    }
+  ]
+}
