@@ -14,6 +14,8 @@ import pro2 from "../../assets/pro2.webp";
 import pro3 from "../../assets/pro3.webp";
 import { useLocale, useTranslations } from "next-intl";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import PhilosophySection from "./PhilosophySection";
+import TargetMarketsSection from "./TargetMarketsSection";
 
 const steps = [
   {
@@ -38,68 +40,86 @@ const HeroSection = memo(() => {
   const locale = useLocale();
 
   return (
+    <section className="relative h-screen w-full flex flex-col justify-between items-center pt-[120px] pb-4 lg:pt-[130px] lg:pb-6 overflow-hidden" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
 
-    <section className="relative min-h-screen w-full flex flex-col justify-center overflow-hidden bg-white pt-8" dir="ltr">
-      <div className="absolute inset-0 z-0 flex flex-col md:flex-row">
-        <div className="flex-1 bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-40" />
-        <div className="flex-1 bg-[#051109] relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#2d5a27]/20 to-transparent" />
-        </div>
+      {/* خلفية نظيفة وهادئة جداً */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-50" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 sm:px-10 lg:px-20 py-24">
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-24">
+      <div className="relative z-10 container mx-auto px-6 sm:px-10 lg:px-16 w-full max-w-5xl flex flex-col justify-between h-full flex-1 gap-4">
 
-          <motion.div
-            initial={{ x: -40, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.9, ease: "circOut" }}
-            viewport={{ once: true }}
-            className="w-full lg:max-w-2xl flex flex-col items-center lg:items-start rtl:ms-auto lg:rtl:pr-10 relative z-20 mt-10"
-            dir={locale === 'ar' ? 'rtl' : 'ltr'}
-          >
-            {/* العنوان */}
-            <h1 className="font-black uppercase tracking-[-0.06em] leading-[0.85] text-[18vw] sm:text-[14vw] md:text-[10vw] lg:text-[8vw] text-center lg:text-start">
-              <span className="block text-[#051109] tracking-normal">{t('pure')}</span>
-              <span className="block text-[#2d5a27] mt-1 tracking-normal">{t('impact')}</span>
-            </h1>
+        {/* 1. قسم النصوص: حجم كبير محترم ومستحيل يدخل في الـ Navbar */}
+        <motion.div
+          initial={{ y: 15, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="w-full flex flex-col items-center text-center max-w-3xl mx-auto shrink-0"
+        >
+          <h1 className="font-black tracking-tight leading-tight text-4xl sm:text-5xl lg:text-6xl text-[#051109]">
+            <span className="block opacity-90">{t('pure')}</span>
+            <span className="block text-[#2d5a27] mt-1 sm:mt-2">{t('impact')}</span>
+          </h1>
 
-            {/* النصوص */}
-            <div className="mt-8 lg:mt-12 flex flex-col gap-3 items-center lg:items-start text-center lg:text-start">
-              <p className="text-lg sm:text-xl md:text-2xl font-bold text-slate-700 uppercase tracking-tight leading-snug">
-                {t.rich('subtitle', {
-                  green: (chunks) => <span className="text-[#2d5a27]">{chunks}</span>,
-                  br: () => <br className="hidden lg:block" />
-                })}
-              </p>
-              <p className="text-lg sm:text-xl md:text-2xl font-bold text-slate-700 uppercase tracking-tight leading-snug">
-                {t('subtitle-1')}
-              </p>
+          <p className="mt-2 text-base sm:text-lg font-medium text-slate-500 leading-relaxed max-w-xl">
+            {t.rich('subtitle', {
+              green: (chunks) => <span className="text-[#2d5a27] font-bold">{chunks}</span>,
+              br: () => <br className="hidden sm:block" />
+            })}
+          </p>
+        </motion.div>
+
+        {/* الكرت الكبير المدمج الموزون بدون قطع أو تداخل وملتزم بالـ h-screen */}
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="w-full bg-[#051109] rounded-[2.5rem] p-6 pb-6 flex flex-col justify-between flex-1 my-auto shadow-xl relative overflow-hidden"
+        >
+          {/* لمسة تدرج ضوئي خفيفة جداً لإبراز المنتج داخل الكرت */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none z-0" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-xl h-full bg-[#2d5a27]/10 rounded-full blur-[120px] pointer-events-none z-0" />
+
+          {/* 2. قسم الصورة: تم التكبير هنا! */}
+          <div className="relative w-full flex-1 flex items-center justify-center z-10 min-h-0 mb-4">
+            {/* وسعنا مساحة العرض (max-w-3xl) عشان الصورة تاخد راحتها */}
+            <div className="relative w-full max-w-3xl h-full">
+              <Image
+                src={arch}
+                alt="Ezz Trading Products"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 800px"
+                // تم استخدام التكبير البصري (scale) بقيم كبيرة خصوصاً للموبايل عشان تملأ المكان
+                className="object-contain object-bottom transform-gpu scale-[2.0] sm:scale-125 lg:scale-[1.40]"
+              />
+            </div>
+          </div>
+
+          {/* 3. شريط التحكم السفلي: ظاهر بالكامل ومستحيل يتغطي وثابت في مكانه */}
+          <div className="w-full pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 z-10 shrink-0">
+            {/* تفاصيل المنشأ */}
+            <div className="text-center sm:text-start">
+              <p className="text-[9px] font-bold tracking-widest uppercase text-slate-400">{t('originLabel')}</p>
+              <p className="text-sm font-bold text-white mt-0.5">{t('originValue')}</p>
             </div>
 
-            {/* زر التحميل + الأيقونات - تم تعديل التنسيق هنا للموبايل */}
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="mt-10 flex flex-wrap justify-center lg:justify-start items-center gap-6 lg:gap-8 w-full"
-            >
-              {/* زر الكتالوج */}
+            {/* الأزرار والسوشيال ميديا في كتلة واحدة نظيفة جداً */}
+            <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+              {/* زر الكتالوج النظيف */}
               <a
                 href="/catalog.pdf"
                 download
-                className="group relative inline-flex mb-10 lg:mb-0 items-center gap-3 bg-[#051109] text-white px-8 py-4 rounded-full overflow-hidden transition-all hover:ring-2 hover:ring-[#2d5a27] hover:ring-offset-2 hover:bg-[#2d5a27] shrink-0"
+                className="group inline-flex items-center justify-center gap-2 bg-white text-[#051109] px-5 py-2.5 rounded-xl transition-colors duration-300 hover:bg-[#2d5a27] hover:text-white font-bold text-xs uppercase tracking-wider w-full sm:w-auto"
               >
-                <span className="relative z-10 text-base font-bold uppercase tracking-wider">
-                  {t('catalog')}
-                </span>
-                <div className="relative z-10 bg-white/20 rounded-full p-2 group-hover:bg-white group-hover:text-[#2d5a27] transition-colors">
-                  <FiArrowDown className="w-4 h-4" />
-                </div>
+                <span>{t('catalog')}</span>
+                <FiArrowDown className="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform" />
               </a>
 
-              {/* أيقونات السوشيال */}
-              <div className="items-center gap-4 hidden lg:flex">
+              {/* أيقونات السوشيال ميديا */}
+              <div className="flex items-center gap-2">
                 {[
                   { Icon: FaFacebookF, href: "https://web.facebook.com/profile.php?id=61582088223661" },
                   { Icon: FaInstagram, href: "https://www.instagram.com/ezzexport/?fbclid=IwY2xjawNsKVpleHRuA2FlbQIxMQBicmlkETEwN2xjblIzdTRhNmpKZ2tPAR7k_hx9Tk12NMj34rMICVpeqJavdX_0OOiGNwksXLF4QkQh6xjWh5Z9BqjD0w_aem_EiVZGu7OHrur6W-PHTp5Eg" },
@@ -110,62 +130,34 @@ const HeroSection = memo(() => {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-[#2d5a27] hover:text-white hover:border-[#2d5a27] hover:-translate-y-1 transition-all duration-300 shadow-sm bg-white shrink-0"
+                    className="w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-slate-300 hover:bg-[#2d5a27] hover:text-white hover:border-[#2d5a27] transition-all duration-300 bg-white/5 shrink-0"
                   >
-                    <item.Icon className="w-5 h-5" />
+                    <item.Icon className="w-3.5 h-3.5" />
                   </a>
                 ))}
               </div>
-            </motion.div>
-          </motion.div>
-
-
-          {/* CARD */}
-          <motion.div
-            whileHover={{ rotateY: -8, rotateX: 8 }}
-            className="relative w-full max-w-sm sm:max-w-md aspect-square bg-white/5 backdrop-blur-md border border-white/10 rounded-[3rem] sm:rounded-[4rem] p-6 sm:p-8 shadow-2xl flex flex-col justify-between overflow-hidden transform-gpu will-change-transform mx-auto lg:mx-0"
-            dir={locale === 'ar' ? 'rtl' : 'ltr'}
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 hover:opacity-100 transition-opacity" />
-
-            <div className="flex justify-between items-start text-white relative z-10">
-              <div className="text-start">
-                <p className="text-[10px] font-black tracking-[0.3em] uppercase opacity-50">{t('originLabel')}</p>
-                <p className="font-bold uppercase italic tracking-tight">{t('originValue')}</p>
-              </div>
-              <div className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center shrink-0">
-                <FiArrowUpRight className={locale === 'ar' ? "-scale-x-100" : ""} />
-              </div>
             </div>
 
-            <div className="relative h-52 sm:h-64 w-full">
-              <Image
-                src={arch}
-                alt="Premium"
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-contain scale-110 sm:scale-125 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] transform-gpu"
-              />
+            {/* النص الجانبي للوصول العالمي */}
+            <div className="flex items-center gap-2 text-center sm:text-end hidden md:flex">
+              <h3 className="text-xs sm:text-sm font-bold text-white uppercase tracking-tight">
+                {t.rich('globalReach', {
+                  br: () => <br className="hidden" />
+                })}
+              </h3>
+              <div className="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center text-white/50 shrink-0">
+                <FiArrowUpRight className={locale === 'ar' ? "-scale-x-100" : ""} size={12} />
+              </div>
             </div>
+          </div>
 
-            <h3 className="text-3xl sm:text-4xl font-black text-white italic uppercase leading-none tracking-tight text-center">
-              {t.rich('globalReach', {
-                br: () => <br />
-              })}
-            </h3>
-          </motion.div>
-        </div>
-      </div>
+        </motion.div>
 
-      {/* WATERMARK */}
-      <div className="absolute bottom-6 left-6 opacity-[0.03] pointer-events-none select-none">
-        <h2 className="text-[20vw] sm:text-[14vw] font-black text-[#051109]">EST.24</h2>
       </div>
     </section>
-
   );
 });
+
 HeroSection.displayName = "HeroSection";
 
 const StorySection = memo(() => {
@@ -175,7 +167,7 @@ const StorySection = memo(() => {
   return (
 
     <section className="relative bg-white overflow-hidden">
-      <div className="py-20 lg:py-32 px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-10 items-center" dir="ltr">
+      <div className="py-10 lg:py-10 px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-10 items-center" dir="ltr">
 
         <div className="lg:col-span-7 relative">
           <motion.div
@@ -433,7 +425,9 @@ export default function AboutUsSection() {
     <>
       <HeroSection />
       <StorySection />
-      <MarqueeSection />
+      {/* <MarqueeSection /> */}
+      <PhilosophySection />
+      <TargetMarketsSection />
       <ProcessSection />
       <Seson />
       <ExportCTA />

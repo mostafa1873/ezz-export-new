@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useMemo, useEffect, Suspense } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -38,16 +37,15 @@ function ProductsGridContent({ initialProducts }: ProductsGridProps) {
     const router = useRouter();
     const [filter, setFilter] = useState("all");
     const t = useTranslations('ProductsPage.grid');
+    const tPage = useTranslations('ProductsPage'); 
     const locale = useLocale();
 
+    // مراقبة الـ URL وتحديث الـ State فوراً وبشكل صارم
     useEffect(() => {
         const categoryFilter = searchParams.get('filter');
         if (categoryFilter) {
             const formattedFilter = categoryFilter.replace('-', '_');
             setFilter(formattedFilter);
-        } else if (window.location.hash) { // ← سطر جديد لدعم hash
-            const hashFilter = window.location.hash.substring(1).replace('-', '_');
-            setFilter(hashFilter);
         } else {
             setFilter("all");
         }
@@ -65,6 +63,24 @@ function ProductsGridContent({ initialProducts }: ProductsGridProps) {
         });
     }, [filter, initialProducts]);
 
+    const artichokeProducts = useMemo(() => {
+        return filteredProducts.filter(p =>
+            p.name_en?.toLowerCase().includes("artichoke") ||
+            p.name_ar?.includes("خرشوف") ||
+            p.name_it?.toLowerCase().includes("carciofo") ||
+            p.category?.toLowerCase().includes("artichoke")
+        );
+    }, [filteredProducts]);
+
+    const otherProducts = useMemo(() => {
+        return filteredProducts.filter(p =>
+            !p.name_en?.toLowerCase().includes("artichoke") &&
+            !p.name_ar?.includes("خرشوف") &&
+            !p.name_it?.toLowerCase().includes("carciofo") &&
+            !p.category?.toLowerCase().includes("artichoke")
+        );
+    }, [filteredProducts]);
+
     const createSlug = (name: string, id: string | number) => {
         const baseSlug = name
             .toLowerCase()
@@ -75,9 +91,15 @@ function ProductsGridContent({ initialProducts }: ProductsGridProps) {
         return `${baseSlug}-${id}`;
     };
 
-    const getLocalizedContent = (product: Product, field: string) => {
+    const getLocalizedContent = (product: Product, field: string): string => {
         const typedProduct = product as any;
-        return typedProduct[`${field}_${locale}`] || typedProduct[`${field}_en`];
+        return typedProduct[`${field}_${locale}`] || typedProduct[`${field}_en`] || '';
+    };
+
+    // دالة الانتقال لصفحة تفاصيل المنتج بأمان بدون تجمد الـ Router
+    const handleProductClick = (product: Product) => {
+        const slug = createSlug(product.name_en, product.id);
+        router.push(`/${locale}/products/${slug}/`);
     };
 
     return (
@@ -86,38 +108,28 @@ function ProductsGridContent({ initialProducts }: ProductsGridProps) {
 
                 {/* --- HEADER SECTION --- */}
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 md:gap-10 mb-12 md:mb-24">
-                    <div className="max-w-2xl text-center lg:text-left rtl:lg:text-right">
+                    <div className="max-w-3xl text-center lg:text-left rtl:lg:text-right border-s-0 lg:border-s-2 lg:rtl:border-s-0 lg:rtl:border-e-2 border-[#2d5a27]/20 lg:ps-6 lg:rtl:pe-6 pb-2">
                         <motion.div
-                            initial={{ opacity: 0, y: -10 }}
+                            initial={{ opacity: 0, y: -5 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="
-                                        flex items-center gap-3 mb-5 md:mb-6
-                                        justify-center lg:justify-start rtl:lg:justify-end
-                                        rtl:flex-row-reverse
-                                      "
+                            className="inline-flex items-center gap-2 mb-3 tracking-widest text-[#2d5a27]/80"
                         >
-                            <span className="w-8 md:w-12 h-[2px] bg-[#2d5a27]" />
-                            <span className="text-[#2d5a27] text-[9px] md:text-[10px] font-extrabold uppercase tracking-widest">
+                            <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em]">
                                 {t('premiumSelection')}
                             </span>
                         </motion.div>
 
-
                         <motion.h2
-                            initial={{ opacity: 0, y: 15 }}
+                            initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="
-                                       text-4xl sm:text-6xl md:text-7xl
-                                       font-black text-[#051109] uppercase
-                                       leading-[1.15] md:leading-[1]
-                                       tracking-tight
-                                     "
+                            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                            className="text-4xl sm:text-6xl md:text-7xl font-black text-[#051109] uppercase leading-[1.1] md:leading-[0.95] tracking-tighter"
                         >
                             {t.rich('pureCollection', {
-                                italic: (chunks) => (
-                                    <span className="text-[#2d5a27] font-black">
+                                italic: (chunks: React.ReactNode) => (
+                                    <span className="text-[#2d5a27] font-black block sm:inline mt-1 sm:mt-0">
                                         {chunks}
                                     </span>
                                 ),
@@ -125,7 +137,6 @@ function ProductsGridContent({ initialProducts }: ProductsGridProps) {
                             })}
                         </motion.h2>
                     </div>
-
 
                     <div className="w-full lg:w-fit">
                         <div className="grid grid-cols-2 sm:flex bg-white/70 backdrop-blur-md p-1.5 rounded-3xl sm:rounded-full border border-slate-200/50 shadow-sm gap-1">
@@ -135,20 +146,18 @@ function ProductsGridContent({ initialProducts }: ProductsGridProps) {
                                     <button
                                         key={f}
                                         onClick={() => {
-                                            const params = new URLSearchParams(searchParams.toString());
+                                            setFilter(f); // تحديث الـ state محلياً فوراً لمنع أي تأخير بصري
+                                            
                                             if (f === 'all') {
-                                                params.delete('filter');
+                                                // تصفير وتنظيف الـ URL تماماً لزرار الكل
+                                                router.push(`/${locale}/products#products`, { scroll: false });
                                             } else {
+                                                const params = new URLSearchParams();
                                                 params.set('filter', f.replace('_', '-'));
+                                                router.push(`/${locale}/products?${params.toString()}#products`, { scroll: false });
                                             }
-                                            // نحافظ على الـ hash #products حتى لا يعيد المتصفح التمرير لأعلى الصفحة
-                                            const query = params.toString();
-                                            const hash = window.location.hash || "#products";
-                                            const nextUrl = query ? `?${query}${hash}` : hash;
-                                            router.push(nextUrl, { scroll: false });
-                                            setFilter(f);
-                                        }} className={`relative px-3 py-2.5 sm:px-6 sm:py-3 rounded-2xl sm:rounded-full text-[8px] md:text-[9px] font-black uppercase tracking-[0.1em] md:tracking-[0.2em] transition-all duration-500 z-10 ${isActive ? 'text-white' : 'text-slate-500 hover:text-[#051109]'
-                                            }`}
+                                        }} 
+                                        className={`relative px-3 py-2.5 sm:px-6 sm:py-3 rounded-2xl sm:rounded-full text-[8px] md:text-[9px] font-black uppercase tracking-[0.1em] md:tracking-[0.2em] transition-all duration-500 z-10 ${isActive ? 'text-white' : 'text-slate-500 hover:text-[#051109]'}`}
                                     >
                                         {isActive && (
                                             <motion.div
@@ -163,76 +172,186 @@ function ProductsGridContent({ initialProducts }: ProductsGridProps) {
                             })}
                         </div>
                     </div>
-
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-14">
-                    <AnimatePresence mode="wait">
-                        {filteredProducts.map((product, index) => (
-                            <motion.div
-                                key={product.id}
-                                initial={{ opacity: 0, y: 15 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, scale: 0.98 }}
-                                transition={{ duration: 0.3, delay: Math.min(index * 0.05, 0.3) }}
-                                className="group relative"
-                            >
-                                <Link
-                                    href={`/${locale}/products/${createSlug(product.name_en, product.id)}/`}
-                                    className="block"
-                                    scroll={false}
-                                >                                    <div className="relative min-h-[500px] md:h-[600px] w-full bg-white rounded-[2.5rem] md:rounded-[4rem] overflow-hidden border border-[#2d5a27]/30 transition-all duration-700 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] group-hover:-translate-y-2 flex flex-col">
+                {/* 🍀 1. سكشن الخرشوف ومحتواه الخاص */}
+                {artichokeProducts.length > 0 && (
+                    <div className="mb-20">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            className="mb-14 max-w-3xl mx-auto text-center px-4 flex flex-col items-center justify-center"
+                        >
+                            <h3 className="text-2xl md:text-4xl font-black text-[#051109] uppercase tracking-tight mb-4 max-w-2xl leading-[1.25]">
+                                {tPage('romanescoHeader.title')}
+                            </h3>
+                            <div className="w-12 h-[3px] bg-[#2d5a27]/30 rounded-full mb-5" />
+                            <p className="text-slate-500 text-sm md:text-base font-medium leading-relaxed max-w-2xl">
+                                {tPage('romanescoHeader.description')}
+                            </p>
+                        </motion.div>
 
-                                        {/* Image Area */}
-                                        <div className="relative flex-grow w-full p-10 md:p-16 transition-transform duration-700 ease-out group-hover:scale-105 transform-gpu">
-                                            <Image
-                                                src={product.image.replace('../', '/')}
-                                                alt={getLocalizedContent(product, 'name')}
-                                                fill
-                                                className="object-contain p-8 md:p-12"
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                                priority={index < 3}
-                                            />
-                                        </div>
-
-                                        {/* Info Box */}
-                                        <div className="p-6 md:p-10 bg-white/60 backdrop-blur-md border border-white/20 rounded-[2rem] md:rounded-[3.2rem] m-3 md:m-5 flex flex-col justify-between transition-all duration-500 shadow-[0_10px_40px_rgba(0,0,0,0.03)] group-hover:bg-white">
-
-                                            <div className="flex justify-between items-start mb-4 md:mb-6">
-                                                <div className="max-w-[75%]">
-                                                    <div className="flex items-center gap-2 mb-2">
-                                                        <Leaf className="text-[#2d5a27] size-3" />
-                                                        <p className="text-[#2d5a27] text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] opacity-80">
-                                                            {t(`categories.${product.category.toLowerCase()}` as any)}
-                                                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-14">
+                            <AnimatePresence mode="wait">
+                                {artichokeProducts.map((product, index) => (
+                                    <motion.div
+                                        key={product.id}
+                                        initial={{ opacity: 0, y: 15 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, scale: 0.98 }}
+                                        transition={{ duration: 0.3, delay: Math.min(index * 0.05, 0.3) }}
+                                        className="group relative cursor-pointer"
+                                        onClick={() => handleProductClick(product)}
+                                    >
+                                        <div className="relative min-h-[500px] md:h-[600px] w-full bg-white rounded-[2.5rem] md:rounded-[4rem] overflow-hidden border border-[#2d5a27]/30 transition-all duration-700 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] group-hover:-translate-y-2 flex flex-col">
+                                            <div className="relative flex-grow w-full p-10 md:p-16 transition-transform duration-700 ease-out group-hover:scale-105 transform-gpu">
+                                                <Image
+                                                    src={product.image?.replace('../', '/') || ''}
+                                                    alt={getLocalizedContent(product, 'name')}
+                                                    fill
+                                                    className="object-contain p-8 md:p-12"
+                                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                    priority={index < 3}
+                                                />
+                                            </div>
+                                            <div className="p-6 md:p-10 bg-white/60 backdrop-blur-md border border-white/20 rounded-[2rem] md:rounded-[3.2rem] m-3 md:m-5 flex flex-col justify-between transition-all duration-500 shadow-[0_10px_40px_rgba(0,0,0,0.03)] group-hover:bg-white">
+                                                <div className="flex justify-between items-start mb-4 md:mb-6">
+                                                    <div className="max-w-[75%]">
+                                                        <div className="flex items-center gap-2 mb-2">
+                                                            <Leaf className="text-[#2d5a27] size-3" />
+                                                            <p className="text-[#2d5a27] text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] opacity-80">
+                                                                {t(`categories.${product.category?.toLowerCase()}` as any)}
+                                                            </p>
+                                                        </div>
+                                                        <h3 className="text-xl md:text-3xl font- text-[#051109] uppercase leading-none tracking-tighter">
+                                                            {getLocalizedContent(product, 'name')}
+                                                        </h3>
                                                     </div>
-                                                    <h3 className="text-xl md:text-3xl font-[1000] text-[#051109] uppercase leading-none tracking-tighter">
-                                                        {getLocalizedContent(product, 'name')}
-                                                    </h3>
+                                                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#2d5a27] text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0 rtl:-translate-x-4 rtl:group-hover:translate-x-0 shadow-2xl shrink-0">
+                                                        <FiArrowUpRight size={20} className="rtl:-scale-x-100" />
+                                                    </div>
                                                 </div>
-                                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#2d5a27] text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0 rtl:-translate-x-4 rtl:group-hover:translate-x-0 shadow-2xl shrink-0">
-                                                    <FiArrowUpRight size={20} className="rtl:-scale-x-100" />
+                                                <div className="flex items-center justify-between pt-4 md:pt-5 border-t border-black/[0.06] gap-2">
+                                                    <div className="flex flex-col">
+                                                        <span className="text-[7px] md:text-[8px] font-black uppercase tracking-[0.3em] text-slate-400 mb-0.5">{t('origin')}</span>
+                                                        <span className="text-[10px] md:text-xs font-black uppercase text-[#2d5a27] tracking-wider">{t('country')}</span>
+                                                    </div>
+                                                    <div className="flex flex-wrap gap-1.5 justify-end">
+                                                        {(Array.isArray(product.status) ? product.status : [product.status]).map((statusItem, idx) => {
+                                                            const cleanStatus = String(statusItem).trim().toLowerCase();
+                                                            return (
+                                                                <span 
+                                                                    key={idx} 
+                                                                    className="px-3 md:px-4 py-1.5 md:py-2 rounded-full text-[8px] md:text-[9px] font- uppercase tracking-[0.15em] text-white bg-[#2d5a27] whitespace-nowrap"
+                                                                >
+                                                                    {t.raw(`filter.${cleanStatus}` as any)}
+                                                                </span>
+                                                            );
+                                                        })}
+                                                    </div>
                                                 </div>
-                                            </div>
-
-                                            <div className="flex items-center justify-between pt-4 md:pt-5 border-t border-black/[0.06]">
-                                                <div className="flex flex-col">
-                                                    <span className="text-[7px] md:text-[8px] font-black uppercase tracking-[0.3em] text-slate-400 mb-0.5">{t('origin')}</span>
-                                                    <span className="text-[10px] md:text-xs font-black uppercase text-[#2d5a27] tracking-wider">{t('country')}</span>
-                                                </div>
-                                                <span className="px-4 md:px-6 py-2 md:py-2.5 rounded-full text-[8px] md:text-[9px] font-[1000] uppercase tracking-[0.2em] text-white bg-[#2d5a27]">
-                                                    {t.raw(`filter.${(Array.isArray(product.status) ? product.status[0] : product.status).toLowerCase()}`)}
-                                                </span>
                                             </div>
                                         </div>
+                                    </motion.div>
+                                ))}
+                            </AnimatePresence>
+                        </div>
+                    </div>
+                )}
 
-                                    </div>
-                                </Link>
+                {/* 📦 2. سكشن باقي المنتجات ومحتواها الخاص */}
+                {otherProducts.length > 0 && (
+                    <div className="mb-12 mt-16">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            className="mb-14 max-w-3xl mx-auto text-center px-4 flex flex-col items-center justify-center"
+                        >
+                            <div className="flex items-center gap-2 mb-4 justify-center">
+                                <span className="text-[#2d5a27] text-[11px] font-black uppercase tracking-[0.2em] bg-[#2d5a27]/5 px-4 py-1.5 rounded-full border border-[#2d5a27]/10 backdrop-blur-sm shadow-sm">
+                                    {tPage('supplyChainHeader.badge')}
+                                </span>
+                            </div>
+                            <h3 className="text-2xl md:text-4xl font-black text-[#051109] tracking-tight mb-4 max-w-2xl leading-[1.25]">
+                                {tPage('supplyChainHeader.title')}
+                            </h3>
+                            <div className="w-12 h-[3px] bg-[#2d5a27]/30 rounded-full mb-5" />
+                            <p className="text-slate-500 text-sm md:text-base font-medium leading-relaxed max-w-2xl">
+                                {tPage('supplyChainHeader.description')}
+                            </p>
+                        </motion.div>
 
-                            </motion.div>
-                        ))}
-                    </AnimatePresence>
-                </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-14">
+                            <AnimatePresence mode="wait">
+                                {otherProducts.map((product, index) => (
+                                    <motion.div
+                                        key={product.id}
+                                        initial={{ opacity: 0, y: 15 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, scale: 0.98 }}
+                                        transition={{ duration: 0.3, delay: Math.min(index * 0.05, 0.3) }}
+                                        className="group relative cursor-pointer"
+                                        onClick={() => handleProductClick(product)}
+                                    >
+                                        <div className="relative min-h-[500px] md:h-[600px] w-full bg-white rounded-[2.5rem] md:rounded-[4rem] overflow-hidden border border-[#2d5a27]/30 transition-all duration-700 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] group-hover:-translate-y-2 flex flex-col">
+                                            <div className="relative flex-grow w-full p-10 md:p-16 transition-transform duration-700 ease-out group-hover:scale-105 transform-gpu">
+                                                <Image
+                                                    src={product.image?.replace('../', '/') || ''}
+                                                    alt={getLocalizedContent(product, 'name')}
+                                                    fill
+                                                    className="object-contain p-8 md:p-12"
+                                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                    priority={index < 3}
+                                                />
+                                            </div>
+                                            <div className="p-6 md:p-10 bg-white/60 backdrop-blur-md border border-white/20 rounded-[2rem] md:rounded-[3.2rem] m-3 md:m-5 flex flex-col justify-between transition-all duration-500 shadow-[0_10px_40px_rgba(0,0,0,0.03)] group-hover:bg-white">
+                                                <div className="flex justify-between items-start mb-4 md:mb-6">
+                                                    <div className="max-w-[75%]">
+                                                        <div className="flex items-center gap-2 mb-2">
+                                                            <Leaf className="text-[#2d5a27] size-3" />
+                                                            <p className="text-[#2d5a27] text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] opacity-80">
+                                                                {t(`categories.${product.category?.toLowerCase()}` as any)}
+                                                            </p>
+                                                        </div>
+                                                        <h3 className="text-xl md:text-3xl font- text-[#051109] uppercase leading-none tracking-tighter">
+                                                            {getLocalizedContent(product, 'name')}
+                                                        </h3>
+                                                    </div>
+                                                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#2d5a27] text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0 rtl:-translate-x-4 rtl:group-hover:translate-x-0 shadow-2xl shrink-0">
+                                                        <FiArrowUpRight size={20} className="rtl:-scale-x-100" />
+                                                    </div>
+                                                </div>
+                                                <div className="flex items-center justify-between pt-4 md:pt-5 border-t border-black/[0.06] gap-2">
+                                                    <div className="flex flex-col">
+                                                        <span className="text-[7px] md:text-[8px] font-black uppercase tracking-[0.3em] text-slate-400 mb-0.5">{t('origin')}</span>
+                                                        <span className="text-[10px] md:text-xs font-black uppercase text-[#2d5a27] tracking-wider">{t('country')}</span>
+                                                    </div>
+                                                    <div className="flex flex-wrap gap-1.5 justify-end">
+                                                        {(Array.isArray(product.status) ? product.status : [product.status]).map((statusItem, idx) => {
+                                                            const cleanStatus = String(statusItem).trim().toLowerCase();
+                                                            return (
+                                                                <span 
+                                                                    key={idx} 
+                                                                    className="px-3 md:px-4 py-1.5 md:py-2 rounded-full text-[8px] md:text-[9px] font- uppercase tracking-[0.15em] text-white bg-[#2d5a27] whitespace-nowrap"
+                                                                >
+                                                                    {t.raw(`filter.${cleanStatus}` as any)}
+                                                                </span>
+                                                            );
+                                                        })}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </AnimatePresence>
+                        </div>
+                    </div>
+                )}
 
             </div>
 

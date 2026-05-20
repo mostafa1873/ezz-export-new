@@ -64,52 +64,55 @@ Expected Order Volume: ${formData.orderSize}
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center pt-24 pb-12 bg-white text-slate-900 antialiased selection:bg-[#2d5a27] selection:text-white relative overflow-hidden font-sans">
+    // تم تحسين الارتفاع والريسبونسف ليكون مرن بالكامل مع إضافة خلفية شبكية وإضاءات ناعمة فخمة
+    <div className="w-full min-h-screen text-slate-900 antialiased selection:bg-[#2d5a27] selection:text-white relative font-sans pt-30 sm:pt-32 lg:pt-30 pb-10 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center overflow-hidden">
       
-      {/* تصحيح العكس: الخلفية الداكنة الآن مبرمجة لتقف خلف الفورم فقط بناءً على اللغة (يسار في العربي / يمين في الإنجليزي)، وفي الموبايل تغطي الجزء السفلي فقط */}
-      <div className={`absolute bottom-0 ${isRtl ? "lg:left-0" : "lg:right-0"} w-full lg:w-1/2 h-[75%] lg:h-full bg-[#051109] pointer-events-none z-0`} />
-      
-      <div className="absolute -top-[20%] -left-[10%] w-[500px] h-[500px] rounded-full bg-[#2d5a27]/5 blur-[100px] pointer-events-none hidden lg:block" />
-
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="w-full max-w-5xl mx-auto relative z-10 flex flex-col justify-center">
         
-        {/* النصف الأول: النصوص (بنفس ألوانها الأصلية، متمركزة في الموبايل فقط) */}
-        <div className={`flex flex-col justify-center items-center lg:items-start text-center ${isRtl ? "lg:text-right lg:pl-10" : "lg:text-left lg:pr-10"}`}>
-          <div className="mb-6">
-            <span className="inline-block px-4 py-1.5 bg-[#2d5a27]/10 text-[#2d5a27] text-xs font-bold uppercase tracking-widest rounded-full border border-[#2d5a27]/20">
-              {t("heroBadge")}
-            </span>
-          </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-slate-900 mb-6 tracking-tight leading-[1.2]">
+        {/* ================= القسم الأول: النصوص المركزية ================= */}
+        <div className="flex flex-col items-center text-center mb-6 sm:mb-8 lg:mb-5 shrink-0">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-white text-[#2d5a27] text-[10px] sm:text-xs font-bold uppercase tracking-widest rounded-full border border-[#2d5a27]/15 shadow-sm mb-3 sm:mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#2d5a27] animate-pulse" />
+            {t("heroBadge")}
+          </span>
+          
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-slate-900 mb-3 tracking-tight leading-[1.2] max-w-3xl">
             {t("heroTitle")}
           </h1>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-medium max-w-lg">
+          
+          <p className="text-xs sm:text-sm lg:text-base text-slate-500 font-medium max-w-xl leading-relaxed hidden sm:block">
             {t("heroDescription")}
           </p>
         </div>
 
-        {/* النصف الثاني: الفورم (تأثير زجاجي بنفس الاستايل الأصلي) */}
-        <div className="bg-white/5 backdrop-blur-md rounded-3xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] border border-white/10 p-6 sm:p-8 lg:p-10 w-full max-w-xl mx-auto lg:mx-0">
+        {/* ================= القسم الثاني: الفورم الذكي بالألوان الفخمة الجديدة ================= */}
+        <div className="bg-[#0b150c] rounded-2xl sm:rounded-[2.5rem] p-5 sm:p-8 lg:p-10 shadow-[0_25px_60px_-15px_rgba(45,90,39,0.15)] border border-[#2d5a27]/25 relative overflow-hidden w-full max-w-4xl mx-auto">
           
-          {!isSubmitted ? (
-            <>
-              {/* Form Headers */}
-              <div className={`mb-8 text-center ${isRtl ? "lg:text-right" : "lg:text-left"}`}>
-                <h2 className="text-2xl sm:text-3xl font-black text-white mb-2">
-                  {t("formTitle")}
-                </h2>
-                <p className="text-slate-400 text-sm font-medium">
-                  {t("formSubtitle")}
-                </p>
-              </div>
+          {/* زخرفة داخلية ناعمة جداً في الخلفية وبدون تشتيت */}
+          <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#2d5a27]/10 blur-[60px] pointer-events-none rounded-full" />
+          <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-[#2d5a27]/10 blur-[60px] pointer-events-none rounded-full" />
 
-              {/* Form Grid */}
-              <form onSubmit={handleSubmit} className="space-y-5">
+          <div className="relative z-10">
+            {!isSubmitted ? (
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5 lg:gap-8">
                 
-                {/* الصف الأول */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className={`block text-xs font-bold text-slate-300 mb-2 uppercase tracking-wide text-center ${isRtl ? "lg:text-right" : "lg:text-left"}`}>
+                <div className="text-center mb-2">
+                  {/* أبيض نقي فاخر وعريض */}
+                  <h2 className="text-xl sm:text-2xl font-extrabold text-white mb-1.5 tracking-tight">
+                    {t("formTitle")}
+                  </h2>
+                  {/* رمادي فاتح وناعم ومريح جداً للعين */}
+                  <p className="text-slate-300 font-normal text-xs sm:text-sm">
+                    {t("formSubtitle")}
+                  </p>
+                </div>
+
+                {/* شبكة الحقول المتجاوبة 100% مع الموبايل والشاشات الكبيرة */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+                  
+                  {/* الإسم */}
+                  <div className="space-y-1.5">
+                    <label className={`block text-[11px] font-bold text-white uppercase tracking-wider ${isRtl ? "text-right" : "text-left"}`}>
                       {t("labelName")}
                     </label>
                     <input
@@ -118,13 +121,14 @@ Expected Order Volume: ${formData.orderSize}
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2d5a27] focus:bg-white/10 transition-all text-white text-sm text-center ${isRtl ? "lg:text-right" : "lg:text-left"}`}
+                      className={`w-full px-4 py-3 bg-white/[0.03] border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2d5a27] focus:border-transparent focus:bg-white/[0.07] transition-all text-white text-sm placeholder-white/50 ${isRtl ? "text-right" : "text-left"}`}
                       placeholder={t("placeholderName")}
                     />
                   </div>
 
-                  <div>
-                    <label className={`block text-xs font-bold text-slate-300 mb-2 uppercase tracking-wide text-center ${isRtl ? "lg:text-right" : "lg:text-left"}`}>
+                  {/* الشركة */}
+                  <div className="space-y-1.5">
+                    <label className={`block text-[11px] font-bold text-white uppercase tracking-wider ${isRtl ? "text-right" : "text-left"}`}>
                       {t("labelCompany")}
                     </label>
                     <input
@@ -133,16 +137,14 @@ Expected Order Volume: ${formData.orderSize}
                       required
                       value={formData.company}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2d5a27] focus:bg-white/10 transition-all text-white text-sm text-center ${isRtl ? "lg:text-right" : "lg:text-left"}`}
+                      className={`w-full px-4 py-3 bg-white/[0.03] border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2d5a27] focus:border-transparent focus:bg-white/[0.07] transition-all text-white text-sm placeholder-white/50 ${isRtl ? "text-right" : "text-left"}`}
                       placeholder={t("placeholderCompany")}
                     />
                   </div>
-                </div>
 
-                {/* الصف الثاني */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className={`block text-xs font-bold text-slate-300 mb-2 uppercase tracking-wide text-center ${isRtl ? "lg:text-right" : "lg:text-left"}`}>
+                  {/* الإيميل */}
+                  <div className="space-y-1.5 sm:col-span-2 lg:col-span-1">
+                    <label className={`block text-[11px] font-bold text-white uppercase tracking-wider ${isRtl ? "text-right" : "text-left"}`}>
                       {t("labelEmail")}
                     </label>
                     <input
@@ -151,14 +153,15 @@ Expected Order Volume: ${formData.orderSize}
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2d5a27] focus:bg-white/10 transition-all text-white text-sm text-center lg:text-left"
+                      className="w-full px-4 py-3 bg-white/[0.03] border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2d5a27] focus:border-transparent focus:bg-white/[0.07] transition-all text-white text-sm placeholder-white/50 text-left"
                       placeholder={t("placeholderEmail")}
                     />
                   </div>
 
-                  <div>
-                    <label className={`block text-xs font-bold text-slate-300 mb-2 uppercase tracking-wide text-center ${isRtl ? "lg:text-right" : "lg:text-left"}`}>
-                      {t("labelCountry")} 
+                  {/* الدولة */}
+                  <div className="space-y-1.5">
+                    <label className={`block text-[11px] font-bold text-white uppercase tracking-wider ${isRtl ? "text-right" : "text-left"}`}>
+                      {t("labelCountry")}
                     </label>
                     <input
                       type="text"
@@ -166,16 +169,14 @@ Expected Order Volume: ${formData.orderSize}
                       required
                       value={formData.country}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2d5a27] focus:bg-white/10 transition-all text-white text-sm text-center ${isRtl ? "lg:text-right" : "lg:text-left"}`}
+                      className={`w-full px-4 py-3 bg-white/[0.03] border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2d5a27] focus:border-transparent focus:bg-white/[0.07] transition-all text-white text-sm placeholder-white/50 ${isRtl ? "text-right" : "text-left"}`}
                       placeholder={t("placeholderCountry")}
                     />
                   </div>
-                </div>
 
-                {/* الصف الثالث */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className={`block text-xs font-bold text-slate-300 mb-2 uppercase tracking-wide text-center ${isRtl ? "lg:text-right" : "lg:text-left"}`}>
+                  {/* المنتجات */}
+                  <div className="space-y-1.5">
+                    <label className={`block text-[11px] font-bold text-white uppercase tracking-wider ${isRtl ? "text-right" : "text-left"}`}>
                       {t("labelProducts")}
                     </label>
                     <input
@@ -184,13 +185,14 @@ Expected Order Volume: ${formData.orderSize}
                       required
                       value={formData.products}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2d5a27] focus:bg-white/10 transition-all text-white text-sm text-center ${isRtl ? "lg:text-right" : "lg:text-left"}`}
+                      className={`w-full px-4 py-3 bg-white/[0.03] border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2d5a27] focus:border-transparent focus:bg-white/[0.07] transition-all text-white text-sm placeholder-white/50 ${isRtl ? "text-right" : "text-left"}`}
                       placeholder={t("placeholderProducts")}
                     />
                   </div>
 
-                  <div>
-                    <label className={`block text-xs font-bold text-slate-300 mb-2 uppercase tracking-wide text-center ${isRtl ? "lg:text-right" : "lg:text-left"}`}>
+                  {/* حجم الطلب */}
+                  <div className="space-y-1.5 sm:col-span-2 lg:col-span-1">
+                    <label className={`block text-[11px] font-bold text-white uppercase tracking-wider ${isRtl ? "text-right" : "text-left"}`}>
                       {t("labelOrderSize")}
                     </label>
                     <input
@@ -199,7 +201,7 @@ Expected Order Volume: ${formData.orderSize}
                       required
                       value={formData.orderSize}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2d5a27] focus:bg-white/10 transition-all text-white text-sm text-center ${isRtl ? "lg:text-right" : "lg:text-left"}`}
+                      className={`w-full px-4 py-3 bg-white/[0.03] border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2d5a27] focus:border-transparent focus:bg-white/[0.07] transition-all text-white text-sm placeholder-white/50 ${isRtl ? "text-right" : "text-left"}`}
                       placeholder={t("placeholderOrderSize")}
                     />
                   </div>
@@ -207,24 +209,24 @@ Expected Order Volume: ${formData.orderSize}
 
                 {/* رسالة الخطأ */}
                 {errorMessage && (
-                  <div className={`p-3 bg-rose-500/10 border border-rose-500/20 text-rose-300 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center lg:justify-start gap-2 text-center ${isRtl ? "lg:text-right" : "lg:text-left"}`}>
-                    <svg className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="p-3 bg-rose-500/10 border border-rose-500/20 text-rose-300 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 animate-fade-in">
+                    <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     {errorMessage}
                   </div>
                 )}
 
-                {/* زر الإرسال */}
-                <div className="pt-2">
+                {/* زر الإرسال الاحترافي */}
+                <div className="mt-2 text-center">
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full py-3.5 bg-[#2d5a27] text-white rounded-xl font-bold shadow-md hover:bg-[#22441d] hover:shadow-lg disabled:bg-slate-600 disabled:shadow-none disabled:cursor-not-allowed transition-all duration-200 text-center flex items-center justify-center gap-2 text-sm tracking-wide uppercase"
+                    className="w-full sm:w-auto min-w-[220px] md:min-w-[260px] px-8 py-3.5 bg-[#2d5a27] text-white rounded-xl font-bold shadow-lg hover:bg-[#22441d] active:scale-[0.98] disabled:bg-white/10 disabled:text-white/40 disabled:cursor-not-allowed disabled:transform-none transition-all duration-200 text-xs sm:text-sm tracking-wider uppercase"
                   >
                     {isLoading ? (
-                      <div className="flex items-center gap-2">
-                        <svg className="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                      <div className="flex items-center justify-center gap-2">
+                        <svg className="animate-spin h-4 w-4 text-current" fill="none" viewBox="0 0 24 24">
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                         </svg>
@@ -236,25 +238,25 @@ Expected Order Volume: ${formData.orderSize}
                   </button>
                 </div>
               </form>
-            </>
-          ) : (
-            /* رسالة النجاح */
-            <div className="text-center py-10">
-              <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-white/20">
-                <svg className="w-10 h-10 text-[#2d5a27]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
+            ) : (
+              /* رسالة النجاح فائدة التناسق ومناسبة للـ Viewport المدمج */
+              <div className="text-center py-10 flex flex-col items-center justify-center">
+                <div className="w-16 h-16 bg-emerald-500/10 rounded-full flex items-center justify-center mb-4 border border-emerald-500/20 shadow-inner">
+                  <svg className="w-8 h-8 text-[#4ade80]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h2 className="text-xl sm:text-3xl font-bold text-white mb-2">
+                  {t("successTitle")}
+                </h2>
+                <p className="text-slate-300 text-xs sm:text-base max-w-sm mx-auto leading-relaxed">
+                  {t("successDescription")}
+                </p>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-black text-white mb-3">
-                {t("successTitle")}
-              </h2>
-              <p className="text-slate-300 font-medium">
-                {t("successDescription")}
-              </p>
-            </div>
-          )}
-          
+            )}
+          </div>
         </div>
+
       </div>
     </div>
   );

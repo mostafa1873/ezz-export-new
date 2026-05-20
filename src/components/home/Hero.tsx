@@ -3,7 +3,7 @@
 import React, { memo } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { FiArrowUpRight, FiBox, FiDownload, FiGlobe, FiPhone } from "react-icons/fi";
+import { FiArrowUpRight, FiBox, FiDownload, FiGlobe } from "react-icons/fi";
 import arch from "../../assets/arch.webp";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
@@ -15,7 +15,7 @@ const MovingTicker = memo(() => {
 
     return (
         <div
-            className="relative w-full bg-[#0a2e1a] py-6 mt-5 lg:mt-0 mb-7 overflow-x-hidden ltr:rotate-[-2deg] rtl:rotate-[2deg] scale-[1.02] md:scale-[1.05] z-50 shadow-2xl"
+            className="relative w-full bg-[#0a2e1a] py-4 mt-auto mb-4 overflow-x-hidden ltr:rotate-[-1deg] rtl:rotate-[1deg] scale-[1.01] z-50 shadow-xl"
             style={{ transformStyle: "preserve-3d", backfaceVisibility: "hidden" }}
             dir="ltr"
         >
@@ -36,17 +36,17 @@ const MovingTicker = memo(() => {
                     >
                         <div className="flex items-center gap-3">
                             <FiBox className="text-green-400 shrink-0" />
-                            <span className="text-white text-xs md:text-sm font-black uppercase tracking-[0.4em] rtl:tracking-normal">
+                            <span className="text-white text-xs md:text-sm font-black uppercase tracking-[0.2em] rtl:tracking-normal">
                                 {t("fastDelivery")}
                             </span>
                         </div>
                         <div className="flex items-center gap-3">
                             <FiGlobe className="text-green-400 shrink-0" />
-                            <span className="text-white text-xs md:text-sm font-black uppercase tracking-[0.4em] rtl:tracking-normal">
+                            <span className="text-white text-xs md:text-sm font-black uppercase tracking-[0.2em] rtl:tracking-normal">
                                 {t("globalReach")}
                             </span>
                         </div>
-                        <div className="flex items-center gap-3 text-green-400 font-serif italic text-xl">
+                        <div className="flex items-center gap-3 text-green-400 font-serif italic text-lg">
                             {t("premiumHarvest")}
                         </div>
                     </div>
@@ -61,108 +61,111 @@ export default function CinematicHero() {
     const t = useTranslations("Hero");
     const locale = useLocale();
     const reduceMotion = useReducedMotion();
+    const isRtl = locale === "ar";
 
     return (
-
-        <section className="relative w-full min-h-screen bg-[#fff] overflow-hidden flex flex-col items-center justify-center pt-32 lg:pt-28">
-            {/* Background Text - Added transform-gpu to optimize large text rendering */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-[0.04] select-none pointer-events-none transform-gpu">
-                <h2 className="text-[30vw] font-black tracking-tighter text-green-900 uppercase leading-none">
+        <section className="relative w-full min-h-screen lg:h-screen lg:min-h-0 bg-[#fff] overflow-x-hidden overflow-y-auto lg:overflow-hidden flex flex-col justify-between pt-24 sm:pt-28 lg:pt-32">
+            {/* Background Large Text */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] select-none pointer-events-none transform-gpu z-0">
+                <h2 className="text-[25vw] font-black tracking-tighter text-green-900 uppercase leading-none">
                     EZZ
                 </h2>
             </div>
 
-            <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-20">
-                <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-0">
-                    {/* Content */}
-                    <div className="w-full lg:w-1/2 text-center lg:ltr:text-start lg:rtl:text-right z-30">
+            <div className="container mx-auto px-4 sm:px-8 lg:px-20 my-auto relative z-20 py-6 lg:py-0">
+                <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 lg:gap-12">
+
+                    {/* Content Column */}
+                    <div className="w-full lg:col-span-7 text-center lg:ltr:text-start lg:rtl:text-right z-30">
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 15 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
+                            transition={{ duration: 0.5 }}
                         >
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#2d5a27] mb-6">
-                                <div className="w-2 h-2 rounded-full bg-green-800 animate-pulse" />
-                                <span className="text-[10px] font-black uppercase tracking-widest rtl:tracking-normal text-[#2d5a27]">
+                            {/* Badge */}
+                            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#2d5a27] mb-4">
+                                <div className="w-1.5 h-1.5 rounded-full bg-green-800 animate-pulse" />
+                                <span className="text-[9px] font-bold uppercase tracking-widest rtl:tracking-normal text-[#2d5a27]">
                                     {t("newSeason")}
                                 </span>
                             </div>
 
-                            <h1 className="text-[11vw] sm:text-[8vw] lg:text-[5.5rem] font-black text-slate-900 leading-[0.95] rtl:leading-[1.1] tracking-tighter rtl:tracking-normal mb-6">
-                                {t("titlePrefix")} <br />
-                                <span className="text-[#2d5a27] relative">
+                            {/* العناوين بعد تصغيرها وتنسيق الـ Line Height لمنع التداخل */}
+                            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[2.6rem] xl:text-[3.5rem] font-black text-slate-900 leading-[1.2] tracking-tight mb-4 max-w-2xl mx-auto lg:mx-0">
+                                {t("titlePrefix")}{" "}
+                                <span className="text-[#2d5a27]">
                                     {t("titleHighlight")}
                                 </span>{" "}
-                                <br />
-                                <span>{t("titleSuffix")}</span>
+                                <span className="block md:inline lg:block">{t("titleSuffix")}</span>
                             </h1>
 
-                            {/* Mobile Image - Optimized with priority */}
-                            <div className="relative w-75 h-75 mx-auto mb-8 block lg:hidden">
+                            {/* Mobile Image - تحسين حجمها لتناسب الشاشات الصغيرة جداً */}
+                            <div className="relative w-44 h-44 sm:w-56 sm:h-56 mx-auto mb-6 block lg:hidden">
                                 <Image
                                     src={arch}
                                     alt="Ezz products"
                                     fill
                                     priority
-                                    sizes="192px"
+                                    sizes="(max-w: 640px) 176px, 224px"
                                     className="object-contain"
                                 />
                             </div>
 
-                            <p className="text-sm sm:text-base md:text-lg text-slate-500 max-w-md mx-auto lg:ltr:mx-0 lg:rtl:mr-0 leading-relaxed font-medium mb-10">
+                            {/* الوصف بمقاس منضبط */}
+                            <p className="text-xs sm:text-sm md:text-base text-slate-500 max-w-lg mx-auto lg:ltr:mx-0 lg:rtl:ml-0 lg:rtl:mr-0 leading-relaxed font-medium mb-6">
                                 {t("description")}
                             </p>
 
-                            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:ltr:justify-start lg:rtl:justify-start">
+                            {/* الأزرار متناسقة تماماً */}
+                            <div className="flex flex-col sm:flex-row items-center gap-3 justify-center lg:ltr:justify-start lg:rtl:justify-start max-w-md sm:max-w-none mx-auto lg:mx-0">
+                                {/* زر طلب عرض السعر */}
                                 <Link
                                     href={`/${locale}/catalog/`}
-                                    // أضفنا will-change-transform لضمان سلاسة الأنميشن في المتصفح
-                                    className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 sm:px-10 sm:py-5 font-bold text-white transition-all duration-300 ease-in-out will-change-transform bg-[#2d5a27] rounded-full hover:bg-white hover:text-[#2d5a27] shadow-[0_10px_20px_-5px_rgba(45,90,39,0.3)] hover:shadow-[0_0_30px_rgba(45,90,39,0.5)] border-2 border-[#2d5a27] active:scale-[0.98]"
+                                    className="group relative w-full rounded-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 font-bold text-sm text-[#2d5a27] hover:text-white transition-all duration-300 ease-in-out will-change-transform bg-[#fff] hover:bg-[#2d5a27] shadow-md border-2 border-[#2d5a27] active:scale-[0.98]"
                                 >
-                                    {/* نبض خفيف تحت الزرار لجذب الانتباه */}
-                                    <span className="absolute inset-0 rounded-full animate-pulse border border-[#2d5a27]/30 group-hover:hidden" />
-
                                     <span className="relative z-10 flex items-center gap-2">
                                         {t("downloadCatalog")}
-                                        <div className="p-1 bg-[#ffffff]/20 group-hover:bg-[#2d5a27]/10 rounded-full transition-all duration-300">
-                                            <FiArrowUpRight className="w-5 h-5 rtl:rotate-[-90deg]" />
+                                        <div className="p-0.5 bg-[#2d5a27]/10 group-hover:bg-[#ffffff]/20 rounded-full transition-colors duration-300">
+                                            <FiArrowUpRight className={`w-4 h-4 ${isRtl ? "rotate-[-90deg]" : ""}`} />
                                         </div>
                                     </span>
                                 </Link>
 
+                                {/* زر تحميل الكتالوج */}
                                 <Link
                                     href="/catalog.pdf"
                                     download="catalog.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-full sm:w-auto px-8 py-4 sm:px-12 sm:py-5 bg-white border border-[#2d5a27] text-slate-900 rounded-[2rem] font-bold hover:bg-slate-50 transition-all flex items-center justify-center gap-2"
+                                    className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#15451e] border-2 border-[#15451e] text-[#fff] text-sm rounded-full font-bold transition-all duration-300 hover:bg-[#fff] hover:text-[#15451e] hover:shadow-[0_8px_20px_-6px_rgba(21,69,30,0.4)] hover:-translate-y-0.5 active:scale-[0.98]"
                                 >
-                                    <FiDownload className="text-[#2d5a27] w-5 h-5" />
-                                    {t("ctaContact")}
+                                    <span>{t("ctaContact")}</span>
+                                    {/* الأيقونة بتتحرك حركة خفيفة لفوق عند الهوفر وبقت بعد الجملة */}
+                                    <FiDownload className="w-4 h-4 transition-transform duration-300 group-hover:-translate-y-1 group-hover:animate-pulse" />
                                 </Link>
                             </div>
                         </motion.div>
                     </div>
 
-                    {/* Desktop Image */}
-                    <div className="w-full lg:w-1/2 relative hidden lg:flex justify-center items-center h-[600px]">
-                        <div className="absolute w-[450px] h-[450px]  rounded-full blur-[80px]" />
+                    {/* Desktop Image Column */}
+                    <div className="w-full lg:col-span-5 relative hidden lg:flex justify-center items-center h-[350px] xl:h-[450px]">
+                        <div className="absolute w-[250px] h-[250px] xl:w-[300px] xl:h-[300px] bg-green-50/50 rounded-full blur-[60px]" />
 
                         <motion.div
                             animate={
                                 reduceMotion
                                     ? false
-                                    : { y: [0, -20, 0], rotate: [0, 5, 0] }
+                                    : { y: [0, -12, 0], rotate: [0, 3, 0] }
                             }
-                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                            className="relative w-[550px] h-[550px] z-20 will-change-transform transform-gpu"
+                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                            className="relative w-[320px] h-[320px] xl:w-[400px] xl:h-[400px] z-20 will-change-transform transform-gpu"
                         >
                             <Image
                                 src={arch}
                                 alt="Ezz products"
                                 fill
                                 priority
-                                sizes="(min-width: 1024px) 550px, 100vw"
+                                sizes="(min-width: 1280px) 400px, 320px"
                                 className="object-contain"
                             />
                         </motion.div>
@@ -170,11 +173,12 @@ export default function CinematicHero() {
                 </div>
             </div>
 
+            {/* الشريط المتحرك متموضع في الأسفل بدون تدمير الـ Height */}
             <MovingTicker />
 
-            {/* Noise - Changed to absolute with fixed behavior to prevent repaints during scroll */}
+            {/* Noise Background */}
             <div
-                className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat"
+                className="absolute inset-0 opacity-[0.01] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat"
                 style={{ transform: "translateZ(0)" }}
             />
         </section>

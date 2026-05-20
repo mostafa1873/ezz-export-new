@@ -3,6 +3,7 @@ import ProductContent from "../../../../components/products/productdetails";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
+import TechnicalSpecs from "@/components/products/TechnicalSpecs";
 
 const createSlug = (name: string, id: string | number) => {
   if (!name) return '';
@@ -111,5 +112,8 @@ export default async function ProductPage({ params }: PageProps) {
 
   const safeProduct = JSON.parse(JSON.stringify(product));
 
-  return <ProductContent product={safeProduct} />;
+  return <>
+    <ProductContent product={safeProduct} />;
+    {/* <TechnicalSpecs /> */}
+  </>
 }

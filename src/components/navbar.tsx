@@ -148,6 +148,7 @@ export default function Navbar() {
                         {[
                             { name: t('home'), path: '/', icon: <Home className="w-5 h-5" /> },
                             { name: t('about'), path: '/about', icon: <Info className="w-5 h-5" /> },
+                            { name: t('catalog'), path: '/catalog', icon: <Info className="w-5 h-5" /> },
                             { name: t('products'), path: '/products', icon: <Leaf className="w-5 h-5" /> },
                             { name: t('contact'), path: '/contact', icon: <PhoneCall className="w-5 h-5" /> }
                         ].map((link) => {

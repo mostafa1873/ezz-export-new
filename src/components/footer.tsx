@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { ArrowUpRight, Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { ArrowUpRight, Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Download } from 'lucide-react';
 import Link from 'next/link';
 import Image from "next/image";
 import logo from '../assets/greenrow.webp';
@@ -34,26 +34,9 @@ export default function Footer() {
                                 className="h-18 w-auto object-contain brightness-110"
                             />
                         </Link>
-                        <p className="text-white/40 text-sm leading-relaxed mb-6 font-medium max-w-[sm]">
+                        <p className="text-white/40 text-sm leading-relaxed font-medium max-w-[sm]">
                             {t('description')}
                         </p>
-                        <div className="flex gap-4">
-                            {[
-                                { Icon: Facebook, href: "https://web.facebook.com/profile.php?id=61582088223661" },
-                                { Icon: Instagram, href: "https://www.instagram.com/ezzexport/?fbclid=IwY2xjawNsKVpleHRuA2FlbQIxMQBicmlkETEwN2xjblIzdTRhNmpKZ2tPAR7k_hx9Tk12NMj34rMICVpeqJavdX_0OOiGNwksXLF4QkQh6xjWh5Z9BqjD0w_aem_EiVZGu7OHrur6W-PHTp5Eg" },
-                                { Icon: Linkedin, href: "https://www.linkedin.com/company/ezz-export" }
-                            ].map((social, i) => (
-                                <Link
-                                    key={i}
-                                    href={social.href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-green-600 hover:text-white transition-all duration-300"
-                                >
-                                    <social.Icon size={16} />
-                                </Link>
-                            ))}
-                        </div>
                     </div>
 
                     <div className="flex flex-col items-center text-center lg:items-start lg:text-start w-full">
@@ -66,14 +49,11 @@ export default function Footer() {
                                 <li key={item} className="w-full flex justify-center lg:justify-start">
                                     <Link
                                         href={`/${locale}${getRoute(item)}`}
-                                        className="text-white/50 text-sm font-bold hover:text-green-500 transition-colors
-                 flex items-center justify-center lg:justify-start group"
+                                        className="text-white/50 text-sm font-bold hover:text-green-500 transition-colors flex items-center justify-center lg:justify-start group"
                                     >
                                         <ArrowUpRight
                                             size={14}
-                                            className="hidden lg:inline-block me-2 opacity-0 -translate-y-1
-                   group-hover:opacity-100 group-hover:translate-y-0
-                   transition-all rtl:rotate-[-90deg]"
+                                            className="hidden lg:inline-block me-2 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all rtl:rotate-[-90deg]"
                                         />
                                         {t(`navigation.${item}`)}
                                     </Link>
@@ -113,8 +93,8 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Location */}
-                    <div className="flex flex-col items-center text-center lg:items-start lg:text-start">
+                    {/* Location Column */}
+                    <div className="flex flex-col items-center text-center lg:items-start lg:text-start w-full">
                         <h4 className="text-white text-xs font-black uppercase tracking-[0.2em] mb-8">
                             {t('location')}
                         </h4>
@@ -122,7 +102,7 @@ export default function Footer() {
                             href="https://maps.google.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group flex flex-col lg:flex-row items-center lg:items-start gap-4"
+                            className="group flex flex-col lg:flex-row items-center lg:items-start gap-4 mb-6 w-full"
                         >
                             <div className="w-10 h-10 rounded-xl bg-green-900/30 flex items-center justify-center shrink-0 border border-green-800/20 text-green-500 group-hover:bg-green-500 group-hover:text-white transition-all">
                                 <MapPin size={18} />
@@ -131,6 +111,42 @@ export default function Footer() {
                                 {t('address')}
                             </p>
                         </a>
+
+                        {/* 🌟 كارت السوشيال والكتالوج المودرن المدمج (تعديل التوسط هنا) */}
+                        <div className="w-full bg-white/[0.02] backdrop-blur-md border border-white/5 rounded-2xl p-4 flex flex-col gap-4 items-center shadow-xl">
+                            {/* روابط السوشيال ميديا متمركزة في المنتصف بالظبط */}
+                            <div className="flex gap-3 justify-center w-full">
+                                {[
+                                    { Icon: Facebook, href: "https://web.facebook.com/profile.php?id=61582088223661", hoverClass: "hover:bg-[#1877F2] hover:border-[#1877F2] hover:shadow-[#1877F2]/30" },
+                                    { Icon: Instagram, href: "https://www.instagram.com/ezzexport/?fbclid=IwY2xjawNsKVpleHRuA2FlbQIxMQBicmlkETEwN2xjblIzdTRhNmpKZ2tPAR7k_hx9Tk12NMj34rMICVpeqJavdX_0OOiGNwksXLF4QkQh6xjWh5Z9BqjD0w_aem_EiVZGu7OHrur6W-PHTp5Eg", hoverClass: "hover:bg-[#E4405F] hover:border-[#E4405F] hover:shadow-[#E4405F]/30" },
+                                    { Icon: Linkedin, href: "https://www.linkedin.com/company/ezz-export", hoverClass: "hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:shadow-[#0A66C2]/30" }
+                                ].map((social, i) => (
+                                    <Link
+                                        key={i}
+                                        href={social.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={`w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/80 hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-md ${social.hoverClass}`}
+                                    >
+                                        <social.Icon size={16} />
+                                    </Link>
+                                ))}
+                            </div>
+                            
+                            {/* زرار الكتالوج التفاعلي المنضبط */}
+                            <Link
+                                href="/catalog.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative w-full inline-flex items-center justify-center gap-2.5 px-4 py-3 bg-transparent border border-[#fff]/20 hover:border-[#15451e] rounded-xl text-white text-xs font-bold transition-all duration-300 overflow-hidden"
+                            >
+                                <div className="absolute inset-0 bg-[#15451e] translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
+                                <span className="relative z-10 flex items-center gap-2">
+                                    <Download className="w-3.5 h-3.5 group-hover:-translate-y-0.5 group-hover:animate-pulse transition-transform duration-300" />
+                                    <span className="tracking-wide">{t('downloadCatalog')}</span>
+                                </span>
+                            </Link>
+                        </div>
                     </div>
 
                 </div>

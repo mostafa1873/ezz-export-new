@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
-import { ArrowLeft, ArrowRight, Download, FileText, Calendar, PhoneCall } from "lucide-react";
+import { ArrowLeft, ArrowRight, Download, FileText, Calendar, PhoneCall, FileEdit } from "lucide-react";
 import Link from "next/link";
 
 const FinalCTA = () => {
@@ -59,10 +59,12 @@ const FinalCTA = () => {
               </p>
             </div>
 
-            {/* زر حجز المكالمة الفاخر - ينقلك فوراً لصفحة الاتصال */}
-            <div className="pt-8 w-full sm:w-auto relative z-10">
-              <Link href={`/${locale}/contact/`} passHref legacyBehavior>
-                <motion.a
+            {/* الأزرار جنب بعض ومتوافقة ريسبونسبف بالكامل */}
+            <div className="pt-8 w-full flex flex-col sm:flex-row items-center gap-4 relative z-10">
+              
+              {/* زر حجز المكالمة الفاخر - ينقلك فوراً لصفحة الاتصال */}
+              <Link href={`/${locale}/contact/`} className="w-full sm:w-auto">
+                <motion.div
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
                   className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#051109] text-white hover:bg-[#2d5a27] font-bold px-8 py-4 rounded-xl transition-all text-sm md:text-base tracking-wide shadow-lg shadow-[#051109]/10 cursor-pointer"
@@ -74,8 +76,26 @@ const FinalCTA = () => {
                   ) : (
                     <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                   )}
-                </motion.a>
+                </motion.div>
               </Link>
+
+              {/* زر طلب عرض السعر الرايق والمودرن */}
+              <Link href={`/${locale}/catalog/`} className="w-full sm:w-auto">
+                <motion.div
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white text-[#051109] hover:text-white hover:bg-[#2d5a27] font-bold px-8 py-4 rounded-xl border-2 border-[#051109] hover:border-[#2d5a27] transition-all text-sm md:text-base tracking-wide shadow-md cursor-pointer"
+                >
+                  <FileEdit size={18} className="opacity-90 transition-transform group-hover:rotate-12" />
+                  <span>{t('downloadCatalog')}</span>
+                  {isRtl ? (
+                    <ArrowLeft size={16} className="transition-transform group-hover:-translate-x-1" />
+                  ) : (
+                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                  )}
+                </motion.div>
+              </Link>
+
             </div>
           </div>
 

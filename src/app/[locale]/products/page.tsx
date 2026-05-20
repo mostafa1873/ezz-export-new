@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { Metadata } from "next";
 import B2B from "@/components/products/b2b";
+import FinalCTA from "@/components/about/ExportCTA";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -133,7 +134,8 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
       </section>
 
       {/* --- B2B SECTION --- */}
-      <B2B />
+
+      <FinalCTA />
 
     </main>
   );
