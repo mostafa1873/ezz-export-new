@@ -4,7 +4,6 @@ import { FiArrowDown, FiCheck, FiArrowUpRight, FiGlobe, FiTarget } from "react-i
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { Metadata } from "next";
-import B2B from "@/components/products/b2b";
 import FinalCTA from "@/components/about/ExportCTA";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
