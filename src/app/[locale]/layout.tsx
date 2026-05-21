@@ -45,7 +45,21 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Index' });
 
-  const baseUrl = "https://ezzexport.com";
+  // تحديد الرابط ديناميكياً بناءً على البيئة الحالية (Vercel أو الدومين الأساسي أو Localhost)
+  const getBaseUrl = () => {
+    if (process.env.NEXT_PUBLIC_SITE_URL) {
+      return process.env.NEXT_PUBLIC_SITE_URL;
+    }
+    if (process.env.VERCEL_URL) {
+      return `https://${process.env.VERCEL_URL}`;
+    }
+    if (process.env.NODE_ENV === 'development') {
+      return 'http://localhost:3000';
+    }
+    return "https://ezzexport.com";
+  };
+
+  const baseUrl = getBaseUrl();
 
   return {
     // 1. العناوين والوصف الأساسي
@@ -80,7 +94,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: "website",
       images: [
         {
-          url: "/og-main.jpg", // تأكد من وجود صورة بهذا الاسم في folder public
+          url: `${baseUrl}/og-main.jpg`, 
           width: 1200,
           height: 630,
           alt: "Ezz Export - Egyptian Agricultural Excellence",
@@ -93,7 +107,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: t('title'),
       description: t('description'),
-      images: ["/og-main.jpg"],
+      images: [`${baseUrl}/og-main.jpg`],
     },
 
     // 6. تعليمات الروبوتات (Robots)
