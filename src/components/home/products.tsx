@@ -33,7 +33,7 @@ const MainProducts = () => {
   useEffect(() => {
     if (productsData && productsData.products) {
       // فلترة المنتجات الأساسية الـ 5 المطلوبة عبر الـ IDs الخاصة بها
-      const targetIds = [1, 13, 34, 22, 24]; 
+      const targetIds = [1, 34, 22, 24, 21]; 
       const filtered = productsData.products.filter((p: any) => targetIds.includes(p.id));
       setProducts(filtered.length > 0 ? filtered : productsData.products.slice(0, 5));
     }

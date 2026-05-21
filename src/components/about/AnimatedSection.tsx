@@ -7,7 +7,7 @@ import { FiArrowDown, FiArrowUpRight, FiGlobe, FiPhone, FiStar } from "react-ico
 import arch from "../../assets/about-hero.webp";
 import about from "../../assets/about-main.webp";
 import Link from "next/link";
-import Seson from "./seson";
+// import Seson from "./seson";
 import ExportCTA from "./ExportCTA";
 import pro1 from "../../assets/pro1.webp";
 import pro2 from "../../assets/pro2.webp";
@@ -429,7 +429,7 @@ export default function AboutUsSection() {
       <PhilosophySection />
       <TargetMarketsSection />
       <ProcessSection />
-      <Seson />
+      {/* <Seson /> */}
       <ExportCTA />
     </>
   );
