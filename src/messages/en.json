@@ -6,6 +6,7 @@
   "Navbar": {
     "home": "Home",
     "about": "About Us",
+    "why-egypt": "Why Egypt",
     "catalog": "Get Quote",
     "products": "Our Products",
     "contact": "Contact Us",
@@ -408,5 +409,61 @@
     "successTitle": "Thank you for contacting us",
     "successDescription": "The catalog and product files will be sent to your email, and our team will contact you to discuss your specific supply needs.",
     "errorMsg": "An error occurred, please try again."
+  },
+  "TechnicalSpecs": {
+    "title": "Technical Specifications",
+    "mainHeading": "Clear specifications for more accurate purchasing decisions",
+    "description": "We provide precise details about sizes, packaging, sorting grades, and loading capacity to facilitate purchasing processes and logistical planning.",
+    "sizesTitle": "Sizes & Dimensions",
+    "sizesDesc": "Precise dimensions complying with international standards to suit all needs.",
+    "packagingTitle": "Packaging & Bundling",
+    "packagingDesc": "Premium protection and secure packaging ensuring product safety during transit.",
+    "sortingTitle": "Sorting Grades",
+    "sortingDesc": "Accurate classification and strict quality control to guarantee premium grading.",
+    "loadingTitle": "Loading Capacity",
+    "loadingDesc": "Optimized logistical planning for maximum capacity and efficient container utilization."
+  },
+  "QualitySpecs": {
+    "badge": "Quality Standards",
+    "mainHeading": "Reliable Operational Quality",
+    "description": "Sorting, packaging, and preparation stages are executed under strict procedures designed to preserve product quality at the highest standards from farms to export.",
+    "step1Title": "Precision Sorting",
+    "step1Desc": "Strict inspection criteria to ensure flawless crops, categorizing products based on optimal quality and size.",
+    "step2Title": "Professional Packaging",
+    "step2Desc": "Using globally certified packaging materials that lock in freshness and prevent damage during storage.",
+    "step3Title": "Logistics Preparation",
+    "step3Desc": "Securing supply chains and precisely controlling temperatures for international shipping and export."
+  },
+  "WhyEgyptHero": {
+    "metadata": {
+      "title": "Why Are European Importers Sourcing from Egypt?",
+      "description": "Discover why Egypt is the premier agricultural supplier for Europe, thanks to crop quality, logistical speed, and international standard compliance with Ezz Export."
+    },
+    "badge": "The Agricultural Future of the EU",
+    "title": "Why Are European Importers Sourcing from Egypt?",
+    "description": "Egypt has emerged as a premier agricultural sourcing hub for European markets, driven by rapid advancements in modern production, sustainable logistics, and strict export compliance.",
+    "pillar1_title": "Hyper-Fast Logistics Transit",
+    "pillar1_desc": "A unique strategic geographical position connects Egyptian fields directly to key European ports in just 3 to 5 days, ensuring maximum freshness and a significantly lower carbon footprint compared to global competitors.",
+    "pillar2_title": "Golden Climate Window",
+    "pillar2_desc": "With optimal year-round warmth and abundant sunshine, Egypt offers extended growing seasons, securing a highly reliable, uninterrupted supply of fresh produce during harsh European winter freezes.",
+    "pillar3_title": "Strict Euro-Standard Compliance",
+    "pillar3_desc": "Our partner farms strictly apply the highest international safety frameworks like GlobalGAP, fully integrating advanced digital tracing to guarantee 100% compliance with rigorous European food safety regulations.",
+    "sec2_badge": "Agricultural Capabilities",
+    "sec2_title": "Production Capabilities Supporting Continuity",
+    "sec2_desc": "Egypt provides a wide agricultural diversity that allows the provision of seasonal products with stable quality and commercial quantities suitable for export.",
+    "sec3_badge": "Logistical Advantage",
+    "sec3_title": "Strategic Location Supporting Supply Speed",
+    "sec3_desc": "Egypt's geographical location helps reduce transit times to European markets and enhances supply chain efficiency.",
+    "quality_sec_badge": "Quality & European Compliance",
+    "quality_sec_title": "Continuous Evolution in Quality and Export Standards",
+    "quality_sec_desc": "The Egyptian agricultural export sector is witnessing remarkable development in quality systems and compliance with European market requirements.",
+    "q_card1_head": "International Standards",
+    "q_card1_text": "Strict application of the highest global inspection standards.",
+    "q_card2_head": "European Compliance",
+    "q_card2_text": "Full alignment with all European market requirements.",
+    "q_card3_head": "Modern Technology",
+    "q_card3_text": "Advanced sorting and packaging technologies.",
+    "q_card4_head": "Supply Sustainability",
+    "q_card4_text": "Ensuring efficient and continuous supply chains."
   }
 }

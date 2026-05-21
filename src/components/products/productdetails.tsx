@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { FiArrowLeft, FiMessageCircle, FiCheck, FiPackage, FiShield, FiSend, FiGlobe, FiDownload } from "react-icons/fi";
+import { FiArrowLeft, FiMessageCircle, FiCheck, FiPackage, FiShield, FiSend, FiGlobe, FiDownload, FiArrowUpLeft } from "react-icons/fi";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import productsData from "@/data/products.json";
@@ -62,156 +62,200 @@ export default function ProductContent({ product }: ProductProps) {
     }
 
     return (
-        <main className="bg-[#fff] min-h-screen font-sans text-[#2d2d2d] py-26" dir={dir}>
+        <main className="bg-[#fff] min-h-screen font-sans text-[#2d2d2d] py-10" dir={dir}>
 
-            <nav className="max-w-7xl mx-auto px-6 md:px-8 py-6 md:py-10 flex justify-between items-center">
-                <Link href={`/${locale}/products/`} className="flex items-center gap-2 text-gray-400 hover:text-black transition-colors group">
-                    <FiArrowLeft size={18} className={`group-hover:-translate-x-1 transition-transform ${isRTL ? "rotate-180" : ""}`} />
-                    <span className="text-sm font-medium tracking-tight">{t("backToCatalog")}</span>
-                </Link>
-                <div className="flex items-center gap-2">
-                    <span className="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-gray-400">{t("premiumExport")}</span>
-                    <div className="h-2 w-2 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.4)]"></div>
-                </div>
-            </nav>
+            <div className="min-h-screen lg:h-screen flex flex-col bg-white box-border relative pt-[80px] lg:pt-[70px]">
+    {/* الـ Sub-Header الداخلي: تم ضبط المسافات علشان يظهر فوراً وبشكل راقي تحت الناف بار الأساسي */}
+    <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-3 md:py-4 flex justify-between items-center flex-shrink-0 border-b border-gray-100/80 bg-transparent z-10 relative">
 
-            <div className="max-w-6xl mx-auto px-5 py-5">
-                <div className="lg:hidden mb-6 flex flex-col items-center text-center">
-                    <span className="inline-block px-3 py-1 bg-green-50 text-green-700 text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">
-                        {t("directFromFarms")}
-                    </span>
-
-                    <h1 className="text-3xl md:text-5xl font-bold text-[#1a1a1a] tracking-tight">
-                        {productName}
-                    </h1>
-                </div>
-
-                <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-
-                    {/* LEFT: IMAGE SECTION */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="relative bg-white border border-gray-100 rounded-[24px] md:rounded-[32px] p-8 md:p-12 shadow-sm w-full"
-                    >
-                        <div className="relative aspect-square w-full max-w-[300px] md:max-w-[400px] mx-auto">
-                            <Image
-                                src={imagePath}
-                                alt={productName}
-                                fill
-                                className="object-contain"
-                                priority
-                            />
-                        </div>
-
-                        <div className="mt-8 flex justify-center gap-4 md:gap-8 border-t border-gray-50 pt-8">
-                            <div className="text-center">
-                                <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-gray-400 mb-1">{t("origin")}</p>
-                                <p className="text-xs md:text-sm font-semibold">{t("egypt")}</p>
-                            </div>
-                            <div className="w-[1px] h-8 bg-gray-100"></div>
-                            <div className="text-center">
-                                <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-gray-400 mb-1">{t("quality")}</p>
-                                <p className="text-xs md:text-sm font-semibold">{t("premium")}</p>
-                            </div>
-                            <div className="w-[1px] h-8 bg-gray-100"></div>
-                            <div className="text-center">
-                                <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-gray-400 mb-1">{t("type")}</p>
-                                <p className="text-xs md:text-sm font-semibold">{t("organic")}</p>
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    {/* RIGHT: INFO SECTION */}
-                    <div className="flex flex-col items-center text-center lg:items-start lg:text-left rtl:lg:text-right pt-2 md:pt-4">
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.2 }}
-                            className="w-full flex flex-col items-center lg:items-start"
-                        >
-                            <div className="hidden lg:block w-full text-left rtl:text-right">
-                                <span className="inline-block px-3 py-1 bg-green-50 text-green-700 text-[10px] font-bold uppercase tracking-widest rounded-full mb-4 md:mb-6">
-                                    {t("directFromFarms")}
-                                </span>
-                                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#1a1a1a] tracking-tight mb-4 md:mb-6">
-                                    {productName}
-                                </h1>
-                            </div>
-
-                            <p className="text-gray-500 text-base md:text-lg leading-relaxed mb-8 md:mb-10 font-normal max-w-lg text-center lg:text-left rtl:lg:text-right">
-                                {productDesc}
-                            </p>
-
-                            <div className="mb-8 md:mb-10 w-full text-center lg:text-left rtl:lg:text-right">
-                                <h3 className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-4">{t("availableSelection")}</h3>
-                                <div className="flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3">
-                                    {product.variants?.map((v: any, i: number) => (
-                                        <div key={i} className="px-4 py-2 md:px-5 md:py-2.5 bg-white border border-gray-200 rounded-full text-xs md:text-sm font-medium hover:border-black transition-all cursor-default shadow-sm">
-                                            {v[`name_${locale}`] || v.name_en}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className="grid grid-cols-2 gap-3 md:gap-4 mb-10 md:mb-12 w-full">
-                                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 md:gap-3 p-3 md:p-4 bg-[#f9f9f9] rounded-xl md:rounded-2xl border border-gray-50">
-                                    <FiPackage className="text-gray-400" size={18} />
-                                    <span className="text-[11px] md:text-xs font-semibold text-gray-600">{t("exportPacking")}</span>
-                                </div>
-                                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 md:gap-3 p-3 md:p-4 bg-[#f9f9f9] rounded-xl md:rounded-2xl border border-gray-50">
-                                    <FiShield className="text-gray-400" size={18} />
-                                    <span className="text-[11px] md:text-xs font-semibold text-gray-600">{t("certifiedQuality")}</span>
-                                </div>
-                            </div>
-
-                            <div className="w-full flex flex-row flex-nowrap items-center justify-start gap-2 mt-2">
-                                <Link href={`/${locale}/catalog`} scroll={false} className="flex-1 min-w-0">
-                                    <motion.div
-                                        whileHover={{ y: -3, boxShadow: "0px 10px 25px rgba(45, 90, 39, 0.25)" }}
-                                        whileTap={{ scale: 0.97 }}
-                                        className="flex items-center justify-center gap-1.5 bg-[#2d5a27] text-white px-2 py-3 rounded-full shadow-md transition-all whitespace-nowrap"
-                                    >
-                                        <FiSend size={14} className={isRTL ? "scale-x-[-1]" : ""} />
-                                        <span className="text-[10px] md:text-xs font-bold tracking-tight truncate">
-                                            {t("buttons.quote")}
-                                        </span>
-                                    </motion.div>
-                                </Link>
-
-                                <Link href={`/${locale}/contact`} scroll={false} className="flex-1 min-w-0">
-                                    <motion.div
-                                        whileHover={{ y: -3, backgroundColor: "rgba(45, 90, 39, 0.15)" }}
-                                        whileTap={{ scale: 0.97 }}
-                                        className="flex flex-1 min-w-0 items-center justify-center gap-1.5 bg-[#2d5a27]/10 text-[#2d5a27] px-2 py-3 rounded-full font-bold text-[10px] md:text-xs transition-all whitespace-nowrap"
-                                    >
-                                        <FiPackage size={14} />
-                                        <span className="tracking-tight truncate">
-                                            {t("buttons.sample")}
-                                        </span>
-                                    </motion.div>
-                                </Link>
-
-                                <motion.a
-                                    whileHover={{ y: -3, borderColor: "#2d5a27", color: "#2d5a27" }}
-                                    whileTap={{ scale: 0.97 }}
-                                    href={product.pdf_url || catalogPath}
-                                    download
-                                    target="_blank"
-                                    className="flex flex-1 min-w-0 items-center justify-center gap-1.5 border-2 border-gray-200 text-gray-600 px-2 py-3 rounded-full font-bold text-[10px] md:text-xs transition-all whitespace-nowrap hover:bg-gray-50"
-                                >
-                                    <FiDownload size={14} />
-                                    <span className="tracking-tight truncate">
-                                        {t("buttons.catalog")}
-                                    </span>
-                                </motion.a>
-                            </div>
-                        </motion.div>
-                    </div>
-                </div>
+        {/* زر العودة: ظاهر ونضيف تماماً بعيد عن أي تداخل */}
+        <Link
+            href={`/${locale}/products/`}
+            className="inline-flex items-center gap-3 text-[#2d5a27]/60 hover:text-[#2d5a27] transition-all duration-300 group py-1"
+        >
+            {/* حاوية الأيقونة: دوران هندسي ناعم عند الـ Hover مع قلب اتجاه السهم ذكياً في الـ RTL */}
+            <div className={`transform transition-transform duration-500 ease-out p-1.5 rounded-full bg-[#2d5a27]/5 group-hover:bg-[#2d5a27] group-hover:text-white ${isRTL ? "group-hover:rotate-[135deg]" : "group-hover:-rotate-[135deg]"
+                }`}>
+                <FiArrowUpLeft size={18} className={`transform transition-colors duration-300 ${isRTL ? "scale-x-[-1]" : ""}`} />
             </div>
 
-            <section className="relative w-full py-16 md:py-32 overflow-hidden bg-white">
+            {/* تم تكبير الخط هنا من text-xs إلى text-sm */}
+            <span className="text-sm font-bold uppercase tracking-widest transition-colors duration-300">
+                {t("backToCatalog")}
+            </span>
+        </Link>
+
+        {/* شارة الجودة العالمية */}
+        <div className="flex items-center gap-3 bg-gray-50/80 border border-gray-100/80 rounded-full pl-4 pr-3 py-2 backdrop-blur-sm shadow-sm hover:shadow-md hover:border-gray-200/80 transition-all duration-300">
+            {/* تم تكبير الخط هنا من text-[9px] إلى text-xs */}
+            <span className="hidden sm:block text-xs font-extrabold uppercase tracking-[0.15em] text-gray-500 selection:bg-transparent">
+                {t("premiumExport")}
+            </span>
+
+            {/* النبض الضوئي الأخضر */}
+            <div className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <div className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500 shadow-[0_0_12px_rgba(34,197,94,0.6)]"></div>
+            </div>
+        </div>
+
+    </div>
+
+    {/* الحاوية الرئيسية للمحتوى: مالي الشاشة 100% ومتوسط عمودياً بكل فخامة */}
+    <div className="flex-grow flex items-center justify-center max-w-6xl w-full mx-auto px-5 py-4 lg:py-0 overflow-y-auto lg:overflow-hidden">
+        <div className="w-full">
+            {/* في الموبايل: العنوان العلوي */}
+            <div className="lg:hidden mb-6 flex flex-col items-center text-center">
+                {/* تم تكبير خط الشارة هنا من text-[10px] إلى text-xs */}
+                <span className="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-bold uppercase tracking-widest rounded-full mb-2">
+                    {t("directFromFarms")}
+                </span>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a1a1a] tracking-tight px-2">
+                    {productName}
+                </h1>
+            </div>
+
+            {/* شبكة العرض (يمين ويسار) متناسقة تماماً */}
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+                {/* LEFT: IMAGE SECTION */}
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="relative bg-white border border-gray-100 rounded-[24px] md:rounded-[32px] p-6 md:p-8 shadow-sm w-full max-w-md mx-auto lg:max-w-none"
+                >
+                    <div className="relative aspect-square w-full max-w-[220px] sm:max-w-[260px] md:max-w-[300px] lg:max-w-[340px] mx-auto">
+                        <Image
+                            src={imagePath}
+                            alt={productName}
+                            fill
+                            className="object-contain"
+                            priority
+                        />
+                    </div>
+
+                    <div className="mt-6 flex justify-center gap-4 md:gap-8 border-t border-gray-50 pt-6">
+                        <div className="text-center">
+                            {/* تم تكبير خط العناوين الصغيرة من text-[9px] إلى text-xs */}
+                            <p className="text-xs uppercase tracking-widest text-gray-400 mb-1">{t("origin")}</p>
+                            {/* تم تكبير خط القيم من text-xs/md:text-sm إلى text-sm/md:text-base */}
+                            <p className="text-sm md:text-base font-semibold">{t("egypt")}</p>
+                        </div>
+                        <div className="w-[1px] h-8 bg-gray-100"></div>
+                        <div className="text-center">
+                            <p className="text-xs uppercase tracking-widest text-gray-400 mb-1">{t("quality")}</p>
+                            <p className="text-sm md:text-base font-semibold">{t("premium")}</p>
+                        </div>
+                        <div className="w-[1px] h-8 bg-gray-100"></div>
+                        <div className="text-center">
+                            <p className="text-xs uppercase tracking-widest text-gray-400 mb-1">{t("type")}</p>
+                            <p className="text-sm md:text-base font-semibold">{t("organic")}</p>
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* RIGHT: INFO SECTION */}
+                <div className="flex flex-col items-center text-center lg:items-start lg:text-left rtl:lg:text-right pt-1 w-full">
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.2 }}
+                        className="w-full flex flex-col items-center lg:items-start"
+                    >
+                        <div className="hidden lg:block w-full text-left rtl:text-right">
+                            {/* تم تكبير خط الشارة هنا أيضاً لـ text-xs */}
+                            <span className="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-bold uppercase tracking-widest rounded-full mb-2">
+                                {t("directFromFarms")}
+                            </span>
+                            {/* تم تكبير اسم المنتج من lg:text-4xl إلى lg:text-5xl لمزيد من الفخامة */}
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a1a1a] tracking-tight mb-3">
+                                {productName}
+                            </h1>
+                        </div>
+
+                        {/* تم تكبير خط الوصف من text-xs إلى text-sm وموبايل لـ text-base */}
+                        <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-5 font-normal max-w-lg text-center lg:text-left rtl:lg:text-right px-2 sm:px-0">
+                            {productDesc}
+                        </p>
+
+                        <div className="mb-4 w-full text-center lg:text-left rtl:lg:text-right">
+                            {/* تم تكبير العنوان من text-[10px] إلى text-xs */}
+                            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2.5">{t("availableSelection")}</h3>
+                            <div className="flex flex-wrap justify-center lg:justify-start gap-1.5 px-2 sm:px-0">
+                                {product.variants?.map((v: any, i: number) => (
+                                    /* تم تكبير خط الأحجام المتوفرة من text-[11px] إلى text-xs مع زيادة الـ padding */
+                                    <div key={i} className="px-3.5 py-1.5 bg-white border border-gray-200 rounded-full text-xs font-medium hover:border-black transition-all cursor-default shadow-sm">
+                                        {v[`name_${locale}`] || v.name_en}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-3 mb-5 w-full px-2 sm:px-0">
+                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 p-2.5 bg-[#f9f9f9] rounded-xl border border-gray-50">
+                                <FiPackage className="text-gray-400 flex-shrink-0" size={16} />
+                                {/* تم تكبير خط الميزات من text-[11px] إلى text-xs */}
+                                <span className="text-xs font-semibold text-gray-600 text-center sm:text-left rtl:sm:text-right">{t("exportPacking")}</span>
+                            </div>
+                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 p-2.5 bg-[#f9f9f9] rounded-xl border border-gray-50">
+                                <FiShield className="text-gray-400 flex-shrink-0" size={16} />
+                                <span className="text-xs font-semibold text-gray-600 text-center sm:text-left rtl:sm:text-right">{t("certifiedQuality")}</span>
+                            </div>
+                        </div>
+
+                        {/* أزرار الـ CTA الاحترافية المقاومة للانضغاط */}
+                        <div className="w-full grid grid-cols-1 sm:grid-cols-3 lg:flex lg:flex-row lg:flex-nowrap items-center justify-start gap-3 mt-1 px-2 sm:px-0">
+                            <Link href={`/${locale}/catalog`} scroll={false} className="w-full lg:flex-1">
+                                <motion.div
+                                    whileHover={{ y: -3, boxShadow: "0px 10px 25px rgba(45, 90, 39, 0.25)" }}
+                                    whileTap={{ scale: 0.97 }}
+                                    /* تم تكبير الخط هنا من text-[11px] إلى text-xs/md:text-sm والـ padding لجعل الزر أضخم وأسهل في الضغط */
+                                    className="flex items-center justify-center gap-1.5 bg-[#2d5a27] text-white px-4 py-3 rounded-full shadow-md transition-all whitespace-nowrap"
+                                >
+                                    <FiSend size={15} className={`flex-shrink-0 ${isRTL ? "scale-x-[-1]" : ""}`} />
+                                    <span className="text-xs md:text-sm font-bold tracking-tight">
+                                        {t("buttons.quote")}
+                                    </span>
+                                </motion.div>
+                            </Link>
+
+                            <Link href={`/${locale}/contact`} scroll={false} className="w-full lg:flex-1">
+                                <motion.div
+                                    whileHover={{ y: -3, backgroundColor: "rgba(45, 90, 39, 0.15)" }}
+                                    whileTap={{ scale: 0.97 }}
+                                    className="flex items-center justify-center gap-1.5 bg-[#2d5a27]/10 text-[#2d5a27] px-4 py-3 rounded-full font-bold text-xs md:text-sm transition-all whitespace-nowrap"
+                                >
+                                    <FiPackage size={15} className="flex-shrink-0" />
+                                    <span className="tracking-tight">
+                                        {t("buttons.sample")}
+                                    </span>
+                                </motion.div>
+                            </Link>
+
+                            <motion.a
+                                whileHover={{ y: -3, borderColor: "#2d5a27", color: "#2d5a27" }}
+                                whileTap={{ scale: 0.97 }}
+                                href={product.pdf_url || catalogPath}
+                                download
+                                target="_blank"
+                                className="flex w-full lg:flex-1 items-center justify-center gap-1.5 border-2 border-gray-200 text-gray-600 px-4 py-3 rounded-full font-bold text-xs md:text-sm transition-all whitespace-nowrap hover:bg-gray-50"
+                            >
+                                <FiDownload size={15} className="flex-shrink-0" />
+                                <span className="tracking-tight">
+                                    {t("buttons.catalog")}
+                                </span>
+                            </motion.a>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {/* سبيسر وهمي سفلي متناسق */}
+    <div className="h-4 flex-shrink-0"></div>
+</div>
+
+            <section className="relative w-full py-15 overflow-hidden bg-white">
                 <div className="absolute inset-0 z-0">
                     <div
                         className="absolute inset-0 bg-[#2d5a27]"
@@ -285,7 +329,7 @@ export default function ProductContent({ product }: ProductProps) {
                 </div>
             </section>
 
-            <section className="max-w-7xl mx-auto px-6 mt-24 md:mt-40 mb-20 md:mb-32">
+            {/* <section className="max-w-7xl mx-auto px-6 mt-24 md:mt-40 mb-20 md:mb-32">
                 <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
                     <div className="lg:col-span-7 text-center md:text-left">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-6 md:mb-8">
@@ -371,7 +415,8 @@ export default function ProductContent({ product }: ProductProps) {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
+
         </main>
     );
 }

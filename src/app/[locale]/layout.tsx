@@ -80,7 +80,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: "website",
       images: [
         {
-          url: "/og-image.webp", // تأكد من وجود صورة بهذا الاسم في folder public
+          url: "/og-main.jpg", // تأكد من وجود صورة بهذا الاسم في folder public
           width: 1200,
           height: 630,
           alt: "Ezz Export - Egyptian Agricultural Excellence",
@@ -93,7 +93,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: t('title'),
       description: t('description'),
-      images: ["/og-image.webp"],
+      images: ["/og-main.jpg"],
     },
 
     // 6. تعليمات الروبوتات (Robots)
@@ -116,13 +116,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         { url: "/favicon.png", type: "image/png" },
       ],
       apple: [
-        { url: "/apple-touch-icon.png" },
+        { url: "/apple-icon.png" },
       ],
     },
 
     // 8. التحقق من ملكية الموقع (اختياري)
     verification: {
-      google: "google-site-verification-code", // ضعه هنا لو متاح
+      google: "google-site-verification-code",
     },
   };
 }

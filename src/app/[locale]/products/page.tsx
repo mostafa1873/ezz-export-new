@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: "Ezz Export",
       images: [
         {
-          url: "/og-image.webp",
+          url: "/og-main.jpg",
           width: 1200,
           height: 630,
         },
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: t('metadata.title'),
       description: t('metadata.description'),
-      images: ["/og-image.webp"],
+      images: ["/og-main.jpg"],
     }
   };
 }

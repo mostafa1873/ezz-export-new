@@ -6,6 +6,7 @@
   "Navbar": {
     "home": "Home",
     "about": "Chi Siamo",
+    "why-egypt": "Perché l'Egitto",
     "catalog": "Richiedi Preventivo",
     "products": "I Nostri Prodotti",
     "contact": "Contattaci",
@@ -408,5 +409,59 @@
     "successTitle": "Grazie per averci contattato",
     "successDescription": "Il catalogo e i file dei prodotti saranno inviati alla tua email e il nostro team ti contatterà per discutere le tue specifiche esigenze di fornitura.",
     "errorMsg": "Si è verificato un errore, riprova."
+  },
+  "TechnicalSpecs": {
+    "title": "Specifiche Tecniche",
+    "mainHeading": "Specifiche chiare per decisioni d'acquisto più precise",
+    "description": "Forniamo dettagli precisi su dimensioni, imballaggio, gradi di selezione e capacità di carico per facilitare i processi di acquisto e la pianificazione logistica.",
+    "sizesTitle": "Dimensioni e Misure",
+    "sizesDesc": "Dimensioni precise e conformi agli standard internazionali per soddisfare ogni esigenza.",
+    "packagingTitle": "Imballaggio e Confezionamento",
+    "packagingDesc": "Protezione superiore e imballaggio sicuro che garantisce l'integrità del prodotto durante il trasporto.",
+    "sortingTitle": "Gradi di Selezione",
+    "sortingDesc": "Classificazione accurata e rigoroso controllo qualità per garantire una selezione premium.",
+    "loadingTitle": "Capacità di Carico",
+    "loadingDesc": "Pianificazione logistica ottimizzata per la massima capacità ed efficienza dei container."
+  },
+  "QualitySpecs": {
+    "title": "Standard di Qualità",
+    "mainHeading": "Standard di qualità rigorosi per la massima soddisfazione del cliente",
+    "description": "I nostri prodotti sono sottoposti a test rigorosi per garantire che soddisfino i più alti standard di sicurezza alimentare, freschezza e conformità alle normative internazionali.",
+    "safetyTitle": "Sicurezza Alimentare",
+    "safetyDesc": "Test approfonditi per garantire l'assenza di contaminanti e la conformità agli standard globali.",
+    "freshnessTitle": "Freschezza Garantita",
+    "freshnessDesc": "Controllo della catena del freddo e imballaggio ottimale per"
+  },
+  "WhyEgyptHero": {
+    "metadata": {
+      "title": "Perché gli importatori europei scelgono l'Egitto?",
+      "description": "L'Egitto si è affermato come hub strategico di approvvigionamento agricolo per i mercati europei, grazie a rapidi progressi nella produzione moderna, logistica sostenibile e rigorosa conformità export."
+    },
+    "badge": "Il futuro agricolo dell'Unione Europea",
+    "title": "Perché gli importatori europei scelgono l'Egitto?",
+    "description": "L'Egitto si è affermato come hub strategico di approvvigionamento agricolo per i mercati europei, grazie a rapidi progressi nella produzione moderna, logistica sostenibile e rigorosa conformità export.",
+    "pillar1_title": "Transito logistico ultrarapido",
+    "pillar1_desc": "Una posizione geografica strategica ed eccezionale collega i campi egiziani direttamente ai principali porti europei in soli 3-5 giorni, garantendo la massima freschezza e un'impronta di carbonio notevolmente ridotta rispetto ai concorrenti globali.",
+    "pillar2_title": "Finestra climatica ideale",
+    "pillar2_desc": "Grazie a un clima caldo tutto l'anno e a un'abbondante luce solare, l'Egitto offre stagioni di raccolta estese, assicurando forniture fresche e altamente affidabili proprio durante i rigidi mesi invernali europei.",
+    "pillar3_title": "Rigorosa conformità agli standard UE",
+    "pillar3_desc": "Le nostre aziende agricole partner applicano rigorosamente i più elevati standard internazionali come GlobalGAP, integrando sistemi avanzati di tracciabilità digitale per garantire la conformità al 100% con le severe normative europee sulla sicurezza alimentare.",
+    "sec2_badge": "Capacità Agricole",
+    "sec2_title": "Capacità produttive che supportano la continuità",
+    "sec2_desc": "L'Egitto offre un'ampia diversità agricola che consente la fornitura di prodotti stagionali con una qualità stabile e quantità commerciali adatte all'esportazione.",
+    "sec3_badge": "Vantaggio Logistico",
+    "sec3_title": "Posizione Strategica che Supporta la Velocità di Fornitura",
+    "sec3_desc": "La posizione geografica dell'Egitto aiuta a ridurre i tempi di transito verso i mercati europei e migliora l'efficienza della catena di approvvigionamento.",
+    "quality_sec_badge": "Qualité et Conformité Européenne",
+    "quality_sec_title": "Évolution constante des normes de qualité et d'exportation",
+    "quality_sec_desc": "Le secteur égyptien de l'exportation agricole connaît un développement remarquable des systèmes de qualité et de conformité aux exigences des marchés européens.",
+    "q_card1_head": "Normes Internationales",
+    "q_card1_text": "Application stricte des normes d'inspection mondiales.",
+    "q_card2_head": "Conformité Européenne",
+    "q_card2_text": "Alignement total avec toutes les exigences européennes.",
+    "q_card3_head": "Technologie Moderne",
+    "q_card3_text": "Utilisation de technologies de tri et d'emballage avancées.",
+    "q_card4_head": "Durabilité de l'Approvisionnement",
+    "q_card4_text": "Garantie de chaînes d'approvisionnement efficaces et continues."
   }
 }

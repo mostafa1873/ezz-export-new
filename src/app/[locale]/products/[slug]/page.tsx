@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import TechnicalSpecs from "@/components/products/TechnicalSpecs";
+import QualitySpecs from "@/components/products/QualitySpecs";
 
 const createSlug = (name: string, id: string | number) => {
   if (!name) return '';
@@ -19,11 +20,9 @@ interface PageProps {
   params: Promise<{ slug: string; locale: string }>;
 }
 
-// دالة توليد الـ SEO ديناميكياً لكل منتج بناءً على بياناته ولغته
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug, locale } = await params;
 
-  // استخراج الـ ID من آخر الـ slug للبحث بدقة
   const parts = slug.split('-');
   const idFromSlug = parts[parts.length - 1];
 
@@ -33,7 +32,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!product) return {};
 
-  // اختيار الاسم والوصف بناءً على اللغة الحالية
   const productName = locale === 'ar' ? product.name_ar : product.name_en;
   const productDesc = locale === 'ar' ? product.description_ar : product.description_en;
 
@@ -45,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: productDesc,
       images: [
         {
-          url: product.image, // صورة المنتج الحقيقية تظهر عند مشاركة اللينك
+          url: product.image,
           width: 800,
           height: 600,
           alt: productName,
@@ -114,6 +112,7 @@ export default async function ProductPage({ params }: PageProps) {
 
   return <>
     <ProductContent product={safeProduct} />;
-    {/* <TechnicalSpecs /> */}
+    <TechnicalSpecs />
+    <QualitySpecs />
   </>
 }

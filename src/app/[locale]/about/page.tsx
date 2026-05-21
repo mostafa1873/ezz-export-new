@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       url: `https://ezzexport.com/${locale}/about`,
       images: [
         {
-          url: "/og-image.webp", // نفس الصورة الموحدة أو صورة خاصة بـ About
+          url: "/og-main.jpg", // نفس الصورة الموحدة أو صورة خاصة بـ About
           width: 1200,
           height: 630,
         },

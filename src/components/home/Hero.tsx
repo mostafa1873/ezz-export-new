@@ -97,16 +97,16 @@ export default function CinematicHero() {
                                     {t("titleHighlight")}
                                 </span>{" "}
                                 <span className="block md:inline lg:block">{t("titleSuffix")}</span>
-                            </h1>
+                             </h1>
 
-                            {/* Mobile Image - تحسين حجمها لتناسب الشاشات الصغيرة جداً */}
-                            <div className="relative w-44 h-44 sm:w-56 sm:h-56 mx-auto mb-6 block lg:hidden">
+                            {/* Mobile Image - تم تكبير الحاوية وزيادة حجم الـ sizes لتعمل بكفاءة */}
+                            <div className="relative w-64 h-64 sm:w-80 sm:h-80 mx-auto mb-6 block lg:hidden">
                                 <Image
                                     src={arch}
                                     alt="Ezz products"
                                     fill
                                     priority
-                                    sizes="(max-w: 640px) 176px, 224px"
+                                    sizes="(max-w: 640px) 256px, 320px"
                                     className="object-contain"
                                 />
                             </div>
@@ -147,9 +147,9 @@ export default function CinematicHero() {
                         </motion.div>
                     </div>
 
-                    {/* Desktop Image Column */}
-                    <div className="w-full lg:col-span-5 relative hidden lg:flex justify-center items-center h-[350px] xl:h-[450px]">
-                        <div className="absolute w-[250px] h-[250px] xl:w-[300px] xl:h-[300px] bg-green-50/50 rounded-full blur-[60px]" />
+                    {/* Desktop Image Column - تم زيادة الطول الكلي للعمود وحجم حاوية الصورة المتحركة وحجم الـ sizes */}
+                    <div className="w-full lg:col-span-5 relative hidden lg:flex justify-center items-center h-[450px] xl:h-[550px]">
+                        <div className="absolute w-[300px] h-[300px] xl:w-[400px] xl:h-[400px] bg-green-50/50 rounded-full blur-[60px]" />
 
                         <motion.div
                             animate={
@@ -158,14 +158,14 @@ export default function CinematicHero() {
                                     : { y: [0, -12, 0], rotate: [0, 3, 0] }
                             }
                             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                            className="relative w-[320px] h-[320px] xl:w-[400px] xl:h-[400px] z-20 will-change-transform transform-gpu"
+                            className="relative w-[400px] h-[400px] xl:w-[500px] xl:h-[500px] z-20 will-change-transform transform-gpu"
                         >
                             <Image
                                 src={arch}
                                 alt="Ezz products"
                                 fill
                                 priority
-                                sizes="(min-width: 1280px) 400px, 320px"
+                                sizes="(min-width: 1280px) 500px, 400px"
                                 className="object-contain"
                             />
                         </motion.div>

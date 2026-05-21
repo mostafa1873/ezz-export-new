@@ -86,6 +86,7 @@ export default function Navbar() {
                             <div className="flex items-center gap-1 bg-gray-100/50 p-1.5 rounded-full border border-gray-100">
                                 <Link href={`/${locale}/`} className={navLinkStyles('/')}>{t('home')}</Link>
                                 <Link href={`/${locale}/about/`} className={navLinkStyles('/about')}>{t('about')}</Link>
+                                <Link href={`/${locale}/why-egypt/`} className={navLinkStyles('/why-egypt')}>{t('why-egypt')}</Link>
                                 <Link href={`/${locale}/catalog/`} className={navLinkStyles('/catalog')}>{t('catalog')}</Link>
                                 <Link href={`/${locale}/products/`} className={navLinkStyles('/products')}>{t('products')}</Link>
                                 <Link href={`/${locale}/contact/`} className={navLinkStyles('/contact')}>{t('contact')}</Link>
@@ -148,6 +149,7 @@ export default function Navbar() {
                         {[
                             { name: t('home'), path: '/', icon: <Home className="w-5 h-5" /> },
                             { name: t('about'), path: '/about', icon: <Info className="w-5 h-5" /> },
+                            { name: t('about'), path: '/why-egypt', icon: <Info className="w-5 h-5" /> },
                             { name: t('catalog'), path: '/catalog', icon: <Info className="w-5 h-5" /> },
                             { name: t('products'), path: '/products', icon: <Leaf className="w-5 h-5" /> },
                             { name: t('contact'), path: '/contact', icon: <PhoneCall className="w-5 h-5" /> }
