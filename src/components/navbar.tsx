@@ -13,6 +13,7 @@ import logoMain from '../assets/greenrow.webp';
 import GB from '../assets/GB.webp';
 import EG from '../assets/EG.webp';
 import IT from '../assets/IT.webp';
+import { FiBriefcase, FiMapPin, FiShoppingBag } from 'react-icons/fi';
 
 export default function Navbar() {
     const t = useTranslations('Navbar');
@@ -149,8 +150,8 @@ export default function Navbar() {
                         {[
                             { name: t('home'), path: '/', icon: <Home className="w-5 h-5" /> },
                             { name: t('about'), path: '/about', icon: <Info className="w-5 h-5" /> },
-                            { name: t('about'), path: '/why-egypt', icon: <Info className="w-5 h-5" /> },
-                            { name: t('catalog'), path: '/catalog', icon: <Info className="w-5 h-5" /> },
+                            { name: t('why-egypt'), path: '/why-egypt', icon: <FiMapPin className="w-5 h-5" /> },
+                            { name: t('catalog'), path: '/catalog', icon: <FiBriefcase className="w-5 h-5" /> },
                             { name: t('products'), path: '/products', icon: <Leaf className="w-5 h-5" /> },
                             { name: t('contact'), path: '/contact', icon: <PhoneCall className="w-5 h-5" /> }
                         ].map((link) => {
