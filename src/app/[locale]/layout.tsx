@@ -92,14 +92,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: "Ezz Export",
       locale: locale === 'ar' ? 'ar_EG' : locale === 'it' ? 'it_IT' : 'en_US',
       type: "website",
-      images: [
-        {
-          url: `${baseUrl}/og-main.jpg`, 
-          width: 1200,
-          height: 630,
-          alt: "Ezz Export - Egyptian Agricultural Excellence",
-        },
-      ],
+      // images: [
+      //   {
+      //     url: `${baseUrl}/og-main.jpg`, 
+      //     width: 1200,
+      //     height: 630,
+      //     alt: "Ezz Export - Egyptian Agricultural Excellence",
+      //   },
+      // ],
     },
 
     // 5. إعدادات تويتر (Twitter Card)
@@ -107,7 +107,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: t('title'),
       description: t('description'),
-      images: [`${baseUrl}/og-main.jpg`],
+      // images: [`${baseUrl}/og-main.jpg`],
     },
 
     // 6. تعليمات الروبوتات (Robots)
