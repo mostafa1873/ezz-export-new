@@ -94,7 +94,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: "website",
       images: [
         {
-          url: "/og-main.jpg", // استخدام المسار النسبي لحل مشكلة النوع
+          url: "/og-main.jpg", 
           width: 1200,
           height: 630,
           alt: "Ezz Export - Egyptian Agricultural Excellence",
@@ -107,7 +107,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: t('title'),
       description: t('description'),
-      images: ["/og-main.jpg"], // استخدام المسار النسبي لحل مشكلة النوع
+      images: ["/og-main.jpg"],
     },
 
     // 6. تعليمات الروبوتات (Robots)
@@ -123,7 +123,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       },
     },
 
-    // 7. الأيقونات (Favicons) - تم التعديل لضمان عدم التداخل
+    // 7. الأيقونات (تم تعديلها لتكون مسارات مباشرة لمنع تضارب الـ OG Image)
     icons: {
       icon: "/favicon.png",
       shortcut: "/favicon.png",
