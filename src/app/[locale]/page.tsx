@@ -14,16 +14,21 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Index' });
 
+  // تحديد الرابط الأساسي ديناميكياً ليعمل على Vercel أو الدومين الخاص بك
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 
+                  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://ezzexport.com");
+
   return {
+    metadataBase: new URL(baseUrl),
     title: t('title'),
     description: t('description'),
     alternates: {
-      canonical: `https://ezzexport.com/${locale}`,
+      canonical: `${baseUrl}/${locale}`,
     },
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `https://ezzexport.com/${locale}`,
+      url: `${baseUrl}/${locale}`,
       siteName: "Ezz Export",
       type: "website",
       images: [
