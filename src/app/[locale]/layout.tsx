@@ -123,15 +123,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       },
     },
 
-    // 7. الأيقونات (Favicons)
+    // 7. الأيقونات (Favicons) - تم التعديل لضمان عدم التداخل
     icons: {
-      icon: [
-        { url: "/favicon.png" },
-        { url: "/favicon.png", type: "image/png" },
-      ],
-      apple: [
-        { url: "/apple-icon.png" },
-      ],
+      icon: "/favicon.png",
+      shortcut: "/favicon.png",
+      apple: "/apple-icon.png",
     },
 
     // 8. التحقق من ملكية الموقع (اختياري)
