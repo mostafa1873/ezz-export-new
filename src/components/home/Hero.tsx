@@ -15,44 +15,45 @@ const MovingTicker = memo(() => {
 
     return (
         <div
-            className="relative w-full bg-[#0a2e1a] py-4 mt-auto mb-4 overflow-x-hidden ltr:rotate-[-1deg] rtl:rotate-[1deg] scale-[1.01] z-50 shadow-xl"
-            style={{ transformStyle: "preserve-3d", backfaceVisibility: "hidden" }}
-            dir="ltr"
-        >
-            <motion.div
-                animate={reduceMotion ? false : { x: ["0%", "-50%"] }}
-                transition={{
-                    repeat: Infinity,
-                    duration: 30,
-                    ease: "linear",
-                }}
-                className="flex whitespace-nowrap gap-12 md:gap-24 min-w-max will-change-transform"
+    // استبدلنا فقط justify-center بـ justify-start لحل تعارض الحركة اللانهائية
+    className="relative w-full bg-[#0a2e1a] py-4 mt-auto mb-4 overflow-hidden ltr:rotate-[-1deg] rtl:rotate-[1deg] scale-[1.01] z-50 shadow-xl flex justify-start items-center"
+    style={{ transformStyle: "preserve-3d", backfaceVisibility: "hidden" }}
+    dir="ltr"
+>
+    <motion.div
+        animate={reduceMotion ? false : { x: ["0%", "-50%"] }}
+        transition={{
+            repeat: Infinity,
+            duration: 30,
+            ease: "linear",
+        }}
+        className="flex whitespace-nowrap gap-12 md:gap-24 min-w-max will-change-transform"
+    >
+        {[...Array(4)].map((_, i) => (
+            <div
+                key={i}
+                className="flex items-center gap-12 md:gap-24"
+                dir={locale === "ar" ? "rtl" : "ltr"}
             >
-                {[...Array(4)].map((_, i) => (
-                    <div
-                        key={i}
-                        className="flex items-center gap-12 md:gap-24"
-                        dir={locale === "ar" ? "rtl" : "ltr"}
-                    >
-                        <div className="flex items-center gap-3">
-                            <FiBox className="text-green-400 shrink-0" />
-                            <span className="text-white text-xs md:text-sm font-black uppercase tracking-[0.2em] rtl:tracking-normal">
-                                {t("fastDelivery")}
-                            </span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                            <FiGlobe className="text-green-400 shrink-0" />
-                            <span className="text-white text-xs md:text-sm font-black uppercase tracking-[0.2em] rtl:tracking-normal">
-                                {t("globalReach")}
-                            </span>
-                        </div>
-                        <div className="flex items-center gap-3 text-green-400 font-serif italic text-lg">
-                            {t("premiumHarvest")}
-                        </div>
-                    </div>
-                ))}
-            </motion.div>
-        </div>
+                <div className="flex items-center gap-3">
+                    <FiBox className="text-green-400 shrink-0" />
+                    <span className="text-white text-xs md:text-sm font-black uppercase tracking-[0.2em] rtl:tracking-normal">
+                        {t("fastDelivery")}
+                    </span>
+                </div>
+                <div className="flex items-center gap-3">
+                    <FiGlobe className="text-green-400 shrink-0" />
+                    <span className="text-white text-xs md:text-sm font-black uppercase tracking-[0.2em] rtl:tracking-normal">
+                        {t("globalReach")}
+                    </span>
+                </div>
+                <div className="flex items-center gap-3 text-green-400 font-serif italic text-lg">
+                    {t("premiumHarvest")}
+                </div>
+            </div>
+        ))}
+    </motion.div>
+</div>
     );
 });
 MovingTicker.displayName = "MovingTicker";
@@ -97,7 +98,7 @@ export default function CinematicHero() {
                                     {t("titleHighlight")}
                                 </span>{" "}
                                 <span className="block md:inline lg:block">{t("titleSuffix")}</span>
-                             </h1>
+                            </h1>
 
                             {/* Mobile Image - تم تكبير الحاوية وزيادة حجم الـ sizes لتعمل بكفاءة */}
                             <div className="relative w-64 h-64 sm:w-80 sm:h-80 mx-auto mb-6 block lg:hidden">

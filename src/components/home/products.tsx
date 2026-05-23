@@ -33,8 +33,13 @@ const MainProducts = () => {
   useEffect(() => {
     if (productsData && productsData.products) {
       // فلترة المنتجات الأساسية الـ 5 المطلوبة عبر الـ IDs الخاصة بها
-      const targetIds = [1, 34, 22, 24, 21]; 
-      const filtered = productsData.products.filter((p: any) => targetIds.includes(p.id));
+      const targetIds = [1, 34, 24, 21, 23];
+
+      const filtered = productsData.products
+        .filter((p: any) => targetIds.includes(p.id))
+        // هنا قمنا بترتيب المنتجات لكي تطابق تماماً ترتيب المصفوفة targetIds
+        .sort((a: any, b: any) => targetIds.indexOf(a.id) - targetIds.indexOf(b.id));
+
       setProducts(filtered.length > 0 ? filtered : productsData.products.slice(0, 5));
     }
   }, []);
@@ -66,7 +71,7 @@ const MainProducts = () => {
 
       {/* تم ضبط السكشن مع الحفاظ التام على overflow-hidden لحماية الأبعاد والتأثيرات الخلفية */}
       <section className="py-10 bg-[#fff] text-[#051109] relative z-10 border-t-2 border-[#2d5a27] overflow-hidden">
-        
+
         {/* عناصر ديكورية بالخلفية لكسر اللون وإعطاء شكل مميز وعصري */}
         <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none z-0">
           <div className="absolute top-10 left-10 w-96 h-96 bg-[#2d5a27]/5 rounded-full blur-3xl" />
@@ -74,10 +79,10 @@ const MainProducts = () => {
         </div>
 
         <div className="w-full max-w-[1800px] mx-auto px-4 md:px-8 relative z-10">
-          
+
           {/* --- HEADER SECTION WITH WATERMARK BACKGROUND --- */}
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 relative">
-            
+
             {/* الكلمة الخلفية الكبيرة الفخمة - تم ضبط الشفافية والخط بدقة */}
             <div className="absolute -top-10 md:-top-16 left-1/2 -translate-x-1/2 text-[50px] sm:text-[110px] md:text-[150px] font-black uppercase tracking-[0.15em] text-[#2d5a27]/[0.04] select-none pointer-events-none z-0 font-sans">
               FRESH
@@ -94,7 +99,7 @@ const MainProducts = () => {
             <h2 className="text-3xl md:text-5xl font-black text-[#051109] uppercase leading-[1.15] tracking-tight mb-4 relative z-10">
               {mainT("title")}
             </h2>
-            
+
             <p className="text-gray-500 text-sm md:text-base font-medium max-w-2xl relative z-10">
               {mainT("desc")}
             </p>
@@ -111,7 +116,7 @@ const MainProducts = () => {
                 >
                   {/* تم تعديل الطول ليكون مرن بالكامل h-full مع min-h لمنع الانضغاط وتجانس الارتفاعات */}
                   <div className="relative min-h-[450px] h-full w-full bg-white rounded-[2rem] xl:rounded-[2.5rem] overflow-hidden border border-[#2d5a27]/20 flex flex-col transition-all duration-500 shadow-[0_4px_25px_rgba(0,0,0,0.02)]">
-                    
+
                     {/* Image Area - أصبحت مرنة هيدروليكياً وتأخذ المساحة المتاحة بالتساوي */}
                     <div className="relative flex-1 w-full min-h-[220px] p-6 md:p-8 flex items-center justify-center">
                       <Image
@@ -126,7 +131,7 @@ const MainProducts = () => {
 
                     {/* Info Box - تم تثبيت تموضعه بالأسفل دائماً دون تداخل */}
                     <div className="p-4 md:p-6 bg-white border border-black/[0.02] rounded-[1.5rem] md:rounded-[1.8rem] m-2 md:m-3 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.02)] shrink-0">
-                      
+
                       <div className="flex justify-between items-start mb-3 md:mb-4 gap-2">
                         <div className="max-w-[75%] min-w-0">
                           <div className="flex items-center gap-1.5 mb-1.5">
@@ -139,7 +144,7 @@ const MainProducts = () => {
                             {getLocalizedContent(product, 'name')}
                           </h3>
                         </div>
-                        
+
                         {/* السهم الأخضر الجانبي */}
                         <div className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-[#2d5a27] text-white flex items-center justify-center shadow-lg shrink-0">
                           <FiArrowUpRight size={16} className="rtl:-scale-x-100" />

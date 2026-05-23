@@ -20,10 +20,10 @@ export default function FloatingActions() {
         animate={{ opacity: 1, x: 0 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.9 }}
-        className="group relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-white text-[#2d5a27] rounded-full shadow-xl border border-gray-100 cursor-pointer"
+        className="group relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-[#2d5a27] text-white rounded-full shadow-xl border border-gray-100 cursor-pointer"
       >
         {/* التسمية التوضيحية تظهر دائماً على يسار الزر لضمان عدم خروجها عن الشاشة */}
-        <span className="hidden md:block absolute right-16 px-3 py-1 bg-black text-white text-[10px] uppercase font-bold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+        <span className="hidden md:block absolute right-16 px-3 py-1 bg-[#2d5a27] text-white text-[10px] uppercase font-bold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
           {t('downloadCatalog')}
         </span>
         <FaFileDownload className="text-xl md:text-2xl" />
