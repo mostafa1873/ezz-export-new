@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       return `https://${process.env.VERCEL_URL}`;
     }
     if (process.env.NODE_ENV === 'development') {
-      return 'http://localhost:3000';
+      return 'http://ezz-export-new.vercel.app';
     }
     return "https://ezzexport.com";
   };
