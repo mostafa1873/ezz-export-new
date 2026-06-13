@@ -127,7 +127,7 @@ const FinalCTA = () => {
                 onClick={handleDownloadCatalog}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-white text-[#0b1e11] hover:bg-slate-100 font-bold py-4 px-6 rounded-xl flex items-center justify-center gap-3 transition-all shadow-xl shadow-black/20"
+                className="w-full cursor-pointer bg-white text-[#0b1e11] hover:bg-slate-100 font-bold py-4 px-6 rounded-xl flex items-center justify-center gap-3 transition-all shadow-xl shadow-black/20"
               >
                 <Download size={18} className="animate-pulse" />
                 <span className="text-sm md:text-base font-black tracking-wide">

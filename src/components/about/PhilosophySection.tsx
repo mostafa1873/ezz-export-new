@@ -23,7 +23,8 @@ export default function PhilosophySection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
           
           {/* 1. الكتلة الجانبية: العنوان الرئيسي والبادج */}
-          <div className="lg:col-span-5 sticky top-24">
+          {/* التعديل هنا: خلينا الـ sticky يشتغل بس على الشاشات الكبيرة عشان مايبوظش الموبايل */}
+          <div className="lg:col-span-5 relative lg:sticky lg:top-24">
             <div className="flex items-center gap-3 mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-[#4ca743]" />
               <span className="text-[#4ca743] text-xs font-black uppercase tracking-[0.3em]">
@@ -37,7 +38,7 @@ export default function PhilosophySection() {
               {t("title")}
             </h2>
 
-            <p className={`text-slate-400 text-sm sm:text-base font-medium leading-relaxed max-w-sm ${
+            <p className={`text-white/50 text-sm sm:text-base font-medium leading-relaxed max-w-sm ${
               isRtl ? "text-right" : "text-left"
             }`}>
               {t("description")}
@@ -63,8 +64,8 @@ export default function PhilosophySection() {
                   {/* محتوى الركيزة */}
                   <div className="flex flex-col sm:flex-row sm:items-baseline gap-4">
                     
-                    {/* الرقم التعريفي - يكبر ويضيء عند الـ Hover */}
-                    <span className="text-xl font-black font-mono text-slate-500 group-hover:text-[#4ca743] group-hover:scale-110 transition-all duration-300 transform origin-left">
+                    {/* الرقم التعريفي - التعديل هنا: ربطنا الـ origin باتجاه اللغة عشان الحركة تظبط في الموبايل والشاشات كلها */}
+                    <span className={`text-xl font-black font-mono text-white/70 group-hover:text-[#4ca743] group-hover:scale-110 transition-all duration-300 transform ${isRtl ? 'origin-right' : 'origin-left'}`}>
                       {pillar.num}.
                     </span>
 
@@ -75,7 +76,7 @@ export default function PhilosophySection() {
                       </h3>
                       
                       {/* الشرح */}
-                      <p className="text-sm sm:text-base text-slate-400 font-medium leading-relaxed max-w-xl group-hover:text-slate-300 transition-colors duration-200">
+                      <p className="text-sm sm:text-base text-white/50 font-medium leading-relaxed max-w-xl group-hover:text-slate-300 transition-colors duration-200">
                         {pillar.desc}
                       </p>
                     </div>
