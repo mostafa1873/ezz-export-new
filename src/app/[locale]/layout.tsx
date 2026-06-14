@@ -45,8 +45,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Index' });
 
-  // 🛑 تم التعديل هنا: تثبيت الرابط لمنع Vercel من استخدام الروابط الداخلية اللي بتمنع الواتساب يقرأ الصورة
-  const baseUrl = "https://ezz-export-new.vercel.app";
+  // تثبيت الدومين الرئيسي هنا كـ Base عشان Next.js يربط بيه كل المسارات تلقائياً زي Global Nexus
+  const SITE_URL = "https://ezz-export-new.vercel.app";
 
   return {
     // 1. العناوين والوصف الأساسي
@@ -55,19 +55,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       template: `%s | Ezz Export`
     },
     description: t('description'),
-    metadataBase: new URL(baseUrl),
+    metadataBase: new URL(SITE_URL),
 
     // 2. الكلمات المفتاحية (Keywords)
     keywords: ["Ezz Export", "Export Egypt", "Fresh fruits export", "Egyptian vegetables", "Agricultural products Egypt"],
 
     // 3. روابط اللغة والأرشفة (Canonical & Hreflang)
     alternates: {
-      canonical: `${baseUrl}/${locale}`,
+      canonical: `${SITE_URL}/${locale}`,
       languages: {
-        ar: `${baseUrl}/ar`,
-        en: `${baseUrl}/en`,
-        it: `${baseUrl}/it`,
-        "x-default": `${baseUrl}/en`,
+        ar: `${SITE_URL}/ar`,
+        en: `${SITE_URL}/en`,
+        it: `${SITE_URL}/it`,
+        "x-default": `${SITE_URL}/en`,
       },
     },
 
@@ -75,13 +75,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `${baseUrl}/${locale}`,
+      url: `${SITE_URL}/${locale}`,
       siteName: "Ezz Export",
       locale: locale === 'ar' ? 'ar_EG' : locale === 'it' ? 'it_IT' : 'en_US',
       type: "website",
       images: [
         {
-          url: `${baseUrl}/og-main.jpg`, // تم التعديل هنا لرابط كامل
+          url: "/og-main.jpg", // مشينا على نفس طريقة Global Nexus (مسار نسبي وهو هيركب لوحده)
           width: 1200,
           height: 630,
           alt: "Ezz Export - Egyptian Agricultural Excellence",
@@ -94,7 +94,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: t('title'),
       description: t('description'),
-      images: [`${baseUrl}/og-main.jpg`], // تم التعديل هنا لرابط كامل
+      images: ["/og-main.jpg"], // مسار نسبي زي كود الـ webp الشغال عندك
     },
 
     // 6. تعليمات الروبوتات (Robots)
@@ -110,11 +110,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       },
     },
 
-    // 7. الأيقونات (تم تعديلها لتكون مسارات مباشرة ومكتملة)
+    // 7. الأيقونات (تم تحويلها لـ Relative Array زي مشروعك التاني عشان تضمن قرايتها)
     icons: {
-      icon: `${baseUrl}/favicon.png`, // تم التعديل هنا لرابط كامل
-      shortcut: `${baseUrl}/favicon.png`, // تم التعديل هنا لرابط كامل
-      apple: `${baseUrl}/apple-icon.png`, // تم التعديل هنا لرابط كامل
+      icon: [
+        { url: '/favicon.png', type: 'image/png' },
+      ],
+      shortcut: ['/favicon.png'],
+      apple: [
+        { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+      ],
     },
 
     // 8. التحقق من ملكية الموقع (اختياري)
