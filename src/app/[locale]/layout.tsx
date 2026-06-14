@@ -45,21 +45,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Index' });
 
-  // تحديد الرابط ديناميكياً بناءً على البيئة الحالية (Vercel أو الدومين الأساسي أو Localhost)
-  const getBaseUrl = () => {
-    if (process.env.NEXT_PUBLIC_SITE_URL) {
-      return process.env.NEXT_PUBLIC_SITE_URL;
-    }
-    if (process.env.VERCEL_URL) {
-      return `https://${process.env.VERCEL_URL}`;
-    }
-    if (process.env.NODE_ENV === 'development') {
-      return 'http://ezz-export-new.vercel.app';
-    }
-    return "https://ezzexport.com";
-  };
-
-  const baseUrl = getBaseUrl();
+  // 🛑 تم التعديل هنا: تثبيت الرابط لمنع Vercel من استخدام الروابط الداخلية اللي بتمنع الواتساب يقرأ الصورة
+  const baseUrl = "https://ezz-export-new.vercel.app";
 
   return {
     // 1. العناوين والوصف الأساسي
