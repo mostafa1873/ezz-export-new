@@ -34,13 +34,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const productName = locale === 'ar' ? product.name_ar : product.name_en;
   const productDesc = locale === 'ar' ? product.description_ar : product.description_en;
+  const baseUrl = "https://ezz-export-new.vercel.app";
 
   return {
+    metadataBase: new URL(baseUrl),
     title: `${productName} | Ezz Export`,
     description: productDesc,
     openGraph: {
       title: `${productName} | Ezz Export`,
       description: productDesc,
+      url: `${baseUrl}/${locale}/products/${slug}`,
       images: [
         {
           url: product.image,
@@ -110,9 +113,11 @@ export default async function ProductPage({ params }: PageProps) {
 
   const safeProduct = JSON.parse(JSON.stringify(product));
 
-  return <>
-    <ProductContent product={safeProduct} />;
-    <TechnicalSpecs />
-    <QualitySpecs />
-  </>
+  return (
+    <>
+      <ProductContent product={safeProduct} />
+      <TechnicalSpecs />
+      <QualitySpecs />
+    </>
+  );
 }

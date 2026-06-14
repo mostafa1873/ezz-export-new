@@ -11,16 +11,20 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Contact' });
 
+  // توحيد الرابط النشط ليطابق باقي صفحات الموقع والـ Layout لمنع تشتيت الروبوتات
+  const baseUrl = "https://ezz-export-new.vercel.app";
+
   return {
     title: t('metadata.title'),
     description: t('metadata.description'),
+    metadataBase: new URL(baseUrl), // إضافة الـ Base لضمان قراءة مسار الصورة النسبي بشكل سليم
     alternates: {
-      canonical: `https://ezzexport.com/${locale}/contact`,
+      canonical: `${baseUrl}/${locale}/contact`,
     },
     openGraph: {
       title: t('metadata.title'),
       description: t('metadata.description'),
-      url: `https://ezzexport.com/${locale}/contact`,
+      url: `${baseUrl}/${locale}/contact`,
       siteName: "Ezz Export",
       images: [
         {
@@ -68,7 +72,7 @@ export default function ContactPage({ params }: { params: Promise<{ locale: stri
             </div>
             <h1 className="text-6xl md:text-9xl text-[#1a3a16] tracking-tight leading-tight">
               {t.rich('title', {
-                touch: (chunks) => <span className="font-sans not-italic font-[1000] uppercase block md:inline">{chunks}</span>
+                touch: (chunks) => <span className="font-sans not-italic font- uppercase block md:inline">{chunks}</span>
               })}
             </h1>
             <p className="text-slate-500 max-w-xl text-lg font-medium leading-relaxed">
@@ -158,7 +162,7 @@ export default function ContactPage({ params }: { params: Promise<{ locale: stri
             <div className="bg-white border border-slate-100 p-8 md:p-16 rounded-[3rem] shadow-sm relative overflow-hidden text-start">
               <div className="absolute top-0 right-0 rtl:right-auto rtl:left-0 w-32 h-32 bg-[#2d5a27]/5 rounded-bl-full rtl:rounded-bl-none rtl:rounded-br-full pointer-events-none" />
               <div className="mb-12">
-                <h2 className="text-3xl font-[1000] text-[#1a3a16] uppercase tracking-tighter mb-2">
+                <h2 className="text-3xl font- text-[#1a3a16] uppercase tracking-tighter mb-2">
                   {t('sendInquiry')}
                 </h2>
                 <p className="text-slate-400 text-sm font-medium italic">

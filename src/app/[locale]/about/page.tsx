@@ -8,18 +8,23 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'About' });
 
+  // توحيد الرابط النشط ليطابق الصفحة الرئيسية والـ Layout
+  const baseUrl = "https://ezz-export-new.vercel.app";
+
   return {
     title: t('title'),
     description: t('description'),
+    metadataBase: new URL(baseUrl), // إضافة الـ Base لضمان قراءة مسار الصورة النسبي بشكل سليم
+
     // 1. تحديد الرابط الأصلي للصفحة
     alternates: {
-      canonical: `https://ezzexport.com/${locale}/about`,
+      canonical: `${baseUrl}/${locale}/about`,
     },
     // 2. تحسين ظهور الرابط عند المشاركة
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `https://ezzexport.com/${locale}/about`,
+      url: `${baseUrl}/${locale}/about`,
       images: [
         {
           url: "/og-main.jpg", // نفس الصورة الموحدة أو صورة خاصة بـ About

@@ -14,23 +14,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'WhyEgyptHero' });
 
+    // توحيد الرابط النشط ليطابق باقي صفحات الموقع والـ Layout لمنع تشتيت الروبوتات
+    const baseUrl = "https://ezz-export-new.vercel.app";
+
     return {
         title: t('title'),
         description: t('description'),
+        metadataBase: new URL(baseUrl), // إضافة الـ Base لضمان قراءة مسار الصورة النسبي بشكل سليم
         keywords: locale === 'ar'
             ? ["تصدير زراعي", "مزارع مصر", "عز اكسبورت", "تصدير لأوروبا"]
             : ["Agricultural export", "Egypt farms", "Ezz Export", "Export to EU"],
         alternates: {
-            canonical: `https://ezzexport.com/${locale}/why-egypt`,
+            canonical: `${baseUrl}/${locale}/why-egypt`,
         },
         openGraph: {
             title: t('title'),
             description: t('description'),
-            url: `https://ezzexport.com/${locale}/why-egypt`,
+            url: `${baseUrl}/${locale}/why-egypt`,
             siteName: "Ezz Export",
             images: [
                 {
-                    url: "/og-image.jpg",
+                    url: "/og-main.jpg", // توحيد الصورة المصغرة الأساسية للموقع لضمان ظهور البريفيو بشكل سليم
                     width: 1200,
                     height: 630,
                 },
@@ -41,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             card: "summary_large_image",
             title: t('title'),
             description: t('description'),
-            images: ["/og-image.jpg"],
+            images: ["/og-main.jpg"],
         }
     };
 }
@@ -291,8 +295,7 @@ export default async function WhyEgyptPage({ params }: Props) {
                         </p>
                     </div>
 
-                    {/* 
-          شكل مختلف: Bento Grid Layout
+                    {/* شكل مختلف: Bento Grid Layout
           بدل الـ 4 مربعات التقليدية، هنقسمهم شبكة احترافية 
         */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

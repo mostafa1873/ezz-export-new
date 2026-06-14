@@ -11,25 +11,29 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     // تم تحويل الـ namespace إلى catalog لسحب نصوص الأرشفة الصحيحة
     const t = await getTranslations({ locale, namespace: 'catalog' });
 
+    // توحيد الرابط النشط ليطابق باقي صفحات الموقع والـ Layout
+    const baseUrl = "https://ezz-export-new.vercel.app";
+
     return {
         title: t('metadata.title'),
         description: t('metadata.description'),
+        metadataBase: new URL(baseUrl), // إضافة الـ Base لضمان قراءة مسار الصورة النسبي بشكل سليم
         // إضافة كلمات مفتاحية لرفع تقييم الـ SEO للكتالوج
         keywords: "Ezz Export Catalog, Agro Products Export, IQF Vegetables, Fresh Fruits, Egyptian Agriculture Export",
         alternates: {
             // تم تعديل المسار ليكون catalog بدلاً من contact
-            canonical: `https://ezzexport.com/${locale}/catalog`,
+            canonical: `${baseUrl}/${locale}/catalog`,
             languages: {
-                'en': 'https://ezzexport.com/en/catalog',
-                'ar': 'https://ezzexport.com/ar/catalog',
-                'it': 'https://ezzexport.com/it/catalog',
-                'x-default': 'https://ezzexport.com/en/catalog',
+                'en': `${baseUrl}/en/catalog`,
+                'ar': `${baseUrl}/ar/catalog`,
+                'it': `${baseUrl}/it/catalog`,
+                'x-default': `${baseUrl}/en/catalog`,
             },
         },
         openGraph: {
             title: t('metadata.title'),
             description: t('metadata.description'),
-            url: `https://ezzexport.com/${locale}/catalog`,
+            url: `${baseUrl}/${locale}/catalog`,
             siteName: "Ezz Export",
             images: [
                 {

@@ -11,19 +11,23 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   const t = await getTranslations({ locale, namespace: 'ProductsPage' });
 
+  // توحيد الرابط النشط ليطابق بيئة الـ Production والـ Layout لضمان الأرشفة السليمة
+  const baseUrl = "https://ezz-export-new.vercel.app";
+
   return {
     title: t('metadata.title'),
     description: t('metadata.description'),
+    metadataBase: new URL(baseUrl), // إضافة الـ Base لقراءة مسارات الصور والروابط بشكل صحيح
     keywords: locale === 'ar'
       ? ["تصدير فواكه", "خضروات مصرية", "عز اكسبورت", "منتجات زراعية"]
       : ["Fruit export", "Egyptian vegetables", "Ezz Export", "Agricultural products"],
     alternates: {
-      canonical: `https://ezzexport.com/${locale}/products`,
+      canonical: `${baseUrl}/${locale}/products`,
     },
     openGraph: {
       title: t('metadata.title'),
       description: t('metadata.description'),
-      url: `https://ezzexport.com/${locale}/products`,
+      url: `${baseUrl}/${locale}/products`,
       siteName: "Ezz Export",
       images: [
         {
@@ -74,7 +78,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
               <span className="text-[10px] font-black uppercase tracking-[0.3em]">{t('header.origin')}</span>
             </div>
 
-            <h1 className="text-[12vw] md:text-[8.5vw] lg:text-[5.5vw] font-[1000] leading-[1] md:leading-[0.9] tracking-tighter text-[#051109] uppercase">
+            <h1 className="text-[12vw] md:text-[8.5vw] lg:text-[5.5vw] font- leading- md:leading-[0.9] tracking-tighter text-[#051109] uppercase">
               {t('header.our')} <br />
               <span className="text-[#2d5a27] block">{t('header.products')}</span>
             </h1>
