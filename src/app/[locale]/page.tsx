@@ -4,7 +4,7 @@ import Products from "../../components/home/products";
 import WhyChooseUs from "../../components/home/whyus";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
-import { use } from "react"; 
+import { use } from "react";
 import WhyEgypt from "@/components/home/WhyEgypt";
 import QualitySection from "@/components/home/QualitySection";
 
@@ -14,9 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Index' });
 
-  // تحديد الرابط الأساسي ديناميكياً ليعمل على Vercel أو الدومين الخاص بك
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 
-                  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://ezzexport.com");
+  // 🛑 هنا مربط الفرس! ثبتنا الرابط هنا عشان نمنع الصفحة إنها تلغي إعدادات الـ Layout وتجيب لينكات فيرسيل العشوائية
+  const baseUrl = "https://ezz-export-new.vercel.app";
 
   return {
     metadataBase: new URL(baseUrl),
