@@ -130,7 +130,7 @@
       "name_en": "Cauliflower",
       "name_it": "Cavolfiore",
       "pdf_url": "/pdfs/Cauliflower.pdf",
-      "image": "../image/Cauliflower.jpg",
+      "image": "../image/Cauliflower.jpeg",
       "description_ar": "استمتع بالنكهة الطازجة والفوائد الصحية لقرنبيط فاخر من دلتا النيل في مصر. يتميز صنفنا بحلاوته الطبيعية وملمسه الناعم ولونه الابيض المميز، مما يجعله سهل الاستخدام في أطباق متنوعة توفر منتجاتنا بالأصناف التالية:",
       "description_en": "Enjoy the fresh flavor and health benefits of premium cauliflower from the Nile Delta in Egypt. Our frozen variety captures its natural sweetness and soft texture, making it easy to use in a variety of dishes our products are available in the following varieties:",
       "description_it": "Godetevi il sapore fresco e i benefici per la salute del cavolfiore di prima qualità proveniente dal Delta del Nilo in Egitto. La nostra varietà surgelata ne conserva la naturale dolcezza e la consistenza morbida, rendendolo facile da utilizzare in una varietà di piatti I nostri prodotti sono disponibili nelle seguenti varietà:",
@@ -371,62 +371,39 @@
       "description_it": "Ricche di vitamine, minerali e antiossidanti essenziali, le nostre cipolle egiziane surgelate non sono solo deliziose, ma anche un'eccellente fonte di vitamina C, fibre e manganese. Questo ortaggio ricco di nutrienti è un modo fantastico per aggiungere più bontà vegetale ai pasti della tua famiglia."
     },
     {
-      "id": 14,
+      "id": 34,
       "category": "vegetable",
-      "status": "in_brine",
-      "name_ar": "فلفل هالابينو أحمر",
-      "name_en": "Red jalapeno pepper",
-      "name_it": "Peperoncino jalapeno rosso",
-      "pdf_url": "/pdfs/Red-jalapeno-pepper.pdf",
-      "image": "../image/product18.jpg",
-      "description_ar": "يُستخدم في المطبخ المصري، وفي أطباق متنوعة حول العالم، كتوابل في السلطات والصلصات والمخللات، ويُقدم طازجًا أو متبلًا. يُزرع في مصر في مزارع متخصصة متوفر براميل صناعية احجامها:",
-      "description_en": "It is used in Egyptian cuisine and various dishes around the world as a spice in salads, sauces, and pickles, and can be served fresh or marinated. It is grown in Egypt on specialized farms, Available Industrial drums:",
-      "description_it": "Viene utilizzato nella cucina egiziana e in vari piatti in tutto il mondo come spezia in insalate, salse e sottaceti, e può essere servito fresco o marinato. Viene coltivato in Egitto in aziende agricole specializzate. Disponibili Fusti industriali:",
+      "status": [
+        "fresh"
+      ],
+      "name_ar": "ثوم",
+      "name_en": "Garlic",
+      "name_it": "Aglio",
+      "pdf_url": "/pdfs/Garlic.pdf",
+      "image": "../image/product33.webp",
+      "description_ar": "نقدم لكم الثوم المصري الفريش، المزروع في أجود الأراضي المصرية والمعروف بنكهته القوية وجودته العالية. يتم حصاده وفرزه وتعبئته بعناية فائقة لضمان وصوله بأفضل حالة، مطابقًا لأعلى معايير الجودة العالمية ومثاليًا لمتطلبات الأسواق الخارجية والتصدير.",
+      "description_en": "We offer fresh Egyptian garlic, grown in the finest Egyptian soil and known for its robust flavor and superior quality. It is harvested, sorted, and packaged with meticulous care to ensure it arrives in perfect condition, meeting the highest international quality standards and ideally suited to the demands of international markets and export.",
+      "description_it": "Offriamo aglio egiziano fresco, coltivato nei migliori terreni egiziani e rinomato per il suo sapore intenso e la sua qualità superiore. Viene raccolto, selezionato e confezionato con la massima cura per garantire che arrivi in ​​perfette condizioni, soddisfacendo i più elevati standard di qualità internazionali e risultando ideale per le esigenze dei mercati internazionali e per l'esportazione.",
       "variants": [
         {
-          "name_en": "140 kg (0.5 - 1.0 cm) barrel",
-          "name_ar": "برميل 140 كجم (٠.٥ - ١.٠ سم)",
-          "name_it": "Barile da 140 kg (0,5 - 1,0 cm)"
+          "name_en": "Caliber : 20, 30 , 40 , 50 , 60 , 70 , 80 Mm ",
+          "name_ar": "القطر (المقاس): 20، 30، 40، 50، 60، 70، 80 ملم",
+          "name_it": "Calibro : 20, 30 , 40 , 50 , 60 , 70 , 80 Mm "
         },
         {
-          "name_en": "160 kg (0.5 - 1.0 cm) barrel",
-          "name_ar": "برميل 160 كجم (٠.٥ - ١.٠ سم)",
-          "name_it": "Barile da 160 kg (0,5 - 1,0 cm)"
+          "name_en": "Packaging: Carton or Mesh Bags, 10 kg, 15 kg as per request.",
+          "name_ar": "التعبئة: كرتون  أكياس شبكية  أسبتة حسب الطلب",
+          "name_it": "Imballaggio: Cartone o Sassi di Rete, 10 kg, 15 kg su richiesta."
         },
         {
-          "name_en": "225 kg (0.5 - 1.0 cm) barrel",
-          "name_ar": "برميل 225 كجم (٠.٥ - ١.٠ سم)",
-          "name_it": "Barile da 225 kg (0,5 - 1,0 cm)"
-        }
-      ]
-    },
-    {
-      "id": 15,
-      "category": "vegetable",
-      "status": "in_brine",
-      "name_ar": "فلفل هالابينو أخضر",
-      "name_en": "Green jalapeno peppers",
-      "name_it": "Peperoncini jalapeno verdi",
-      "pdf_url": "/pdfs/Green-jalapeno-peppers.pdf",
-      "image": "../image/felfel.jpg",
-      "description_ar": "يحتوي على مادة الكابسيسين، التي تُعطيه حرارته. له استخدامات طهي وفوائد صحية متعددة، مثل تعزيز المناعة، وتحسين الدورة الدموية، والمساعدة على إنقاص الوزن تتوفر الأنواع:",
-      "description_en": "It contains capsaicin, which gives it its heat. It has multiple culinary uses and health benefits, such as boosting immunity, improving blood circulation, and aiding weight loss:",
-      "description_it": "Contiene capsaicina, che gli conferisce il suo sapore piccante. Ha molteplici usi culinari e benefici per la salute, come rafforzare il sistema immunitario, migliorare la circolazione sanguigna e favorire la perdita di peso:",
-      "variants": [
-        {
-          "name_en": "140 kg (0.5 - 1.0 cm) barrel",
-          "name_ar": "برميل 140 كجم (٠.٥ - ١.٠ سم)",
-          "name_it": "Barile da 140 kg (0,5 - 1,0 cm)"
+          "name_en": "Packaging: Carton or Mesh Bags, 10 kg, 15 kg as per request.",
+          "name_ar": "التعبئة: كرتون  أكياس شبكية  أسبتة حسب الطلب",
+          "name_it": "Imballaggio: Cartone o Sassi di Rete, 10 kg, 15 kg su richiesta."
         },
         {
-          "name_en": "160 kg (0.5 - 1.0 cm) barrel",
-          "name_ar": "برميل 160 كجم (٠.٥ - ١.٠ سم)",
-          "name_it": "Barile da 160 kg (0,5 - 1,0 cm)"
-        },
-        {
-          "name_en": "225 kg (0.5 - 1.0 cm) barrel",
-          "name_ar": "برميل 225 كجم (٠.٥ - ١.٠ سم)",
-          "name_it": "Barile da 225 kg (0,5 - 1,0 cm)"
+          "name_en": "Unite weight : As Client Request",
+          "name_ar": "وزن الوحدة: حسب طلب العميل",
+          "name_it": "Peso unitario : Come Richiesto dal Cliente"
         }
       ]
     },
@@ -438,7 +415,7 @@
       "name_en": "Potatoes",
       "name_it": "Patate",
       "pdf_url": "/pdfs/Potatoes.pdf",
-      "image": "../image/patatos.webp",
+      "image": "../image/patatos.jpeg",
       "description_ar": "رقائق بطاطس مقلية جزئيًا، تُجمّد سريعًا للحفاظ على نكهتها وقوامها المقرمش. سهلة وسريعة الطهي في الفرن، أو المقلاة الهوائية، أو المقلاة التقليدية، وهي مصدر جيد للطاقة (الكربوهيدرات).",
       "description_en": "Partially fried potato chips that are then quickly frozen to preserve their flavor and crispy texture. They are easy and quick to cook in the oven, air fryer, or skillet, and are a good source of energy (carbohydrates).",
       "description_it": "Patatine fritte parzialmente fritte e poi rapidamente congelate per preservarne il sapore e la croccantezza. Sono facili e veloci da cuocere in forno, nella friggitrice ad aria o in padella e sono una buona fonte di energia (carboidrati)."
@@ -536,7 +513,7 @@
       "name_en": "Colored Pepper",
       "name_it": "Pepe Colorato",
       "pdf_url": "/pdfs/Colored-Pepper.pdf",
-      "image": "../image/felfelcolor.webp",
+      "image": "../image/felfelcolor.png",
       "description_ar": "خيار غذائي ممتاز يحافظ على نكهة الفلفل الطازج وفوائده من خلال التجميد السريع، ويمكن استخدامه في أطباق متنوعة، مثل السلطات والمشويات والمعكرونة. يُحضّر بتقطيع الفلفل وغسله، ثم يُجمّد بسرعة ويُحفظ في المُجمد لمدة تصل إلى عام.",
       "description_en": "An excellent food option that preserves the flavor and benefits of fresh peppers through rapid freezing, it can be used in a variety of dishes, such as salads, grilled dishes, and pasta. Prepared by cutting and washing the peppers, they are then quickly frozen and can be stored in the freezer for up to a year.",
       "description_it": "Un'eccellente opzione alimentare che preserva il sapore e i benefici dei peperoni freschi grazie al congelamento rapido, e può essere utilizzata in una varietà di piatti, come insalate, grigliate e pasta. Preparati tagliando e lavando i peperoni, vengono poi congelati rapidamente e possono essere conservati nel congelatore fino a un anno.",
@@ -579,39 +556,62 @@
       "description_it": "I peperoncini ciliegia sott'aceto sono un metodo per preparare peperoncini piccanti (come i peperoncini ciliegia o i jalapeño) e conservarli a lungo utilizzando una soluzione di salamoia e aceto. Sono facili da preparare e possono essere utilizzati come contorno o antipasto. Sono anche noti per il loro sapore piccante e possono essere preparati rapidamente o lasciati riposare per un periodo più lungo."
     },
     {
-      "id": 34,
+      "id": 14,
       "category": "vegetable",
-      "status": [
-        "fresh"
-      ],
-      "name_ar": "ثوم",
-      "name_en": "Garlic",
-      "name_it": "Aglio",
-      "pdf_url": "/pdfs/Garlic.pdf",
-      "image": "../image/product33.webp",
-      "description_ar": "نقدم لكم الثوم المصري الفريش، المزروع في أجود الأراضي المصرية والمعروف بنكهته القوية وجودته العالية. يتم حصاده وفرزه وتعبئته بعناية فائقة لضمان وصوله بأفضل حالة، مطابقًا لأعلى معايير الجودة العالمية ومثاليًا لمتطلبات الأسواق الخارجية والتصدير.",
-      "description_en": "We offer fresh Egyptian garlic, grown in the finest Egyptian soil and known for its robust flavor and superior quality. It is harvested, sorted, and packaged with meticulous care to ensure it arrives in perfect condition, meeting the highest international quality standards and ideally suited to the demands of international markets and export.",
-      "description_it": "Offriamo aglio egiziano fresco, coltivato nei migliori terreni egiziani e rinomato per il suo sapore intenso e la sua qualità superiore. Viene raccolto, selezionato e confezionato con la massima cura per garantire che arrivi in ​​perfette condizioni, soddisfacendo i più elevati standard di qualità internazionali e risultando ideale per le esigenze dei mercati internazionali e per l'esportazione.",
+      "status": "in_brine",
+      "name_ar": "فلفل هالابينو أحمر",
+      "name_en": "Red jalapeno pepper",
+      "name_it": "Peperoncino jalapeno rosso",
+      "pdf_url": "/pdfs/Red-jalapeno-pepper.pdf",
+      "image": "../image/product18.jpg",
+      "description_ar": "يُستخدم في المطبخ المصري، وفي أطباق متنوعة حول العالم، كتوابل في السلطات والصلصات والمخللات، ويُقدم طازجًا أو متبلًا. يُزرع في مصر في مزارع متخصصة متوفر براميل صناعية احجامها:",
+      "description_en": "It is used in Egyptian cuisine and various dishes around the world as a spice in salads, sauces, and pickles, and can be served fresh or marinated. It is grown in Egypt on specialized farms, Available Industrial drums:",
+      "description_it": "Viene utilizzato nella cucina egiziana e in vari piatti in tutto il mondo come spezia in insalate, salse e sottaceti, e può essere servito fresco o marinato. Viene coltivato in Egitto in aziende agricole specializzate. Disponibili Fusti industriali:",
       "variants": [
         {
-          "name_en": "Caliber : 20, 30 , 40 , 50 , 60 , 70 , 80 Mm ",
-          "name_ar": "القطر (المقاس): 20، 30، 40، 50، 60، 70، 80 ملم",
-          "name_it": "Calibro : 20, 30 , 40 , 50 , 60 , 70 , 80 Mm "
+          "name_en": "140 kg (0.5 - 1.0 cm) barrel",
+          "name_ar": "برميل 140 كجم (٠.٥ - ١.٠ سم)",
+          "name_it": "Barile da 140 kg (0,5 - 1,0 cm)"
         },
         {
-          "name_en": "Packaging: Carton or Mesh Bags, 10 kg, 15 kg as per request.",
-          "name_ar": "التعبئة: كرتون  أكياس شبكية  أسبتة حسب الطلب",
-          "name_it": "Imballaggio: Cartone o Sassi di Rete, 10 kg, 15 kg su richiesta."
+          "name_en": "160 kg (0.5 - 1.0 cm) barrel",
+          "name_ar": "برميل 160 كجم (٠.٥ - ١.٠ سم)",
+          "name_it": "Barile da 160 kg (0,5 - 1,0 cm)"
         },
         {
-          "name_en": "Packaging: Carton or Mesh Bags, 10 kg, 15 kg as per request.",
-          "name_ar": "التعبئة: كرتون  أكياس شبكية  أسبتة حسب الطلب",
-          "name_it": "Imballaggio: Cartone o Sassi di Rete, 10 kg, 15 kg su richiesta."
+          "name_en": "225 kg (0.5 - 1.0 cm) barrel",
+          "name_ar": "برميل 225 كجم (٠.٥ - ١.٠ سم)",
+          "name_it": "Barile da 225 kg (0,5 - 1,0 cm)"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "category": "vegetable",
+      "status": "in_brine",
+      "name_ar": "فلفل هالابينو أخضر",
+      "name_en": "Green jalapeno peppers",
+      "name_it": "Peperoncini jalapeno verdi",
+      "pdf_url": "/pdfs/Green-jalapeno-peppers.pdf",
+      "image": "../image/felfel.jpg",
+      "description_ar": "يحتوي على مادة الكابسيسين، التي تُعطيه حرارته. له استخدامات طهي وفوائد صحية متعددة، مثل تعزيز المناعة، وتحسين الدورة الدموية، والمساعدة على إنقاص الوزن تتوفر الأنواع:",
+      "description_en": "It contains capsaicin, which gives it its heat. It has multiple culinary uses and health benefits, such as boosting immunity, improving blood circulation, and aiding weight loss:",
+      "description_it": "Contiene capsaicina, che gli conferisce il suo sapore piccante. Ha molteplici usi culinari e benefici per la salute, come rafforzare il sistema immunitario, migliorare la circolazione sanguigna e favorire la perdita di peso:",
+      "variants": [
+        {
+          "name_en": "140 kg (0.5 - 1.0 cm) barrel",
+          "name_ar": "برميل 140 كجم (٠.٥ - ١.٠ سم)",
+          "name_it": "Barile da 140 kg (0,5 - 1,0 cm)"
         },
         {
-          "name_en": "Unite weight : As Client Request",
-          "name_ar": "وزن الوحدة: حسب طلب العميل",
-          "name_it": "Peso unitario : Come Richiesto dal Cliente"
+          "name_en": "160 kg (0.5 - 1.0 cm) barrel",
+          "name_ar": "برميل 160 كجم (٠.٥ - ١.٠ سم)",
+          "name_it": "Barile da 160 kg (0,5 - 1,0 cm)"
+        },
+        {
+          "name_en": "225 kg (0.5 - 1.0 cm) barrel",
+          "name_ar": "برميل 225 كجم (٠.٥ - ١.٠ سم)",
+          "name_it": "Barile da 225 kg (0,5 - 1,0 cm)"
         }
       ]
     },

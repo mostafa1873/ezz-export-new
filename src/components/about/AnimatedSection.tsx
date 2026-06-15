@@ -4,7 +4,7 @@ import React, { useState, memo } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FiArrowDown, FiArrowUpRight, FiStar } from "react-icons/fi";
-import arch from "../../assets/about-hero.webp";
+import arch from "../../assets/about-hero.jpeg";
 import about from "../../assets/about-main.webp";
 import Link from "next/link";
 import ExportCTA from "./ExportCTA";
@@ -39,16 +39,12 @@ const HeroSection = memo(() => {
   const locale = useLocale();
 
   return (
-    <section className="relative h-screen w-full flex flex-col justify-between items-center pt-[120px] pb-4 lg:pt-[130px] lg:pb-6 overflow-hidden" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+    <section className="relative h-screen w-full flex flex-col justify-between items-center pt-[120px] pb-3 sm:pt-[100px] sm:pb-4 lg:pt-[115px] lg:pb-6 overflow-hidden" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
 
-      {/* خلفية نظيفة وهادئة جداً */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-50" />
-      </div>
 
-      <div className="relative z-10 container mx-auto px-6 sm:px-10 lg:px-16 w-full max-w-5xl flex flex-col justify-between h-full flex-1 gap-4">
+      <div className="relative z-10 container mx-auto px-4 sm:px-8 lg:px-12 w-full max-w-6xl flex flex-col justify-between h-full flex-1 min-h-0 gap-3 sm:gap-4">
 
-        {/* 1. قسم النصوص: حجم كبير محترم ومستحيل يدخل في الـ Navbar */}
+        {/* 1. قسم النصوص: حجم متناسق وموزون لمنع دفع الكرت خارج الشاشة */}
         <motion.div
           initial={{ y: 15, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -56,12 +52,12 @@ const HeroSection = memo(() => {
           viewport={{ once: true }}
           className="w-full flex flex-col items-center text-center max-w-3xl mx-auto shrink-0"
         >
-          <h1 className="font-black tracking-tight leading-tight text-4xl sm:text-5xl lg:text-6xl text-[#051109]">
+          <h1 className="font-black tracking-tight leading-tight text-2xl sm:text-4xl lg:text-5xl text-[#051109]">
             <span className="block opacity-90">{t('pure')}</span>
-            <span className="block text-[#2d5a27] mt-1 sm:mt-2">{t('impact')}</span>
+            <span className="block text-[#2d5a27] mt-0.5 sm:mt-1">{t('impact')}</span>
           </h1>
 
-          <p className="mt-2 text-base sm:text-lg font-medium text-slate-500 leading-relaxed max-w-xl">
+          <p className="mt-1 text-xs sm:text-base font-medium text-slate-500 leading-relaxed max-w-xl">
             {t.rich('subtitle', {
               green: (chunks) => <span className="text-[#2d5a27] font-bold">{chunks}</span>,
               br: () => <br className="hidden sm:block" />
@@ -69,94 +65,100 @@ const HeroSection = memo(() => {
           </p>
         </motion.div>
 
-        {/* الكرت الكبير المدمج الموزون بدون قطع أو تداخل وملتزم بالـ h-screen */}
+        {/* الكرت الكبير المدمج الموزون الملتزم بـ h-screen تماماً وبدون أي تداخل */}
         <motion.div
-          initial={{ y: 20, opacity: 0 }}
+          initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="w-full bg-[#051109] rounded-[2.5rem] p-6 pb-6 flex flex-col justify-between flex-1 my-auto shadow-xl relative overflow-hidden"
+          className="relative w-full flex-1 min-h-0 bg-[#051109] rounded-[2rem] sm:rounded-[2.5rem] p-3 sm:p-6 lg:p-8 flex flex-col lg:flex-row gap-4 lg:gap-5 items-stretch overflow-hidden shadow-2xl border border-white/5 mb-1 sm:mb-2"
         >
-          {/* لمسة تدرج ضوئي خفيفة جداً لإبراز المنتج داخل الكرت */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none z-0" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-xl h-full bg-[#2d5a27]/10 rounded-full blur-[120px] pointer-events-none z-0" />
 
-          {/* 2. قسم الصورة: تم التكبير هنا! */}
-          <div className="relative w-full flex-1 flex items-center justify-center z-10 min-h-0 mb-4">
-            {/* وسعنا مساحة العرض (max-w-3xl) عشان الصورة تاخد راحتها */}
-            <div className="relative w-full max-w-3xl h-full">
+          {/* [الشكل الجديد 1]: منصة عرض المنتجات (تتجاوب ديناميكياً لتملأ الفراغ المتاح على الموبايل والكمبيوتر بدون أي زيادة) */}
+          <div className="relative flex-1 min-h-0 bg-gradient-to-b from-white/[0.03] to-transparent border border-white/[0.08] rounded-[1.5rem] sm:rounded-[2rem] flex items-center justify-center overflow-hidden group">
+            {/* هالة ضوئية تفاعلية تظهر خلف المنتج عند حرك الماوس */}
+            <div className="absolute inset-0 bg-[#2d5a27]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl" />
+
+            <div className="relative w-full h-full">
               <Image
                 src={arch}
                 alt="Ezz Trading Products"
                 fill
                 priority
-                sizes="(max-width: 768px) 100vw, 800px"
-                // تم استخدام التكبير البصري (scale) بقيم كبيرة خصوصاً للموبايل عشان تملأ المكان
-                className="object-contain object-bottom transform-gpu scale-[2.0] sm:scale-125 lg:scale-[1.40]"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 900px"
+                className="object-cover object-center transform-gpu"
               />
             </div>
           </div>
 
-          {/* 3. شريط التحكم السفلي: ظاهر بالكامل ومستحيل يتغطي وثابت في مكانه */}
-          <div className="w-full pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 z-10 shrink-0">
-            {/* تفاصيل المنشأ */}
-            <div className="text-center sm:text-start">
-              <p className="text-[9px] font-bold tracking-widest uppercase text-slate-400">{t('originLabel')}</p>
-              <p className="text-sm font-bold text-white mt-0.5">{t('originValue')}</p>
+          {/* [الشكل الجديد 2]: لوحة المعلومات والأزرار الجانبية فائقة العصرية */}
+          <div className="w-full lg:w-[320px] flex flex-col justify-between gap-3 sm:gap-4 z-10 bg-white/[0.01] border border-white/[0.05] p-3 sm:p-5 rounded-[1.5rem] sm:rounded-[2rem]  shrink-0">
+
+            {/* الهيدر العلوي للوحة: تفاصيل المنشأ مدمجة مع الوصول العالمي */}
+            <div className="flex items-center justify-between gap-2 border-b border-white/10 pb-3 sm:pb-4">
+              <div className="space-y-0.5">
+                <p className="text-[8px] sm:text-[9px] font-bold tracking-widest uppercase text-slate-400">{t('originLabel')}</p>
+                <p className="text-xs sm:text-sm font-bold text-white">{t('originValue')}</p>
+              </div>
+
+              {/* قسم الوصول العالمي بشكل مصغر وجذاب */}
+              <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 py-1 px-2 sm:px-2.5 rounded-full border border-white/10 transition-colors hover:bg-white/10">
+                <h3 className="text-[9px] sm:text-[10px] font-bold text-white uppercase tracking-tight whitespace-nowrap">
+                  {t.rich('globalReach', {
+                    br: () => <br className="hidden" />
+                  })}
+                </h3>
+                <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border border-white/20 flex items-center justify-center text-white/70 shrink-0">
+                  <FiArrowUpRight className={locale === 'ar' ? "-scale-x-100" : ""} size={9} />
+                </div>
+              </div>
             </div>
 
-            {/* الأزرار والسوشيال ميديا في كتلة واحدة نظيفة جداً */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-              {/* زر الكتالوج النظيف */}
+            {/* الكتلة السفلية: زر الكتالوج العريض وأيقونات التواصل الاجتماعي أسفله مباشرة */}
+            <div className="flex flex-col gap-2.5 sm:gap-3 mt-auto">
+
+              {/* زر تحميل الكتالوج الفخم بعرض كامل الإطار */}
               <a
                 href="/catalog.pdf"
                 download
-                className="group inline-flex items-center justify-center gap-2 bg-white text-[#051109] px-5 py-2.5 rounded-xl transition-colors duration-300 hover:bg-[#2d5a27] hover:text-white font-bold text-xs uppercase tracking-wider w-full sm:w-auto"
+                className="group flex items-center justify-center gap-2 bg-white text-[#051109] w-full py-2.5 sm:py-3 rounded-xl transition-all duration-300 hover:bg-[#2d5a27] hover:text-white font-bold text-[11px] sm:text-xs uppercase tracking-wider shadow-xl"
               >
                 <span>{t('catalog')}</span>
                 <FiArrowDown className="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform" />
               </a>
 
-              {/* أيقونات السوشيال ميديا */}
-              <div className="flex items-center gap-2">
-                {[
-                  { Icon: FaFacebookF, href: "https://web.facebook.com/profile.php?id=61582088223661" },
-                  { Icon: FaInstagram, href: "https://www.instagram.com/ezzexport/?fbclid=IwY2xjawNsKVpleHRuA2FlbQIxMQBicmlkETEwN2xjblIzdTRhNmpKZ2tPAR7k_hx9Tk12NMj34rMICVpeqJavdX_0OOiGNwksXLF4QkQh6xjWh5Z9BqjD0w_aem_EiVZGu7OHrur6W-PHTp5Eg" },
-                  { Icon: FaLinkedinIn, href: "https://www.linkedin.com/company/ezz-export" }
-                ].map((item, i) => (
-                  <a
-                    key={i}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-slate-300 hover:bg-[#2d5a27] hover:text-white hover:border-[#2d5a27] transition-all duration-300 bg-white/5 shrink-0"
-                  >
-                    <item.Icon className="w-3.5 h-3.5" />
-                  </a>
-                ))}
+              {/* شريط السوشيال ميديا المبتكر والمدمج بشكل رائع */}
+              <div className="flex items-center justify-between gap-2 bg-white/[0.02] border border-white/5 p-1 sm:p-1.5 rounded-xl">
+                <span className="text-[8px] sm:text-[9px] uppercase tracking-wider text-slate-400 font-bold px-1">Follow Us</span>
+
+                <div className="flex items-center gap-1 sm:gap-1.5">
+                  {[
+                    { Icon: FaFacebookF, href: "https://web.facebook.com/profile.php?id=61582088223661" },
+                    { Icon: FaInstagram, href: "https://www.instagram.com/ezzexport/?fbclid=IwY2xjawNsKVpleHRuA2FlbQIxMQBicmlkETEwN2xjblIzdTRhNmpKZ2tPAR7k_hx9Tk12NMj34rMICVpeqJavdX_0OOiGNwksXLF4QkQh6xjWh5Z9BqjD0w_aem_EiVZGu7OHrur6W-PHTp5Eg" },
+                    { Icon: FaLinkedinIn, href: "https://www.linkedin.com/company/ezz-export" }
+                  ].map((item, i) => (
+                    <a
+                      key={i}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg border border-white/5 flex items-center justify-center text-slate-300 hover:bg-[#2d5a27] hover:text-white hover:border-[#2d5a27] transition-all duration-300 bg-white/5 shrink-0"
+                    >
+                      <item.Icon className="w-3 h-3" />
+                    </a>
+                  ))}
+                </div>
               </div>
+
             </div>
 
-            {/* النص الجانبي للوصول العالمي */}
-            <div className="flex items-center gap-2 text-center sm:text-end hidden md:flex">
-              <h3 className="text-xs sm:text-sm font-bold text-white uppercase tracking-tight">
-                {t.rich('globalReach', {
-                  br: () => <br className="hidden" />
-                })}
-              </h3>
-              <div className="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center text-white/50 shrink-0">
-                <FiArrowUpRight className={locale === 'ar' ? "-scale-x-100" : ""} size={12} />
-              </div>
-            </div>
           </div>
-
         </motion.div>
 
       </div>
     </section>
   );
 });
-
 HeroSection.displayName = "HeroSection";
 
 const StorySection = memo(() => {
@@ -164,16 +166,17 @@ const StorySection = memo(() => {
   const locale = useLocale();
 
   return (
-
     <section className="relative bg-white overflow-hidden">
-      <div className="py-10 lg:py-10 px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-10 items-center" dir="ltr">
+      {/* تم تحويل اتجاه السكشن الرئيسي ليتغير ديناميكياً مع اللغة لحل مشكلة المظهر المبعثر */}
+      <div className="py-12 lg:py-16 px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-10 items-center" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
 
         <div className="lg:col-span-7 relative">
           <motion.div
-            whileInView={{ scale: [1.02, 1] }}
-            transition={{ duration: 1 }}
+            initial={{ scale: 1.02 }}
+            whileInView={{ scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative h-[400px] sm:h-[500px] md:h-[650px] w-full rounded-tl-[3rem] rounded-br-[3rem] md:rounded-tl-[5rem] md:rounded-br-[5rem] overflow-hidden shadow-2xl transform-gpu"
+            className="relative h-[350px] sm:h-[450px] md:h-[550px] lg:h-[600px] w-full rounded-tl-[3rem] rounded-br-[3rem] md:rounded-tl-[5rem] md:rounded-br-[5rem] overflow-hidden shadow-2xl transform-gpu will-change-transform"
           >
             <Image
               src={about}
@@ -185,10 +188,11 @@ const StorySection = memo(() => {
             <div className="absolute inset-0 bg-black/10" />
           </motion.div>
 
+          {/* تم إضافة will-change-transform لمنع تهنيج الشاشة أثناء الدوران المستمر */}
           <motion.div
             animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute -bottom-6 -right-6 sm:-bottom-10 sm:-right-10 w-32 sm:w-44 h-32 sm:h-44 bg-[#2d5a27] rounded-full flex items-center justify-center p-1 text-white shadow-xl z-20 border-4 border-white transform-gpu"
+            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+            className="absolute -bottom-6 -right-6 sm:-bottom-10 sm:-right-10 w-32 sm:w-44 h-32 sm:h-44 bg-[#2d5a27] rounded-full flex items-center justify-center p-1 text-white shadow-xl z-20 border-4 border-white transform-gpu will-change-transform"
           >
             <div className="w-full h-full rounded-full border border-white/30 flex items-center justify-center">
               <p className="text-[8px] sm:text-[10px] font-black uppercase tracking-widest text-center leading-relaxed">
@@ -198,12 +202,13 @@ const StorySection = memo(() => {
           </motion.div>
         </div>
 
+        {/* تم ضبط هوامش النصوص والمحاذاة بناءً على اتجاه لغة المستخدم تلقائياً */}
         <div
-          className="lg:col-span-5 flex flex-col justify-center items-center lg:items-start space-y-8 lg:pl-10"
+          className={`lg:col-span-5 flex flex-col justify-center items-center lg:items-start space-y-8 ${locale === 'ar' ? 'lg:pr-10 lg:pl-0' : 'lg:pl-10 lg:pr-0'}`}
           dir={locale === 'ar' ? 'rtl' : 'ltr'}
         >
-          {/* أضفنا text-center للموبيل و lg:text-start (أو right في العربي) */}
-          <h2 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter leading-[0.9] uppercase text-[#051109] text-center lg:text-start">
+          {/* تحسين الـ leading لمنع تداخل الحروف الكبيرة مع بعضها البعض */}
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-tight uppercase text-[#051109] text-center lg:text-start">
             {t.rich('title', {
               italic: (chunks) => <span className="text-[#2d5a27] italic">{chunks}</span>,
               br: () => <br />
@@ -211,22 +216,21 @@ const StorySection = memo(() => {
           </h2>
 
           <div className="space-y-6 relative z-10 text-center lg:text-start">
-            <p className="text-lg sm:text-xl font-bold text-slate-700 leading-snug">
+            <p className="text-base sm:text-lg font-bold text-slate-700 leading-snug">
               {t('p1')}
             </p>
 
-            <p className="text-base sm:text-lg text-slate-500 font-medium leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-500 font-medium leading-relaxed">
               {t('p2')}
             </p>
 
-            {/* أضفنا flex justify-center عشان الزرار يتوسط في الموبيل */}
             <div className="pt-4 flex justify-center lg:justify-start">
               <Link
                 href={`/${locale}/contact`}
-                className="group relative inline-flex items-center justify-center px-10 py-5 font-black uppercase tracking-wider text-white bg-[#2d5a27] rounded-full overflow-hidden transition-all duration-300 active:scale-95"
+                className="group relative inline-flex items-center justify-center px-8 py-4 sm:px-10 sm:py-5 font-black uppercase tracking-wider text-white bg-[#2d5a27] rounded-full overflow-hidden transition-all duration-300 active:scale-95 shadow-lg"
               >
                 <div className="absolute inset-0 bg-[#1e3c1a] translate-y-full transition-transform duration-300 group-hover:translate-y-0" />
-                <span className="relative flex items-center gap-3">
+                <span className="relative flex items-center gap-3 text-sm sm:text-base">
                   {t('button')}
                   <FiArrowUpRight
                     className={`text-xl transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 ${locale === 'ar' ? 'rotate-[-90deg]' : ''}`}
@@ -236,9 +240,9 @@ const StorySection = memo(() => {
             </div>
           </div>
         </div>
+
       </div>
     </section>
-
   );
 });
 StorySection.displayName = "StorySection";

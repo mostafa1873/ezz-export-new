@@ -65,7 +65,7 @@ Expected Order Volume: ${formData.orderSize}
 
   return (
     // تم تحسين الارتفاع والريسبونسف ليكون مرن بالكامل مع إضافة خلفية شبكية وإضاءات ناعمة فخمة
-    <div className="w-full min-h-screen text-slate-900 antialiased selection:bg-[#2d5a27] selection:text-white relative font-sans pt-30 sm:pt-32 lg:pt-30 pb-10 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center overflow-hidden">
+    <div className="w-full min-h-screen text-[#2d5a27] antialiased selection:bg-[#2d5a27] selection:text-white relative font-sans pt-30 sm:pt-32 lg:pt-30 pb-10 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center overflow-hidden">
       
       <div className="w-full max-w-5xl mx-auto relative z-10 flex flex-col justify-center">
         
@@ -76,11 +76,11 @@ Expected Order Volume: ${formData.orderSize}
             {t("heroBadge")}
           </span>
           
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-slate-900 mb-3 tracking-tight leading-[1.2] max-w-3xl">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-[#2d5a27] mb-3 tracking-tight leading-[1.2] max-w-3xl">
             {t("heroTitle")}
           </h1>
           
-          <p className="text-xs sm:text-sm lg:text-base text-slate-500 font-medium max-w-xl leading-relaxed hidden sm:block">
+          <p className="text-xs sm:text-sm lg:text-base text-black/50 font-medium max-w-xl leading-relaxed hidden sm:block">
             {t("heroDescription")}
           </p>
         </div>
@@ -102,7 +102,7 @@ Expected Order Volume: ${formData.orderSize}
                     {t("formTitle")}
                   </h2>
                   {/* رمادي فاتح وناعم ومريح جداً للعين */}
-                  <p className="text-slate-300 font-normal text-xs sm:text-sm">
+                  <p className="text-white/80 font-normal text-xs sm:text-sm">
                     {t("formSubtitle")}
                   </p>
                 </div>

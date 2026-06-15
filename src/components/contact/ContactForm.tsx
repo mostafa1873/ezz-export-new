@@ -117,6 +117,30 @@ export default function ContactForm() {
         />
       </div>
 
+      <div className="mt-4 transition-all duration-500">
+        {status === "success" && (
+          <div className="flex items-center justify-center text-center gap-3 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-2xl animate-in fade-in slide-in-from-top-2">
+            <div className="bg-green-500 rounded-full p-1 shrink-0">
+              <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <p className="text-sm font-medium rtl:text-center">{t('successMessage')}</p>
+          </div>
+        )}
+
+        {status === "error" && (
+          <div className="flex items-center justify-center text-center gap-3 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-2xl animate-in fade-in slide-in-from-top-2">
+            <div className="bg-red-500 rounded-full p-1 shrink-0">
+              <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <p className="text-sm font-medium rtl:text-center">{t('errorMessage')}</p>
+          </div>
+        )}
+      </div>
+
       <button
         disabled={status === "loading"}
         className="w-full bg-[#1a3a16] text-[#f4f1ea] rounded-full py-5 font-bold uppercase text-[11px] rtl:text-[13px] tracking-[0.3em] rtl:tracking-normal flex items-center justify-center gap-3 hover:bg-[#2d5a27] transition-all duration-500 shadow-lg group disabled:opacity-70"
@@ -134,29 +158,6 @@ export default function ContactForm() {
         )}
       </button>
 
-      <div className="mt-4 transition-all duration-500">
-        {status === "success" && (
-          <div className="flex items-center gap-3 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-2xl animate-in fade-in slide-in-from-top-2">
-            <div className="bg-green-500 rounded-full p-1">
-              <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-              </svg>
-            </div>
-            <p className="text-sm font-medium rtl:text-right">{t('successMessage')}</p>
-          </div>
-        )}
-
-        {status === "error" && (
-          <div className="flex items-center gap-3 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-2xl animate-in fade-in slide-in-from-top-2">
-            <div className="bg-red-500 rounded-full p-1">
-              <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </div>
-            <p className="text-sm font-medium rtl:text-right">{t('errorMessage')}</p>
-          </div>
-        )}
-      </div>
     </form>
   );
 }

@@ -424,13 +424,15 @@
     "loadingDesc": "Pianificazione logistica ottimizzata per la massima capacità ed efficienza dei container."
   },
   "QualitySpecs": {
-    "title": "Standard di Qualità",
-    "mainHeading": "Standard di qualità rigorosi per la massima soddisfazione del cliente",
-    "description": "I nostri prodotti sono sottoposti a test rigorosi per garantire che soddisfino i più alti standard di sicurezza alimentare, freschezza e conformità alle normative internazionali.",
-    "safetyTitle": "Sicurezza Alimentare",
-    "safetyDesc": "Test approfonditi per garantire l'assenza di contaminanti e la conformità agli standard globali.",
-    "freshnessTitle": "Freschezza Garantita",
-    "freshnessDesc": "Controllo della catena del freddo e imballaggio ottimale per"
+    "badge": "Standard di qualità",
+    "mainHeading": "Qualità operativa affidabile",
+    "description": "Le fasi di selezione, imballaggio e preparazione sono eseguite secondo rigide procedure volte a preservare la qualità del prodotto ai massimi standard, dai campi all'esportazione.",
+    "step1Title": "Selezione di precisione",
+    "step1Desc": "Rigidi criteri di ispezione per garantire raccolti impeccabili, classificando i prodotti in base alla qualità e alla dimensione ottimali.",
+    "step2Title": "Imballaggio professionale",
+    "step2Desc": "Utilizzo di materiali di imballaggio certificati a livello globale che preservano la freschezza e prevengono danni durante lo stoccaggio.",
+    "step3Title": "Preparazione logistica",
+    "step3Desc": "Messa in sicurezza delle catene di approvvigionamento e controllo preciso delle temperature per la spedizione internazionale e l'esportazione."
   },
   "WhyEgyptHero": {
     "metadata": {
